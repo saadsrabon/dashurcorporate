@@ -1,7 +1,10 @@
 
+export const MainLayout = ({children ,isDarkMode, setIsDarkMode}) => {
+console.log(isDarkMode)
 
-export const MainLayout = () => {
   return (
-    <div>MainLayout</div>
+ <>
+ 
+ </>
   )
 }
