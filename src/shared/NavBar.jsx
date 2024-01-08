@@ -3,7 +3,7 @@ import logo from "../assets/logo.png"
 const NavBar = () => {
     
   return (
- <div className="w-[95%] mx-auto">
+ <div className="w-[95%] mx-auto py-4">
     <nav className="flex justify-between items-center">
        {/* Logo */}
      <div>
@@ -11,9 +11,9 @@ const NavBar = () => {
     </div>  
     {/* Menu */}
     <div className="flex space-x-4">
-        <a href="#" className="text-light-gray hover:text-gray-300">Home</a>
-        <a href="#" className="text-light-gray hover:text-gray-300">About</a>
-        <a href="#" className="text-light-gray hover:text-gray-300">Contact</a>
+        <a href="#" className="text-light-text dark:text-dark-text hover:text-light-gray">Home</a>
+        <a href="#" className="text-light-text dark:text-dark-text hover:text-light-gray">About</a>
+        <a href="#" className="text-light-text dark:text-dark-text hover:text-light-gray">Contact</a>
     </div>
     {/* toggle button */}
     <div>
