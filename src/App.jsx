@@ -10,6 +10,10 @@ function App() {
   // const toggleTheme = () => {
   //   setIsDarkMode(!isDarkMode);
   // };
+  useEffect(() => {
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setIsDarkMode(prefersDarkMode);
+  }, []);
 
   useEffect(() => {
     const currentTime = new Date().getHours();
@@ -18,13 +22,18 @@ function App() {
     const isNightTime = currentTime >= 20 || currentTime < 6;
 
     setIsDarkMode(isNightTime);
+   
   }, []);
 
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
+      // document.body.style.backgroundColor = "#121212"; 
+       document.body.style.backgroundColor = "#000";
+     
     } else {
       document.documentElement.classList.remove('dark');
+      document.body.style.backgroundColor = "#FFFF";
     }
   }, [isDarkMode]);
 

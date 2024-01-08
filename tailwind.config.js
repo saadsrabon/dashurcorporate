@@ -30,11 +30,11 @@ export default {
   },
 
   variants: {
-    extend: {
-      // Enable dark mode variants for background and text colors
-      backgroundColor: ['dark'],
-      textColor: ['dark'],
-    },
+    // extend: {
+    //   // Enable dark mode variants for background and text colors
+    //   backgroundColor: ['dark'],
+    //   textColor: ['dark'],
+    // },
   },
 
   plugins: [],
