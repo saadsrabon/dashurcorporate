@@ -10,15 +10,20 @@ export default {
       colors: {
         // Define colors for light theme
         light: {
-          primary: '#3B82F6', // Adjust colors as needed
-          secondary: '#F59E0B',
+          primary: '#02A9F7', // Adjust colors as needed
+          secondary: '#003852',
+          gray:'#2F2F2F',
+          text:'#1D1D1D',
+          background:"#FFFFFF"
           // Add more colors for the light theme as needed
         },
         // Define colors for dark theme
         dark: {
-          primary: '#10B981', // Adjust colors as needed
-          secondary: '#FBBF24',
-          // Add more colors for the dark theme as needed
+          primary: '#02A9F7', // Adjust colors as needed
+          secondary: '#003852',
+          gray:'#2F2F2F',
+          text:'#EBEBEB',
+          background:"#020E14" 
         },
       },
     },
