@@ -1,5 +1,6 @@
 
 import banner from '../assets/hero.png'
+import Chips from '../components/chips'
 import SearchBar from '../components/searchBar'
 const Home = () => {
   return (
@@ -23,6 +24,17 @@ const Home = () => {
   
   <div className='absolute top-[-7%] translate-x-[-50%] left-[50%]'> <SearchBar /></div>
   
+</div>
+
+
+{/* Technologies Section */}
+
+<div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8 py-24">
+    {/* title-part */}
+    <div className='flex flex-col items-center'>
+      <Chips title="Technologies"/>
+      
+    </div>
 </div>
 
     </>
