@@ -1,5 +1,6 @@
 
 import banner from '../assets/hero.png'
+import BasicTitle from '../components/basicTitle'
 import Chips from '../components/chips'
 import SearchBar from '../components/searchBar'
 const Home = () => {
@@ -33,6 +34,7 @@ const Home = () => {
     {/* title-part */}
     <div className='flex flex-col items-center'>
       <Chips title="Technologies"/>
+      <BasicTitle title="Embrace Innovation, Master Tomorrow" />
       
     </div>
 </div>

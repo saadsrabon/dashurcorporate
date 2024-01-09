@@ -1,9 +1,13 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 
-const basicTitle = () => {
+
+const BasicTitle = ({title}) => {
   return (
-    <div>basicTitle</div>
+    <div className="flex justify-center items-center w-3/4">
+        <h2 className="text-light-text text-center py-4 text-5xl uppercase font-poppins font-bold leading-[64px] dark:text-dark-text">{title}</h2>
+    </div>
   )
 }
 
-export default basicTitle
+export default BasicTitle
