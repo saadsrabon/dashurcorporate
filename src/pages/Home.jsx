@@ -1,5 +1,6 @@
 
 import banner from '../assets/hero.png'
+import SearchBar from '../components/searchBar'
 const Home = () => {
   return (
     <>
@@ -15,9 +16,12 @@ const Home = () => {
 <path d="M10 1V25M10 25L19 16M10 25L1 16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
     </button>
+ 
   </div>
 
+  {/* SearchBAr */}
   
+  <div className='absolute top-[-7%] translate-x-[-50%] left-[50%]'> <SearchBar /></div>
   
 </div>
 
