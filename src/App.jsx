@@ -3,6 +3,8 @@ import { MainLayout } from "./Layout/MainLayout"
 import { useEffect, useState } from "react";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Home from "./pages/Home";
+
 
 
 function App() {
@@ -48,7 +50,7 @@ function App() {
 
     >
       <Routes>
-        <Route path="/" element={<Contact/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>} />
