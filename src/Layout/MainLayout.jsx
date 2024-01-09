@@ -10,7 +10,7 @@ console.log(isDarkMode)
  <>
 <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
 {children}
-<Footer setIsDarkMode={setIsDarkMode}/>
+<Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
  </>
   )
 }
