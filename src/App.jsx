@@ -1,19 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { MainLayout } from "./Layout/MainLayout"
 import { useEffect, useState } from "react";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 
 function App() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // const toggleTheme = () => {
-  //   setIsDarkMode(!isDarkMode);
-  // };
+
   useEffect(() => {
-    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDarkMode(prefersDarkMode);
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+   console.log(prefersDarkMode)
   }, []);
+
 
   useEffect(() => {
     const currentTime = new Date().getHours();
@@ -27,9 +28,10 @@ function App() {
 
   useEffect(() => {
     if (isDarkMode) {
+      console.log(isDarkMode)
       document.documentElement.classList.add('dark');
       // document.body.style.backgroundColor = "#121212"; 
-       document.body.style.backgroundColor = "#000";
+       document.body.style.backgroundColor = "#020E14";
      
     } else {
       document.documentElement.classList.remove('dark');
@@ -40,15 +42,18 @@ function App() {
 
   return (
     <BrowserRouter>
-    <MainLayout 
+    <MainLayout  className="dark"
     isDarkMode={isDarkMode}
     setIsDarkMode={setIsDarkMode}
 
     >
       <Routes>
-        {/* <Route path="/" element={<Jobs/>} />
-        <Route path="/addjobs" element={<AddJob/>} />
-         */}
+        <Route path="/" element={<Contact/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/contact" element={<Contact/>} />
+        
       </Routes>
     </MainLayout>
     </BrowserRouter>
