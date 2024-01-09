@@ -1,5 +1,6 @@
 
 import banner from '../assets/hero.png'
+
 import BasicTitle from '../components/basicTitle'
 import Chips from '../components/chips'
 import SearchBar from '../components/searchBar'
@@ -35,7 +36,11 @@ const Home = () => {
     <div className='flex flex-col items-center'>
       <Chips title="Technologies"/>
       <BasicTitle title="Embrace Innovation, Master Tomorrow" />
-      
+    </div>
+    <div className='w-[57%] mx-auto'>
+    <p className='text-light-text text-base leading-6    dark:text-[#D2D2D2]'>
+    An innovative tech company dedicated to shaping the future through cutting-edge solutions and exceptional service.
+    </p>
     </div>
 </div>
 

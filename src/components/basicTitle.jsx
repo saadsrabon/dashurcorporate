@@ -5,7 +5,7 @@
 const BasicTitle = ({title}) => {
   return (
     <div className="flex justify-center items-center w-3/4">
-        <h2 className="text-light-text text-center py-4 text-5xl uppercase font-poppins font-bold leading-[64px] dark:text-dark-text">{title}</h2>
+        <h2 className="text-light-text text-center py-4 text-5xl uppercase font-sans font-bold leading-[64px] dark:text-dark-text">{title}</h2>
     </div>
   )
 }
