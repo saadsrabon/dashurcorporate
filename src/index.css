@@ -54,3 +54,26 @@ backdrop-filter: blur(50px);
   margin-left: auto;
   margin-right: auto;
 }
+.swiper-button-prev{
+  background-color:#2F2F2F;
+  padding: 25px;
+  border-radius: 50%;
+ 
+
+}
+.swiper-button-next{
+  background-color:#2F2F2F;
+  padding: 25px;
+  border-radius: 50%;
+}
+.swiper-button-next:after{
+  content: ">";
+  font-size: 30px;
+  color: #fff;
+}
+.swiper-button-prev:after{
+  content: "<";
+  font-size: 30px;
+  color: #fff;
+  
+}
