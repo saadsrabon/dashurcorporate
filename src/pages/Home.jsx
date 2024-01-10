@@ -1,5 +1,6 @@
 
 import banner from '../assets/hero.png'
+import BasicSlider from '../components/basicSlider'
 
 import BasicTitle from '../components/basicTitle'
 import Chips from '../components/chips'
@@ -42,6 +43,10 @@ const Home = () => {
     An innovative tech company dedicated to shaping the future through cutting-edge solutions and exceptional service.
     </p>
     </div>
+
+    {/* Slider Section */}
+
+    <BasicSlider/>
 </div>
 
     </>
