@@ -13,7 +13,10 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import TechnologiesCard from './technologiesCard';
 import { useRef } from 'react';
-import SwiperCore  from 'swiper/core';
+import SwiperCore from 'swiper/core';
+
+// Install Swiper modules
+SwiperCore.use([Navigation]);
 // Install Swiper modules
 
 export default function App() {
@@ -34,8 +37,7 @@ export default function App() {
   };
   return (
     <div className='py-16'>
-        <div className="swiper-button-prev" onClick={prevSlide}>Custom Prev</div>
-        <div className="swiper-button-next" onClick={nextSlide}>Custom Next</div>
+        
       <Swiper
         slidesPerView={3}
         spaceBetween={20}
@@ -45,12 +47,18 @@ export default function App() {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+     
+        navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            }}
+      
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide
-        style={{background:"none"}}
+    
         >
             <TechnologiesCard/>
         </SwiperSlide>
@@ -72,6 +80,7 @@ export default function App() {
        
        
       </Swiper>
+   
     </div>
   );
 }

@@ -11,6 +11,13 @@ const TechnologiesCard = () => {
                 Working with Dashur AI has been a game-changer for our business. Their innovative solutions and top-notch 
                 </p>
                 </div>
+
+              <div className='grid grid-cols-2'>
+                <div>
+                    <img src="" alt="" />
+                    <h2>Javascript</h2>
+                </div>
+                </div>  
     
 
     </div>
