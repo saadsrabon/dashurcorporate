@@ -1,0 +1,107 @@
+[
+    {
+      "title": "Front End Development",
+      "description": "Front End Development involves creating components and interfaces using various technologies.",
+      "technology": [
+      
+        {"name": "JavaScript",
+        "imageLink": "https://i.ibb.co/xMsXXC2/Java-Script.png"},
+        {"name": "TypeScript",
+        "imageLink": "https://i.ibb.co/0GMpnJr/Type-Script.png"},
+        {"name": "React",
+        "imageLink": "https://i.ibb.co/6t1wyks/React.png"}
+      ]
+    },
+    {
+      "title": "Back End Development",
+      "description": "Back End Development focuses on server-side logic, databases, and integrations.",
+        "technology": [
+            {"name": "Python",
+            "imageLink": "https://i.ibb.co/TcvjYv0/Python.png"},
+            {"name": "SQL",
+            "imageLink": "https://i.ibb.co/0GMpnJr/Type-Script.png"},
+            {"name": "RUBY",
+            "imageLink": "https://i.ibb.co/0GMpnJr/Type-Script.png"},
+            
+            {"name": "Node.js",
+            "imageLink": "https://i.ibb.co/0GMpnJr/Type-Script.png"},
+            {"name": "C++",
+            "imageLink": "https://i.ibb.co/0GMpnJr/Type-Script.png"},
+            {"name": "JAva",
+            "imageLink": "https://i.ibb.co/0GMpnJr/Type-Script.png"} 
+            
+        ]
+    },
+
+    {
+      "title": "Frameworks",
+      "description": "Programming Languages are essential for writing code and developing software.",
+      "technology": [
+        {"name": "Native Script",
+        "imageLink": "https://i.ibb.co/412zt8n/Native-Script.png"},
+        {"name": "Django",
+        "imageLink": "https://i.ibb.co/98PZstD/Django.png"},
+        {"name": "Angular js",
+        "imageLink": "https://i.ibb.co/3MmmkS2/Angular.png"},
+        {"name": "Vue js",
+        "imageLink": "https://i.ibb.co/xGdkq6H/Vue.png"},
+        {"name": "Next js",
+        "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png"},
+        {"name": "Express js",
+        "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png"}
+        
+      ]
+
+    },
+    {
+        "title": "Mobile Development",
+        "description": "Mobile app development involves designing and creating software applications specifically tailored for smartphones and tablets to meet user needs and enhance their digital experiences..",
+        "technology": [
+          {"name": "React Native",
+          "imageLink": "https://i.ibb.co/crBysHz/React-Native.png"},
+          {"name": "Ionic",
+          "imageLink": "https://i.ibb.co/yg4Qgq0/Ionic.png"},
+          {"name": "Flutter",
+          "imageLink": "https://i.ibb.co/k4RjWsP/Flutter.png"}
+          
+        ]
+        
+      },
+      {
+        "title": "Cloud Services",
+        "description": "Cloud Services involve managing and deploying applications in the cloud.",
+          "technology":[
+            {"name": "Google Cloud",
+          "imageLink": "https://i.ibb.co/Y0HL79Q/Google-Cloud.png"}, 
+          {
+              "name": "AWS",
+              "imageLink": "https://i.ibb.co/DYrgmcv/AWS.png"
+          }
+          
+        ]
+      },
+      {
+        "title": "Deep Learning",
+        "description": "Deep learning is a subset of machine learning focused on artificial neural networks with multiple layers. It excels in tasks like image recognition, natural language processing, and speech recognition. Training deep models involves adjusting parameters to minimize prediction errors. Key frameworks for deep learning include TensorFlow, PyTorch, and Keras."
+       
+      },
+  
+      
+      {
+        "title": "Machine Learning",
+        "description": "Machine learning is a field of artificial intelligence that involves the development of algorithms and models that enable computers to learn from and make predictions or decisions based on data. It encompasses various techniques, including supervised learning, unsupervised learning, and reinforcement learning, and is widely used in applications such as data analysis, pattern recognition, recommendation systems, and more."
+       
+      },
+      {
+        "title": "Artificial Intelligence",
+        "description": "Artificial Intelligence (AI) is a branch of computer science focused on creating machines capable of intelligent behavior. It encompasses various techniques like machine learning and deep learning to enable computers to perform tasks that typically require human intelligence. AI is used in applications ranging from data analysis and automation to robotics and natural language processing."
+       
+      },
+      {
+        "title": "(LLM’s)",
+        "description": "Large Language Models (LLMs) are advanced AI models with extensive training on textual data.They can understand and generate human-like text, making them useful for various applications.LLMs like GPT-3 are employed in natural language processing, translation, content generation, and more."
+       
+      }
+      
+     
+    ]

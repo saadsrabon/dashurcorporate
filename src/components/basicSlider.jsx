@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 
-
+import db from  '../utils/technologies.json'
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
 import TechnologiesCard from './technologiesCard';
@@ -57,26 +57,14 @@ export default function App() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide
-    
-        >
-            <TechnologiesCard/>
-        </SwiperSlide>
-        <SwiperSlide
-        style={{background:"none"}}
-        >
-            <TechnologiesCard/>
-        </SwiperSlide>
-        <SwiperSlide
-        style={{background:"none"}}
-        >
-            <TechnologiesCard/>
-        </SwiperSlide>
-        <SwiperSlide
-        style={{background:"none"}}
-        >
-            <TechnologiesCard/>
-        </SwiperSlide>
+        {
+            db.map((item, index) => (
+                <SwiperSlide key={index}>
+                    <TechnologiesCard item={item} />
+                </SwiperSlide>
+            ))
+        }
+        
        
        
       </Swiper>
