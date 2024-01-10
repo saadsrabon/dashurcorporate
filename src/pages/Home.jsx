@@ -46,7 +46,9 @@ const Home = () => {
 
     {/* Slider Section */}
 
-    <BasicSlider/>
+   <div className='w-[90%] mx-auto'>
+   <BasicSlider/>
+   </div>
 </div>
 
     </>
