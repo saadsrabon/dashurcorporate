@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 import footerdark from "../assets/footerdark.png"
 import footerlight from "../assets/footerlight.png"
-import { Dispatch } from 'react';
 
 
-const Footer = ({ isDarkMode, setIsDarkMode }) => {
+
+const Footer = ({ isDarkMode }) => {
     // const toggleTheme = () => {
     //     setIsDarkMode(!isDarkMode);
     // };
