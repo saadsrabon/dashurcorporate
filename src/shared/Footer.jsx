@@ -97,13 +97,13 @@ const Footer = ({ isDarkMode }) => {
       </nav>
       <div className="flex justify-between items-center py-2">
         <div className=" space-x-4">
-            <a href="">Privacy Policy</a>
-            <a href="">Terms & Conditions</a>
-            <a href="">Cookies Policy</a>
+            <a href="">Privacy </a>
+            <a href="">Terms</a>
+            <a href="">Cookies</a>
             <a href="">Sitemap</a>
         </div>
         <div>
-            <p>©2023 Dashur AI. All Rights Reserved.</p>
+            <p>©2024 Dashur AI. All Rights Reserved.</p>
         </div>
       </div>
     </div>

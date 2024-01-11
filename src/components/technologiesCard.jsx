@@ -18,7 +18,7 @@ const TechnologiesCard = ({item}) => {
               {
                 technology?.map((item,index) => (
                     <div key={index} className='flex  space-x-2 items-center'>
-                   <div className="w-12">
+                   <div className="w-8">
                    <img className="w-[100%]" src={item?.imageLink} alt="" />
                    </div>
                     <h2>{item?.name}</h2>
