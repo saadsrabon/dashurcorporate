@@ -1,24 +1,16 @@
 
-import { RxDotFilled } from 'react-icons/rx'
+
 import banner from '../assets/hero.png'
-import NewSlider from '../components/AdvanceSlider'
-
-
-
-
+import CardWrapper from '../components/CardWrapper'
 import BasicSlider from '../components/basicSlider'
 
 import BasicTitle from '../components/basicTitle'
 import Chips from '../components/chips'
 import SearchBar from '../components/searchBar'
-import { useState } from 'react'
-import { slides } from '../utils/navdetails'
+import services from '../utils/services.json'
 const Home = () => {
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
+
   return (
     <>
     <div className=" mx-auto py-24">
@@ -43,35 +35,40 @@ const Home = () => {
 </div>
 {/* service section */}
 <div id='service' className='mt-24'>
-  <div className=' grid grid-cols-2'>
+  <div className=' flex justify-center items-center flex-col '>
      <div>
      <div className='flex flex-col items-center'>
-      <Chips title="Technologies"/>
-      <BasicTitle title="Embrace Innovation, Master Tomorrow" />
+      <Chips title="Our Services"/>
+      <BasicTitle title="Celebrating Excellence, Delivering Quality" />
     </div>
     <div className='w-[57%] mx-auto'>
-    <p className='text-light-text text-base leading-6    dark:text-[#D2D2D2]'>
+    <p className='text-light-text text-base leading-6  text-center   dark:text-[#D2D2D2]'>
     An innovative tech company dedicated to shaping the future through cutting-edge solutions and exceptional service.
     </p>
 
-    <div className='flex top-4 justify-center py-2'>
-        {slides.map((slide, slideIndex) => (
-          <div
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-            className='text-2xl cursor-pointer'
-          >
-            <RxDotFilled />
-          </div>
-        ))}
-      </div>
+    
     </div>
+
      </div>
 
      {/* slider part */}
-     <div>
-   <NewSlider currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
+     <div className='grid grid-cols-4 w-[80%] gap-4 content-center place-content-center '>
+      {
+        services?.map((item,index) => (
+          <CardWrapper key={index}>
+          <div>
+            <img src={item?.image} alt="" />
+          </div>
+          <div>
+            <h2>{item?.title}</h2>
+            <p>{item?.description}</p>
+          </div>
+        </CardWrapper>
+        ))
+      }
+          
      </div>
+     
   </div>
 </div>
 

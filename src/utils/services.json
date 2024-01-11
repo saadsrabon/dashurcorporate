@@ -1,0 +1,38 @@
+[
+    {
+        "title":"Graphic Design",
+        "description":"Elevate your brand with our creative graphic design service. We transform ideas into captivating visuals that leave a lasting impression.",
+        "image":""
+    },
+    {
+        "title":"UI/UX Design",
+        "description":"Unlock the power of exceptional user experiences with our UI/UX design service. We ensure your product stands out and delights users.",
+        "image":""
+    },
+    {
+        "title":"APP DEVELOPMENT",
+        "description":"Transform your ideas into exceptional mobile experiences with our cutting-edge app development services.   ",
+        "image":""
+    },
+    {
+        "title":"WEB DEVELOPMENT",
+        "description":"Revolutionize your online presence with our web development services. Our skilled team creates websites that captivate users.",
+        "image":""
+    },
+    
+    {
+        "title":"Digital Marketing",
+        "description":"Elevate your brand's online visibility and reach new heights with our comprehensive digital marketing services.",
+        "image":""
+    },
+    {
+        "title":"SEO",
+        "description":"Boost your online presence and climb search engine rankings with our SEO expertise. Our tailored strategies focus on traffic.",
+        "image":""
+    },
+    {
+        "title":"AI INTEGRATION",
+        "description":"Seamlessly integrate the power of artificial intelligence into your business operations with our AI integration services.",
+        "image":""
+    }
+]
