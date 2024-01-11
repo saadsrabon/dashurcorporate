@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 
 
 export default function CardWrapper({children}) {
   return (
-     <div className="techCard px-4 py-8">
+     <div className="techCard px-6 py-10 my-12">
     {
         children
     }

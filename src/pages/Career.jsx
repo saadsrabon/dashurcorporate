@@ -3,7 +3,7 @@ import CardWrapper from "../components/CardWrapper"
 import jobData from '../utils/job.json'
 const Career = () => {
   return (
-    <div>
+    <div className="w-[80%] mx-auto ">
         {
           jobData.map((job, index) => (
             <CardWrapper key={index}>
