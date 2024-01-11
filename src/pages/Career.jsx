@@ -15,8 +15,8 @@ const Career = () => {
           jobData.map((job, index) => (
             <CardWrapper key={index}>
             <div className="mb-8">
-              <h2 className="font-sans text-2xl font-bold ">{job?.jobtitle} ({job?.jobType})</h2>
-              <p className="my-2">{job?.description}</p>
+              <h2 className="font-sans text-2xl font-bold text-light-text dark:text-dark-text ">{job?.jobtitle} ({job?.jobType})</h2>
+              <p className="my-2  text-light-text dark:text-dark-text">{job?.description}</p>
             </div>
             <div className="flex justify-center space-x-6 mt-4">
               <button className="px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">Submit CV/Resume</button>
