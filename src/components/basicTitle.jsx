@@ -2,9 +2,9 @@
 /* eslint-disable no-unused-vars */
 
 
-const BasicTitle = ({title}) => {
+const BasicTitle = ({title ,width}) => {
   return (
-    <div className="flex justify-center items-center w-3/4">
+    <div className={`flex justify-center items-center ${width?width :"w-3/4"}`}>
         <h2 className="text-light-text text-center py-4 text-5xl uppercase font-sans font-bold leading-[64px] dark:text-dark-text">{title}</h2>
     </div>
   )
