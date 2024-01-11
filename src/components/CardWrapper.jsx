@@ -3,7 +3,7 @@
 
 export default function CardWrapper({children}) {
   return (
-     <div className="techCard px-6 py-10 my-16">
+     <div className="rounded-lg border border-solid border-white border-opacity-20 dark:bg-gray-800 dark:bg-opacity-20 bg-white bg-opacity-20 shadow-xl px-6 py-10 my-16 dark:">
     {
         children
     }

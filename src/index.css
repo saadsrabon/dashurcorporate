@@ -89,9 +89,9 @@ backdrop-filter: blur(50px);
 .swiper-wrapper{
   padding:40px 0;
 }
-.techCard{
+/* .techCard{
   border-radius: 16px;
 border: 1px solid rgba(255, 255, 255, 0.20);
 background:  rgba(38, 38, 38, 0.20);
 box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.10);
-}
+} */
