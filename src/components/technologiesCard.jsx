@@ -4,7 +4,8 @@
 const TechnologiesCard = ({item}) => {
     const {title, description, technology} = item;
   return (
-    <div className='techCard py-8 px-4 rounded'>
+    <div className='techCard py-8 px-4 rounded-lg border border-solid border-white border-opacity-20 dark:bg-gray-800 dark:bg-opacity-20 bg-white bg-opacity-20 shadow-xl my-16 ">
+    '>
             <div className='flex justify-center items-center'>
                 <h2 className='uppercase'>{title}</h2>
                 </div>
@@ -21,7 +22,7 @@ const TechnologiesCard = ({item}) => {
                    <div className="w-8">
                    <img className="w-[100%]" src={item?.imageLink} alt="" />
                    </div>
-                    <h2>{item?.name}</h2>
+                    <h2 className="text-light-text dark:text-dark-text">{item?.name}</h2>
                 </div>
                 ))
               }

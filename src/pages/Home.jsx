@@ -77,11 +77,11 @@ const Home = () => {
 
 {/* Technologies Section */}
 
-<div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8 py-24">
+<div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8 py-12">
     {/* title-part */}
     <div className='flex flex-col items-center'>
       <Chips title="Technologies"/>
-      <BasicTitle title="Embrace Innovation, Master Tomorrow" />
+      <BasicTitle width="w-[70%]" title="Embrace Innovation, Master Tomorrow" />
     </div>
     <div className='w-[57%] mx-auto'>
     <p className='text-light-text text-base leading-6    dark:text-[#D2D2D2]'>
