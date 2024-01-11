@@ -3,7 +3,7 @@
 
 export default function CardWrapper({children}) {
   return (
-     <div className="techCard px-6 py-10 my-12">
+     <div className="techCard px-6 py-10 my-16">
     {
         children
     }
