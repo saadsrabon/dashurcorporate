@@ -33,11 +33,13 @@
     {
         "title":"SEO",
         "description":"Boost your online presence and climb search engine rankings with our SEO expertise. Our tailored strategies focus on traffic.",
-        "image":"https://i.ibb.co/nsDS3Mc/image-20.png"
+        "image":"https://i.ibb.co/nsDS3Mc/image-20.png",
+        "bgColor":"#FB5338"
     },
     {
         "title":"AI INTEGRATION",
         "description":"Seamlessly integrate the power of artificial intelligence into your business operations with our AI integration services.",
-        "image":"https://i.ibb.co/qkdJvSg/image-21.png"
+        "image":"https://i.ibb.co/qkdJvSg/image-21.png",
+        "bgColor":"#3FCCA2"
     }
 ]
