@@ -52,12 +52,14 @@ const Home = () => {
      </div>
 
      {/* slider part */}
-     <div className='grid grid-cols-4 w-[90%] gap-4 content-center place-content-center '>
+     <div className='grid grid-cols-4 w-[90%] gap-4 content-center place-content-center mt-12 '>
       {
         services?.map((item,index) => (
           <CardWrapper key={index}>
           <div>
+            <div className={`bg-[${item?.bgColor}] px-4 py-4 w-4/12`} >
             <img src={item?.image} alt="" />
+            </div>
           </div>
           <div>
             <h2 className='text-light-text dark:text-dark-text text-2xl font-bold mb-4 '>{item?.title}</h2>
