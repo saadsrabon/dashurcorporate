@@ -49,7 +49,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
             Contact US
           </NavLink>
           <NavLink
-            to="/carrer"
+            to="/career"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
             Careers

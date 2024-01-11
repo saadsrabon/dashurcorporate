@@ -7,7 +7,7 @@ const Career = () => {
   return (
     <div className="w-[60%] mx-auto my-12 flex-col items-center ">
         <div className="flex flex-col justify-center items-center">
-            <Chips title="Career" />
+            <Chips title="Careers" />
             <BasicTitle width="w-[94%]" title="Currently available ON-SITE/remote/HYBRID positions"/>
             <p className="text-center">Your feedback and inquiries are important to us, and we're here to <br/> provide the support you need.</p>
         </div>
