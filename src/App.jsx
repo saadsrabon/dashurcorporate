@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Home from "./pages/Home";
+import Career from "./pages/Career";
 
 
 
@@ -54,7 +55,7 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>} />
-        <Route path="/contact" element={<Contact/>} />
+        <Route path="/career" element={<Career/>} />
         
       </Routes>
     </MainLayout>
