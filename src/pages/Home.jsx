@@ -57,7 +57,7 @@ const Home = () => {
         services?.map((item,index) => (
           <CardWrapper key={index}>
           <div>
-            <div className={`bg-[${item?.bgColor}] px-4 py-4 w-4/12`} >
+            <div className={`${item?.bgColor} pb-4`} >
             <img src={item?.image} alt="" />
             </div>
           </div>

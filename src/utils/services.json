@@ -15,7 +15,7 @@
         "title":"APP DEVELOPMENT",
         "description":"Transform your ideas into exceptional mobile experiences with our cutting-edge app development services.   ",
         "image":"https://i.ibb.co/2nDBpqN/image-18.png",
-        "bgColor":"#FFB840"
+        "bgColor":"bg-yellow-400"
     },
     {
         "title":"WEB DEVELOPMENT",
@@ -28,18 +28,18 @@
         "title":"Digital Marketing",
         "description":"Elevate your brand's online visibility and reach new heights with our comprehensive digital marketing services.",
         "image":"https://i.ibb.co/qN4CBCR/image-19.png",
-        "bgColor":"#3FCCA2"
+        "bgColor":"bg-green-400"
     },
     {
         "title":"SEO",
         "description":"Boost your online presence and climb search engine rankings with our SEO expertise. Our tailored strategies focus on traffic.",
         "image":"https://i.ibb.co/nsDS3Mc/image-20.png",
-        "bgColor":"#FB5338"
+        "bgColor":"bg-red-500"
     },
     {
         "title":"AI INTEGRATION",
         "description":"Seamlessly integrate the power of artificial intelligence into your business operations with our AI integration services.",
         "image":"https://i.ibb.co/qkdJvSg/image-21.png",
-        "bgColor":"#3FCCA2"
+        "bgColor":"bg-green-400"
     }
 ]
