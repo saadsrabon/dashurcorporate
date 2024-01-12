@@ -27,13 +27,13 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 my-24">
         <CardWrapper >
         <div >
-        <h2 className="'text-light-text dark:text-dark-text text-2xl font-bold mb-4 ">Our Mission</h2>
+        <h2 className="text-light-text dark:text-dark-text text-2xl font-bold mb-4 ">Our Mission</h2>
           <p className="text-light-text dark:text-dark-text">Provide outstanding service, high-end applications and products, which allow our clients to grow and enhance their brand(s).</p>
         </div>
         </CardWrapper>
         <CardWrapper >
         <div >
-        <h2 className="'text-light-text dark:text-dark-text text-2xl font-bold mb-4 ">Our Vision</h2>
+        <h2 className="text-light-text dark:text-dark-text text-2xl font-bold mb-4 ">Our Vision</h2>
           <p className="text-light-text dark:text-dark-text">Provide outstanding service, high-end applications and products, which allow our clients to grow and enhance their brand(s).</p>
         </div>
         </CardWrapper>
