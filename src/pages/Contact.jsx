@@ -17,19 +17,35 @@ const Contact = () => {
       </div>
 
       {/* item section */}
-      <div >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12" >
         <CardWrapper>
-          <div>
+          <div className="flex justify-between space-x-8">
             <div>
               <img src="" alt="" />
               <div>
-              <h2>Email Us</h2>
-              <p>contact@dashurai.com</p>
+              <h2 className="text-light-text dark:text-dark-text font-bold">Email Us</h2>
+              <p className="text-light-text dark:text-dark-text">contact@dashurai.com</p>
               </div>
             </div>
             <div>
               <button className="px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">
                 Email Now
+              </button>
+            </div>
+          </div>
+        </CardWrapper>
+        <CardWrapper>
+          <div className="flex justify-between space-x-8">
+            <div>
+              <img src="" alt="" />
+              <div>
+              <h2 className="text-light-text dark:text-dark-text font-bold ">Let us contact </h2>
+              <p className="text-light-text dark:text-dark-text">Provide your information to connect</p>
+              </div>
+            </div>
+            <div>
+              <button className="px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">
+              Get In Touch
               </button>
             </div>
           </div>
