@@ -1,3 +1,4 @@
+import CardWrapper from "../components/CardWrapper"
 import Chips from "../components/chips"
 
 
@@ -13,6 +14,26 @@ const Contact = () => {
         <p className="text-light-text dark:text-dark-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat ipsum odit cupiditate nostrum delectus a, asperiores sequi nesciunt ullam eius, quis molestiae eos labore voluptatem officiis. Tenetur, eos, maiores odit optio, fuga provident delectus nam est laudantium assumenda saepe consequatur.</p>     
     </div>
              
+      </div>
+
+      {/* item section */}
+      <div >
+        <CardWrapper>
+          <div>
+            <div>
+              <img src="" alt="" />
+              <div>
+              <h2>Email Us</h2>
+              <p>contact@dashurai.com</p>
+              </div>
+            </div>
+            <div>
+              <button className="px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">
+                Email Now
+              </button>
+            </div>
+          </div>
+        </CardWrapper>
       </div>
     </div>
   )
