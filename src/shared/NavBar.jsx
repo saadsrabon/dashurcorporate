@@ -7,7 +7,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
   };
   return (
     <div className="w-[95%] mx-auto py-8">
-      <nav className="flex justify-between items-center">
+      <nav className="flex md:hidden lg:flex justify-between items-center">
         {/* Logo */}
         <div>
           {isDarkMode ? (
@@ -66,6 +66,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
    
         </div>
       </nav>
+      {/* Mobile menu */}
     </div>
   );
 };
