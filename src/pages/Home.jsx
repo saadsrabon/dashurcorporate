@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <>
     <div className=" mx-auto py-24">
-        <h2 className="text-light-text text-6xl  font-bold uppercase dark:text-dark-text text-center leading-[78px]">Empowering Innovation, Connecting <br></br>the Future With Dashur ai</h2>
+        <h2 className="text-light-text md:text-4xl lg:text-6xl  font-bold uppercase dark:text-dark-text text-center lg:leading-[78px]">Empowering Innovation, Connecting <br></br>the Future With Dashur ai</h2>
     </div>
     <div className="relative w-[95%] mx-auto">
   <img  src={banner} alt="Your Image" className="w-full h-auto " />
@@ -52,7 +52,7 @@ const Home = () => {
      </div>
 
      {/* slider part */}
-     <div className='grid grid-cols-4 w-[90%] gap-4 content-center place-content-center mt-12 '>
+     <div className='grid grid-cols-1 md:grid-cols-3 lg-grid-cols=4 w-[90%] gap-4 content-center place-content-center mt-12 '>
       {
         services?.map((item,index) => (
           <CardWrapper key={index}>

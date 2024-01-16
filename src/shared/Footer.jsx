@@ -11,7 +11,7 @@ const Footer = ({ isDarkMode }) => {
     // };
   return (
     <div className="w-[95%] mx-auto pt-4  divide-y-[0.5px] space-y-4 divide-[#454545]">
-      <nav className="flex justify-between items-center">
+      <nav className="hidden md:hidden lg:flex justify-between items-center">
         {/* Logo */}
         <div>
           {isDarkMode ? (
@@ -95,7 +95,7 @@ const Footer = ({ isDarkMode }) => {
    
         </div>
       </nav>
-      <div className="flex justify-between items-center py-2">
+      <div className="hidden md:hidden lg:flex  justify-between items-center py-2">
         <div className=" space-x-4">
             <a href="">Privacy </a>
             <a href="">Terms</a>
