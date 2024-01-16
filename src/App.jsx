@@ -5,7 +5,11 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Career from "./pages/Career";
-
+import Chatbot from 'react-chatbot-kit'
+import 'react-chatbot-kit/build/main.css'
+import config from "./chatbot/config";
+import MessageParser from "./chatbot/MessageParser";
+import ActionProvider from "./chatbot/ActionProvider";
 
 
 function App() {
@@ -48,8 +52,14 @@ function App() {
     <MainLayout  className="dark"
     isDarkMode={isDarkMode}
     setIsDarkMode={setIsDarkMode}
-
+ 
     >
+      <Chatbot
+       config={config}
+       messageParser={MessageParser}
+       actionProvider={ActionProvider}
+       headerText='Dashur Ai Chatbot'
+      />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/contact" element={<Contact/>} />

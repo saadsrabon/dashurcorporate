@@ -95,3 +95,40 @@ border: 1px solid rgba(255, 255, 255, 0.20);
 background:  rgba(38, 38, 38, 0.20);
 box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.10);
 } */
+
+.react-chatbot-kit-chat-container{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 999;
+  border: 1px solid rgba(255, 255, 255, 0.40);
+  border-radius: 16px;
+  max-width: 422px;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+.react-chatbot-kit-chat-inner-container {
+  background: rgba(38, 38, 38, 0.20);
+  backdrop-filter: blur(50px);
+  border-radius: 16px;
+
+}
+
+.react-chatbot-kit-chat-btn-send {
+  background: none;
+}
+.react-chatbot-kit-chat-btn-send-icon {
+  fill: #28BFF1;
+}
+
+.react-chatbot-kit-chat-input {
+  background: rgba(38, 38, 38, 0.20);
+  border:none;
+}
+.react-chatbot-kit-chat-input-form {
+  background: rgba(38, 38, 38, 0.20)
+}
+
+
+
+
