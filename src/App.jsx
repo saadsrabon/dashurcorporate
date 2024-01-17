@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { MainLayout } from "./Layout/MainLayout"
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -10,11 +10,13 @@ import 'react-chatbot-kit/build/main.css'
 import config from "./chatbot/config";
 import MessageParser from "./chatbot/MessageParser";
 import ActionProvider from "./chatbot/ActionProvider";
-
-
+import chatBotGlow from './assets/Ellipse 5.svg'
+ export const ChatbotContext = createContext();
 function App() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const[chatbotOpen,setChatbotOpen]=useState(false)
 
 
   useEffect(() => {
@@ -53,13 +55,20 @@ function App() {
     isDarkMode={isDarkMode}
     setIsDarkMode={setIsDarkMode}
  
-    >
-      <Chatbot
-       config={config}
-       messageParser={MessageParser}
-       actionProvider={ActionProvider}
-       headerText='Dashur Ai Chatbot'
+    >  
+      <div onClick={()=>setChatbotOpen(prev=>!prev)} className="fixed top-72 right-5">
+         <img src={chatBotGlow} alt="" />
+      </div>
+  <ChatbotContext.Provider value={{setChatbotOpen}}>
+      {
+        chatbotOpen && <Chatbot
+        config={config}
+        messageParser={MessageParser}
+        actionProvider={ActionProvider}
       />
+      }
+  </ChatbotContext.Provider>
+   
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/contact" element={<Contact/>} />
@@ -68,6 +77,7 @@ function App() {
         <Route path="/career" element={<Career/>} />
         
       </Routes>
+   
     </MainLayout>
     </BrowserRouter>
   )

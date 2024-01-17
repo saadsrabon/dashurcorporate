@@ -147,3 +147,28 @@ box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.10);
 .react-chatbot-kit-chat-bot-message{
   margin-left: 0;
 }
+
+.react-chatbot-kit-chat-bot-message-arrow {
+  border:none
+}
+.react-chatbot-kit-user-chat-message{
+  border-radius: 16px 16px 0px 16px;
+  background: #28BFF1;
+  color:black
+}
+.react-chatbot-kit-user-chat-message-arrow {
+  border:none
+}
+.react-chatbot-kit-chat-bot-message{
+  background: none;
+}
+
+/* .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom:80px;
+} */
+
+@media screen and (max-width: 768px) {
+  .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom:50px;
+}
+}
