@@ -3,6 +3,7 @@ import CardWrapper from '../components/CardWrapper';
 import BasicSlider from '../components/basicSlider';
 import BasicTitle from '../components/basicTitle';
 import Chips from '../components/chips';
+import { CookiesFile } from '../components/cookies';
 import SearchBar from '../components/searchBar';
 import services from '../utils/services.json';
 
@@ -86,6 +87,7 @@ const Home = () => {
           <BasicSlider />
         </div>
       </div>
+      <CookiesFile/>
     </>
   );
 };

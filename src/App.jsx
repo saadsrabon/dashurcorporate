@@ -11,6 +11,7 @@ import config from "./chatbot/config";
 import MessageParser from "./chatbot/MessageParser";
 import ActionProvider from "./chatbot/ActionProvider";
 import chatBotGlow from './assets/Ellipse 5.svg'
+import { CookiesFile } from "./components/cookies";
  export const ChatbotContext = createContext();
 function App() {
 
@@ -56,9 +57,11 @@ function App() {
     setIsDarkMode={setIsDarkMode}
  
     >  
+    
       <div onClick={()=>setChatbotOpen(prev=>!prev)} className="fixed top-72 right-5">
          <img src={chatBotGlow} alt="" />
       </div>
+ 
   <ChatbotContext.Provider value={{setChatbotOpen}}>
       {
         chatbotOpen && <Chatbot
