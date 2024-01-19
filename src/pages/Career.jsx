@@ -19,7 +19,7 @@ const handleOpen = (id) => {
     <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mx-auto my-12 flex-col items-center px-4">
       <div className="flex flex-col justify-center items-center">
         <Chips title="Careers" />
-        <BasicTitle width="w-full md:w-94%" title="available  positions" />
+        <BasicTitle width="w-full md:w-94%" title="Make an Outstanding career with dashur AI" />
         <p className="text-center md:text-left md:ml-[-45px]">Your feedback and inquiries are important to us, and we're here to <br /> provide the support you need.</p>
       </div>
       {
