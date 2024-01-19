@@ -95,7 +95,7 @@ const Footer = ({ isDarkMode }) => {
    
         </div>
       </nav>
-      <div className="hidden text-light-text md:hidden lg:flex  justify-between items-center py-2">
+      <div className="hidden text-light-text dark:text-dark-text md:hidden lg:flex  justify-between items-center py-2">
         <div className=" space-x-4">
             <a href="">Privacy </a>
             <a href="">Terms</a>
@@ -103,7 +103,7 @@ const Footer = ({ isDarkMode }) => {
             <a href="">Sitemap</a>
         </div>
         <div>
-            <p className="text-light-text">©2024 Dashur AI. All Rights Reserved.</p>
+            <p className="text-light-text dark:text-dark-text">©2024 Dashur AI. All Rights Reserved.</p>
         </div>
       </div>
 
