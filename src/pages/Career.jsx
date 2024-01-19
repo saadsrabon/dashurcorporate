@@ -9,7 +9,9 @@ const Career = () => {
   const [id , setId] = useState(null)
 
 const handleOpen = (id) => {
-
+  if(id==id){
+    setShowJob(prev=>!prev)
+  }
   setId(id)
   setShowJob(prev=>!prev)
 }
