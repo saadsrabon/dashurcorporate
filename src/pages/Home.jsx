@@ -18,21 +18,27 @@ const Home = () => {
       </div>
 
       {/* Banner Section */}
-      <div className="relative w-full md:w-[95%] mx-auto -z-[999]">
-        <img src={banner} alt="Your Image" className="w-full h-auto" />
+      <div className=" w-full md:w-[95%] mx-auto -z-[20]">
 
-        <div className="absolute bottom-[-7%] left-0 right-0 flex justify-center">
+        <div className='relative'>
+        <img src={banner} alt="Your Image" className="  w-full h-auto" />
+        <div className="absolute  top-[-10%] md:top-[-5%] left-1/2 transform -translate-x-1/2">
+          <SearchBar />
+        </div>
+        </div>
+       <div className='relative'>
+       <div className="absolute -bottom-10  left-0 right-0 click-btn flex justify-center">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold w-16 h-16 rounded-full shadow-lg flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewBox="0 0 20 26" fill="none">
               <path d="M10 1V25M10 25L19 16M10 25L1 16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>
+       </div>
+        
 
         {/* SearchBar */}
-        <div className="absolute top-[-7%] md:top-[15%] left-1/2 transform -translate-x-1/2">
-          <SearchBar />
-        </div>
+       
       </div>
 
       {/* Service Section */}
