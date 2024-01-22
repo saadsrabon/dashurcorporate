@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import banner from '../assets/hero.png';
 import CardWrapper from '../components/CardWrapper';
 import BasicSlider from '../components/basicSlider';
@@ -8,6 +9,18 @@ import SearchBar from '../components/searchBar';
 import services from '../utils/services.json';
 
 const Home = () => {
+  const [showCookies, setShowCookies] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      
+      localStorage.setItem('showCookies', true);
+      setShowCookies(true);
+      
+    }, 5000);
+  }, []);
+
+  
   return (
     <>
       {/* Hero Section */}
@@ -93,7 +106,7 @@ const Home = () => {
           <BasicSlider />
         </div>
       </div>
-      <CookiesFile/>
+     {showCookies&& <CookiesFile  setShowCookies={setShowCookies}/>} 
     </>
   );
 };
