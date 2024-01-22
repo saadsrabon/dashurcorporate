@@ -106,7 +106,9 @@ const Home = () => {
           <BasicSlider />
         </div>
       </div>
-     {showCookies&& <CookiesFile  setShowCookies={setShowCookies}/>} 
+     {showCookies&& <div className='absolute w-full  bottom-3 left-[50%] -translate-x-[20%]'>
+      <CookiesFile  setShowCookies={setShowCookies}/>
+      </div>} 
     </>
   );
 };
