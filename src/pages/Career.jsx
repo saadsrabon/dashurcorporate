@@ -5,6 +5,7 @@ import BasicTitle from "../components/basicTitle";
 import Chips from "../components/chips";
 import jobData from '../utils/job.json';
 import JobDescription from "../components/JobDescription";
+import UploadResume from "../components/UploadResume";
 
 const Career = () => {
   const [showJob, setShowJob] = useState(false);
@@ -30,6 +31,10 @@ const handleOpen = () => {
             <div className="flex flex-col md:flex-row justify-center md:space-x-6 mt-4">
               <button className="mb-2 md:mb-0 px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">Submit CV/Resume</button>
               <button onClick={handleOpen} className="px-2 py-3 text-light-primary text-base font-medium rounded-lg bg-transparent border-light-primary border-2" >View Job Description</button>
+            </div>
+
+            <div>
+              <UploadResume/>
             </div>
           </CardWrapper>
         ))
