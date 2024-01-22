@@ -22,7 +22,7 @@ const Home = () => {
 
   
   return (
-    <>
+    <div className='relative'>
       {/* Hero Section */}
       <div className="mx-auto py-8 md:py-16 lg:py-24">
         <h2 className="text-light-text text-xl md:text-4xl lg:text-6xl font-bold uppercase dark:text-dark-text text-center lg:leading-[78px]">
@@ -106,10 +106,10 @@ const Home = () => {
           <BasicSlider />
         </div>
       </div>
-     {showCookies&& <div className='absolute w-full  bottom-3 left-[50%] -translate-x-[20%]'>
+     {showCookies&& 
       <CookiesFile  setShowCookies={setShowCookies}/>
-      </div>} 
-    </>
+     } 
+    </div>
   );
 };
 

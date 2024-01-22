@@ -1,48 +1,57 @@
 [
     {   "id":1,
-        "jobtitle": "Software Engineer",
+        "jobtitle": "Software Developer",
         "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite"
+        "jobType":"Onsite",
+        "overview":"Dashur AI, LLC. is one of the leading companies in our field in the area. We are hiring a talented Software Developer professional to join our team. If you're excited to be part of a winning team, Dashur AI is a great place to grow your career.",
+        "responsiblities":[
+            "Collaborate with team members to determine best practices and client requirements for software",
+            "Develop intuitive software that meets and exceeds the needs of the company",
+            "Professionally maintain all software and create updates regularly to address customer and company concerns",
+            "Analyze and test programs and products before formal launch",
+            "Troubleshoot coding problems quickly and efficiently to ensure a productive workplace",
+            "Ensure software security by developing programs to actively monitor the sharing of private information",
+            "Actively seek ways to improve business software processes and interactions",
+            "Aid and support the coaching and training of other team members to ensure all employees are confident in the use of software applications"
+          ],
+          "qualification": [
+            "3-5 years of experience developing and implementing software applications",
+            "Professional program certification in Java is strongly preferred",
+            "Experience working on large-scale software projects",
+            "Professional experience using cybersecurity and open source technology",
+            "Experience developing software utilizing various coding languages including Java, C++, PHP, and Python",
+            "Outstanding collaboration and communication skills are essential",
+            "Experience developing secure software systems based upon industry specifications",
+            "Analyze code for weaknesses and errors, and present detailed plans to improve them",
+            "Experience developing customized code for multiple projects simultaneously"
+          ]
     },
     {   "id":2,
         "jobtitle": "Software Engineer",
         "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite"
-    },
-    {   "id":3,
-        "jobtitle": "Software Engineer",
-        "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite"
-    },
-    {   "id":4,
-        "jobtitle": "Software Engineer",
-        "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite"
-    },
-    {   "id":5,
-        "jobtitle": "Software Engineer",
-        "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite"
-    },
-    {   "id":6,
-        "jobtitle": "Software Engineer",
-        "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite"
-    },
-    {   "id":7,
-        "jobtitle": "Software Engineer",
-        "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite"
-    },
-    {   "id":8,
-        "jobtitle": "Software Engineer",
-        "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite"
-    },
-    {   "id":9,
-        "jobtitle": "Software Engineer",
-        "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite"
+        "jobType":"Onsite",
+        "overview":"Dashur AI, LLC. is one of the leading companies in our field in the area. We are hiring a talented Software Developer professional to join our team. If you're excited to be part of a winning team, Dashur AI is a great place to grow your career.",
+        "responsiblities":[
+            "Collaborate with team members to determine best practices and client requirements for software",
+            "Develop intuitive software that meets and exceeds the needs of the company",
+            "Professionally maintain all software and create updates regularly to address customer and company concerns",
+            "Analyze and test programs and products before formal launch",
+            "Troubleshoot coding problems quickly and efficiently to ensure a productive workplace",
+            "Ensure software security by developing programs to actively monitor the sharing of private information",
+            "Actively seek ways to improve business software processes and interactions",
+            "Aid and support the coaching and training of other team members to ensure all employees are confident in the use of software applications"
+          ],
+          "qualification": [
+            "3-5 years of experience developing and implementing software applications",
+            "Professional program certification in Java is strongly preferred",
+            "Experience working on large-scale software projects",
+            "Professional experience using cybersecurity and open source technology",
+            "Experience developing software utilizing various coding languages including Java, C++, PHP, and Python",
+            "Outstanding collaboration and communication skills are essential",
+            "Experience developing secure software systems based upon industry specifications",
+            "Analyze code for weaknesses and errors, and present detailed plans to improve them",
+            "Experience developing customized code for multiple projects simultaneously"
+          ]
     }
-  
+    
 ]

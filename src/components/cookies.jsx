@@ -6,7 +6,7 @@ import cookiesDoc from '../assets/cookies_dashur.pdf';
 export const CookiesFile = ({showCookies ,setShowCookies}) => {
   const scrollableBoxRef = useRef(null);
   const [autoScroll, setAutoScroll] = useState(true);
- 
+  const [width , setWidth] = useState({width:'w-[40%]' , height:'300px'});
 
 
   useEffect(() => {
@@ -23,16 +23,24 @@ export const CookiesFile = ({showCookies ,setShowCookies}) => {
   return (
   
 
-<div className=" bottom-5 w-[40%] "  id="my_modal_3" >
+<div className={`${width.width} inset-10   absolute top-40 left-[50%] translate-x-[-50%]` }    id="my_modal_3" >
   <div className="modal-boxx ">
     <form method="dialog">
       {/* if there is a button in form, it will close the modal */}
       <button onClick={()=>setShowCookies(prev=>!prev)} className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+      <button onClick={()=>setWidth(prev=>{
+        return {
+          ...prev , 
+        width:'w-[80%]',  height:'500px'
+        }
+        
+      })} className="btn btn-sm btn-circle btn-ghost absolute right-10 top-2"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fillRule="evenodd" clipRule="evenodd" d="M22 5C22 3.34315 20.6569 2 19 2H5C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5ZM20 5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5Z" fill="#ffff"></path> </g></svg></button>
+      <button onClick={()=>setShowCookies(prev=>!prev)} className="btn btn-sm btn-circle btn-ghost absolute right-[72px] top-2"><svg className="w-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M23 13H1v-2h22z"></path><path fill="none" d="M0 0h24v24H0z"></path></g></svg></button>
     </form>
     <div>
         <h2 className="text-4xl font-bold text-center uppercase py-2 ">Cookies</h2>
-        <div className="my-4" style={{ height: '300px', overflowY: 'auto', border: '1px solid #ccc',  }} ref={scrollableBoxRef}>
-      <div style={{ padding: '10px' }}>
+        <div className="my-4" style={{ height:  width.height, overflowY: 'auto', border: '1px solid #ccc',  }} ref={scrollableBoxRef}>
+      <div style={{ padding: '20px' }}>
       
         {/* Add more content as needed */}
         <p>We at dashurai.com use cookies to ensure you get the best experience when you are using our services. This Cookie Policy provides you with clear and comprehensive information about the cookies we use and the purpose for using those cookies on this Platform.
@@ -157,7 +165,7 @@ This Cookie Policy does not cover the links within this site linking to other Pl
        
       </div>
       <div>
-        <label className="">
+        <label className="px-4">
           <input className="mr-2" type="checkbox" checked={autoScroll} onChange={handleCheckboxChange} />
            I accept the cookies
         </label>
