@@ -9,11 +9,7 @@ const Career = () => {
   const [id , setId] = useState(null)
 
 const handleOpen = (id) => {
-  if(id==id){
-    setShowJob(prev=>!prev)
-  }
-  setId(id)
-  setShowJob(prev=>!prev)
+  setShowJob(prev => !prev)
 }
   return (
     <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mx-auto my-12 flex-col items-center px-4">
@@ -27,7 +23,7 @@ const handleOpen = (id) => {
           <CardWrapper key={index}>
             <div className="mb-8 ">
               <h2 className="font-sans text-2xl font-bold text-light-text dark:text-dark-text ">{job?.jobtitle} ({job?.jobType})</h2>
-              {showJob & id ==job.id ?<p className="my-2  text-light-text dark:text-dark-text">{job?.description}</p>:""}
+              {showJob  ?<p className="my-2  text-light-text dark:text-dark-text">{job?.description}</p>:""}
             </div>
             <div className="flex flex-col md:flex-row justify-center md:space-x-6 mt-4">
               <button className="mb-2 md:mb-0 px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">Submit CV/Resume</button>

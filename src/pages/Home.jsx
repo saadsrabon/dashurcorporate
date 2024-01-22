@@ -18,7 +18,7 @@ const Home = () => {
       </div>
 
       {/* Banner Section */}
-      <div className=" w-full md:w-[95%] mx-auto -z-[20]">
+      <div className=" w-full md:w-[95%] mx-auto -z-[999]">
 
         <div className='relative'>
         <img src={banner} alt="Your Image" className="  w-full h-auto" />
