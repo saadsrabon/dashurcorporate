@@ -17,14 +17,14 @@ const handleOpen = () => {
     <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mx-auto my-12 flex-col items-center px-4">
       <div className="flex flex-col justify-center items-center">
         <Chips title="Careers" />
-        <BasicTitle width="w-full md:w-94%" title="Make an Outstanding career with dashur AI" />
+        <BasicTitle width="w-full md:w-[94%] lg:w-[60%]" title="Make an Outstanding career with dashur AI" />
         <p className="text-center md:text-left md:ml-[-45px]">Your feedback and inquiries are important to us, and we're here to <br /> provide the support you need.</p>
       </div>
       {
         jobData.map((job, index) => (
           <CardWrapper key={index}>
             <div className="mb-8 ">
-              <h2 className="font-sans text-2xl font-bold text-light-text dark:text-dark-text ">{job?.jobtitle} ({job?.jobType})</h2>
+              <h2 className="font-sans text-2xl font-bold mb-4 text-light-text dark:text-dark-text ">{job?.jobtitle} ({job?.jobType})</h2>
               {showJob  ?<JobDescription job={job}/>:""}
             </div>
             <div className="flex flex-col md:flex-row justify-center md:space-x-6 mt-4">
