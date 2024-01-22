@@ -1,18 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import CardWrapper from "../components/CardWrapper";
+
 import BasicTitle from "../components/basicTitle";
 import Chips from "../components/chips";
 import jobData from '../utils/job.json';
-import JobDescription from "../components/JobDescription";
-import UploadResume from "../components/UploadResume";
+
+import SingleJob from "../components/SingleJob";
 
 const Career = () => {
-  const [showJob, setShowJob] = useState(false);
+  const [indexData, setIndexData] = useState(0);
 
 
-const handleOpen = () => {
-  setShowJob(prev => !prev)
+const handleOpen = (index) => {
+  setIndexData(index)
 }
   return (
     <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mx-auto my-12 flex-col items-center px-4">
@@ -23,20 +23,7 @@ const handleOpen = () => {
       </div>
       {
         jobData.map((job, index) => (
-          <CardWrapper key={index}>
-            <div className="mb-8 ">
-              <h2 className="font-sans text-2xl font-bold mb-4 text-light-text dark:text-dark-text ">{job?.jobtitle} ({job?.jobType})</h2>
-              {showJob  ?<JobDescription job={job}/>:""}
-            </div>
-            <div className="flex flex-col md:flex-row justify-center md:space-x-6 mt-4">
-              <button className="mb-2 md:mb-0 px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">Submit CV/Resume</button>
-              <button onClick={handleOpen} className="px-2 py-3 text-light-primary text-base font-medium rounded-lg bg-transparent border-light-primary border-2" >View Job Description</button>
-            </div>
-
-            <div>
-              <UploadResume/>
-            </div>
-          </CardWrapper>
+          <SingleJob key={index} job={job} handleOpen={()=>handleOpen(index)} isActive={indexData==index}/>
         ))
       }
     </div>
