@@ -24,15 +24,15 @@ const handleOpen = (index) => {
       </div>
        {/* Tab Version */}
        <div role="tablist" className="tabs tabs-lifted my-12">
-  <a role="tab" className="tab">Job Positions</a>
-  <a role="tab" className="tab tab-active">Learning Lab</a>
+  <a onClick={()=>setTabIndex(0)} role="tab" className={`${tabIndex==0?"tab tab-active font-bold":"tab"}`}>Job Positions</a>
+  <a onClick={()=>setTabIndex(1)} role="tab" className={`${tabIndex==1?"tab tab-active font-bold":"tab"}`}>Learning Lab</a>
   
 
 </div>
       {
-        jobData.map((job, index) => (
+       tabIndex==0?( jobData.map((job, index) => (
           <SingleJob key={index} job={job} handleOpen={()=>handleOpen(index)} isActive={indexData==index}/>
-        ))
+        ))) : ("")
       }
     </div>
   );
