@@ -29,13 +29,26 @@ const UploadResume = () => {
     };
   
     return (
+      <div>
+       <form action="">
+        <div>
+          <input type="text" name="name" />
+        </div>
+        <div>
+          <input type="text" name="phone" />
+        </div>
+        <div>
+          <input type="email" name="email" />
+        </div>
       <div className="file-upload" onDrop={handleDrop} onDragOver={handleDragOver}>
         <h2>File Upload</h2>
-        <input type="file" accept=".docx, .pdf" onChange={handleFileChange} />
+        <input className="apperance-none" type="file" accept=".docx, .pdf" onChange={handleFileChange} />
         <p>or</p>
         <p>Drag and drop a file here</p>
         {selectedFile && <p>Selected file: {selectedFile.name}</p>}
-        <button onClick={handleUpload}>Upload</button>
+        <button className="" onClick={handleUpload}>Upload</button>
+      </div>
+      </form>
       </div>
     );
   };
