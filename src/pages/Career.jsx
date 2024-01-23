@@ -9,6 +9,7 @@ import SingleJob from "../components/SingleJob";
 
 const Career = () => {
   const [indexData, setIndexData] = useState(0);
+  const [tabIndex , setTabIndex] = useState(0);
 
 
 const handleOpen = (index) => {
@@ -21,6 +22,13 @@ const handleOpen = (index) => {
         <BasicTitle width="w-full md:w-[94%] lg:w-[60%]" title="Make an Outstanding career with dashur AI" />
         <p className="text-center md:text-left md:ml-[-45px]">Your feedback and inquiries are important to us, and we're here to <br /> provide the support you need.</p>
       </div>
+       {/* Tab Version */}
+       <div role="tablist" className="tabs tabs-lifted my-12">
+  <a role="tab" className="tab">Job Positions</a>
+  <a role="tab" className="tab tab-active">Learning Lab</a>
+  
+
+</div>
       {
         jobData.map((job, index) => (
           <SingleJob key={index} job={job} handleOpen={()=>handleOpen(index)} isActive={indexData==index}/>

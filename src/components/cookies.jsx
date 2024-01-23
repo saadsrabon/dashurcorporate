@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
-import { Document, Page } from 'react-pdf';
-import cookiesDoc from '../assets/cookies_dashur.pdf';
 
-export const CookiesFile = ({showCookies ,setShowCookies}) => {
+
+export const CookiesFile = ({setShowCookies}) => {
   const scrollableBoxRef = useRef(null);
   const [autoScroll, setAutoScroll] = useState(true);
   const [width , setWidth] = useState({width:'w-[40%]' , height:'300px'});
