@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CardWrapper from "./CardWrapper";
 
 const UploadResume = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -29,16 +30,20 @@ const UploadResume = () => {
     };
   
     return (
-      <div>
-       <form action="">
-        <div>
-          <input type="text" name="name" />
+      <div className="w-[50%]">
+         <CardWrapper>
+       <form className="">
+        <div className="mb-6" >
+          <label className="block" htmlFor="name">Name</label>
+          <input className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="name" />
         </div>
-        <div>
-          <input type="text" name="phone" />
+        <div className="mb-6">
+          <label className="block" htmlFor="phone">Phone</label>
+          <input className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="phone" />
         </div>
-        <div>
-          <input type="email" name="email" />
+        <div className="mb-6">
+          <label className="block" htmlFor="email">Email</label>
+          <input className="appearance-none bg-transparent w-full py-4" type="email" name="email" />
         </div>
       <div className="file-upload" onDrop={handleDrop} onDragOver={handleDragOver}>
         <h2>File Upload</h2>
@@ -49,7 +54,9 @@ const UploadResume = () => {
         <button className="" onClick={handleUpload}>Upload</button>
       </div>
       </form>
+      </CardWrapper>
       </div>
+     
     );
   };
   export default UploadResume;
