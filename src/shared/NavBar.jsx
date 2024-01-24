@@ -4,10 +4,19 @@ import logo from "../assets/logo.png";
 import logolight from "../assets/logolight.png";
 import footerdark from "../assets/footerdark.png"
 import footerlight from "../assets/footerlight.png"
+import { useState } from "react";
 const NavBar = ({ isDarkMode, setIsDarkMode }) => {
       const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+    // State to manage the visibility of the dropdown
+    const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+    // Function to toggle the visibility of the dropdown
+    const toggleDropdown = () => {
+      setDropdownVisible(!isDropdownVisible);
+    };
   return (
     <div className="w-[95%] mx-auto py-8">
       <nav className="hidden md:hidden lg:flex justify-between items-center">
@@ -34,10 +43,34 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
             Capabilities
           </NavLink>
           <NavLink
-            to="/markets"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
+            
+            onClick={() => setDropdownVisible(!isDropdownVisible)}
           >
-            Markets
+          <div className="">
+          <span >Markets</span> 
+            </div>  
+            {isDropdownVisible && (
+            <div className="absolute top-24 z-10 bg-opacity-20 bg-gray-800 border border-white border-opacity-20 backdrop-blur-3xl p-2 space-y-2 rounded-lg">
+              <div className="relative">
+              {/* <div className="absolute -top-6 w-0 h-0 border-b-[20px] bg-opacity-20 bg-gray-800 border-b-gray-800 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent"></div> */}
+              </div>
+              <div className=" grid grid-cols-2 space-x-8 py-3 px-4 ">
+             
+
+                 <div className="flex flex-col">
+                  <NavLink>Defence</NavLink>
+                  <NavLink>Aero Space</NavLink>
+                  <NavLink>Robotics</NavLink>
+                 </div>
+                 <div className="flex flex-col">
+                  <NavLink>Agriculture</NavLink>
+                  <NavLink>Media</NavLink>
+                 </div>
+              </div>
+              {/* Add more NavLink items as needed */}
+            </div>
+          )}
           </NavLink>
           <NavLink
             to="/about"

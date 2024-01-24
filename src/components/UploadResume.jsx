@@ -17,6 +17,10 @@ const UploadResume = () => {
   
     const handleDragOver = (event) => {
       event.preventDefault();
+      const file = event.dataTransfer.files[0];
+      
+        setSelectedFile(file);
+      
     };
   
     const handleUpload = () => {
@@ -30,8 +34,8 @@ const UploadResume = () => {
     };
   
     return (
-      <div className="w-[50%]">
-         <CardWrapper>
+      <div className="w-full">
+         <div className="rounded-lg border border-solid border-white border-opacity-20 dark:bg-gray-800 dark:opacity-100 bg-white bg-opacity-20 shadow-xl px-6 py-10 my-8">
        <form className="">
         <div className="mb-6" >
           <label className="block" htmlFor="name">Name</label>
@@ -43,18 +47,26 @@ const UploadResume = () => {
         </div>
         <div className="mb-6">
           <label className="block" htmlFor="email">Email</label>
-          <input className="appearance-none bg-transparent w-full py-4" type="email" name="email" />
+          <input className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="email" name="email" />
         </div>
       <div className="file-upload" onDrop={handleDrop} onDragOver={handleDragOver}>
-        <h2>File Upload</h2>
-        <input className="apperance-none" type="file" accept=".docx, .pdf" onChange={handleFileChange} />
-        <p>or</p>
-        <p>Drag and drop a file here</p>
-        {selectedFile && <p>Selected file: {selectedFile.name}</p>}
-        <button className="" onClick={handleUpload}>Upload</button>
+        
+        <input className="apperance-none hidden" type="file" accept=".docx, .pdf" onChange={handleFileChange} />
+     
+     
+       
+      <div className="flex flex-col items-center justify-center py-5 px-4 border-white border-opacity-20 rounded-lg border ">
+      <p>Upload or drop your resume in the Word, Google Doc, PDF format</p>
+      {selectedFile && <p>Selected file: {selectedFile.name}</p>}
+      <button onClick={handleUpload} className="mb-2 mt-4  md:mb-0 px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary" >View Job Description</button>
+      </div>
+
+        <div  className="flex justify-center">
+        <button  className=" w-[60%] mb-2 mt-8 md:mb-0 px-8 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary" >Submit</button>
+        </div>
       </div>
       </form>
-      </CardWrapper>
+      </div>
       </div>
      
     );

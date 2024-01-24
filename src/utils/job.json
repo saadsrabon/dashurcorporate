@@ -1,57 +1,140 @@
 [
-    {   "id":1,
-        "jobtitle": "Software Developer",
-        "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite",
-        "overview":"Dashur AI, LLC. is one of the leading companies in our field in the area. We are hiring a talented Software Developer professional to join our team. If you're excited to be part of a winning team, Dashur AI is a great place to grow your career.",
-        "responsiblities":[
-            "Collaborate with team members to determine best practices and client requirements for software",
-            "Develop intuitive software that meets and exceeds the needs of the company",
-            "Professionally maintain all software and create updates regularly to address customer and company concerns",
-            "Analyze and test programs and products before formal launch",
-            "Troubleshoot coding problems quickly and efficiently to ensure a productive workplace",
-            "Ensure software security by developing programs to actively monitor the sharing of private information",
-            "Actively seek ways to improve business software processes and interactions",
-            "Aid and support the coaching and training of other team members to ensure all employees are confident in the use of software applications"
-          ],
-          "qualification": [
-            "3-5 years of experience developing and implementing software applications",
-            "Professional program certification in Java is strongly preferred",
-            "Experience working on large-scale software projects",
-            "Professional experience using cybersecurity and open source technology",
-            "Experience developing software utilizing various coding languages including Java, C++, PHP, and Python",
-            "Outstanding collaboration and communication skills are essential",
-            "Experience developing secure software systems based upon industry specifications",
-            "Analyze code for weaknesses and errors, and present detailed plans to improve them",
-            "Experience developing customized code for multiple projects simultaneously"
-          ]
-    },
-    {   "id":2,
-        "jobtitle": "Software Engineer",
-        "description": "Develops software solutions by studying information needs; conferring with users; studying systems flow, data usage, and work processes; investigating problem areas; following the software development lifecycle.",
-        "jobType":"Onsite",
-        "overview":"Dashur AI, LLC. is one of the leading companies in our field in the area. We are hiring a talented Software Developer professional to join our team. If you're excited to be part of a winning team, Dashur AI is a great place to grow your career.",
-        "responsiblities":[
-            "Collaborate with team members to determine best practices and client requirements for software",
-            "Develop intuitive software that meets and exceeds the needs of the company",
-            "Professionally maintain all software and create updates regularly to address customer and company concerns",
-            "Analyze and test programs and products before formal launch",
-            "Troubleshoot coding problems quickly and efficiently to ensure a productive workplace",
-            "Ensure software security by developing programs to actively monitor the sharing of private information",
-            "Actively seek ways to improve business software processes and interactions",
-            "Aid and support the coaching and training of other team members to ensure all employees are confident in the use of software applications"
-          ],
-          "qualification": [
-            "3-5 years of experience developing and implementing software applications",
-            "Professional program certification in Java is strongly preferred",
-            "Experience working on large-scale software projects",
-            "Professional experience using cybersecurity and open source technology",
-            "Experience developing software utilizing various coding languages including Java, C++, PHP, and Python",
-            "Outstanding collaboration and communication skills are essential",
-            "Experience developing secure software systems based upon industry specifications",
-            "Analyze code for weaknesses and errors, and present detailed plans to improve them",
-            "Experience developing customized code for multiple projects simultaneously"
-          ]
-    }
-    
+  {
+    "id": 1,
+    "jobtitle": "Software Developer",
+    "jobType": "Onsite",
+    "overview": "Dashur AI, LLC. is one of the leading companies in our field in the area. We are hiring a talented Software Developer professional to join our team. If you're excited to be part of a winning team, Dashur AI is a great place to grow your career.",
+    "responsibilities": [
+      "Collaborate with team members to determine best practices and client requirements for software",
+      "Develop intuitive software that meets and exceeds the needs of the company",
+      "Professionally maintain all software and create updates regularly to address customer and company concerns",
+      "Analyze and test programs and products before formal launch",
+      "Troubleshoot coding problems quickly and efficiently to ensure a productive workplace",
+      "Ensure software security by developing programs to actively monitor the sharing of private information",
+      "Actively seek ways to improve business software processes and interactions",
+      "Aid and support the coaching and training of other team members to ensure all employees are confident in the use of software applications"
+    ],
+    "qualification": [
+      "3-5 years of experience developing and implementing software applications",
+      "Professional program certification in Java is strongly preferred",
+      "Experience working on large-scale software projects",
+      "Professional experience using cybersecurity and open-source technology",
+      "Experience developing software utilizing various coding languages including Java, C++, PHP, and Python",
+      "Outstanding collaboration and communication skills are essential",
+      "Experience developing secure software systems based upon industry specifications",
+      "Analyze code for weaknesses and errors, and present detailed plans to improve them",
+      "Experience developing customized code for multiple projects simultaneously"
+    ]
+  },
+  {
+    "id": 2,
+    "jobtitle": "Backend Engineer",
+    "jobType": "Onsite",
+    "overview": "Dashur AI, Inc., we are the leading company in our industry in the Las Vegas area. We are hiring an experienced Backend Engineer to help us continue growth. If you're dedicated and ambitious, Dashur AI, Inc. is an excellent place to grow your career!",
+    "responsibilities": [
+      "Generate recyclable code libraries",
+      "Implement ongoing security systems",
+      "Attend regular meetings with the frontend team to expose weaknesses and problems",
+      "Routinely inspect server code for speed optimization",
+      "Conceptualize and implement solutions for data storage",
+      "Configure usability of all front-side applications",
+      "Maintain a stable server without any downtime",
+      "Keep a backup library before any large changes to servers"
+    ],
+    "qualification": [
+      "5+ years of experience in a related field",
+      "Large capacity for attention to detail",
+      "Ability to meet tight deadlines",
+      "Capable of prioritizing multiple projects to meet goals without management oversight",
+      "Vast knowledge of PHP, Python, Ruby, Java, .NET, JavaScript, etc.",
+      "Familiarity with front-side platforms such JAVA, HTML5 and CSS3",
+      "In-depth knowledge of AWS, Azure, and Firebase",
+      "Understanding of accessibility and server compliance",
+      "Previous experience working with multiple platforms such as Desktop, Mobile, Tablet, etc.",
+      "Experience with Kubernetes and Docker."
+    ]
+  },
+  {
+    "id": 3,
+    "jobtitle": "Mobile Developer",
+    "jobType": "Onsite",
+    "overview": "Dashur AI, LLC is an emerging tech firm in the Las Vegas metropolitan area. We are looking to hire an experienced Mobile Developer to help us keep growing. If you're hard-working and dedicated, Dashur AI is an excellent place to grow your career.",
+    "responsibilities": [
+      "Identify and plan for new features",
+      "Develop application programming interfaces (APIs) to support mobile functionality",
+      "Suggest and implement new mobile products, applications, and protocols",
+      "Remain up to date with the terminology, concepts, and best practices for coding mobile apps",
+      "Work closely with colleagues to constantly innovate app functionality and design",
+      "Use and adapt existing web applications for apps",
+      "Write unit and UI tests to identify malfunctions",
+      "Communicate with users to understand their needs and experiences"
+    ],
+    "qualification": [
+      "4+ years of demonstrable experience",
+      "Demonstrable portfolio of released applications on the App store or the Android market",
+      "Extensive knowledge of at least one programming language like Swift and Java",
+      "Familiarity with OOP design principles",
+      "Experience with third-party libraries and APIs",
+      "Superior analytical skills with a good problem-solving attitude",
+      "Ability to perform in a team environment",
+      "Strong oral and written communication skills",
+      "Ability to interpret and follow technical plans",
+      "Knowledge of Jira, Git, or Basecamp"
+    ]
+  },
+  {
+    "id": 4,
+    "jobtitle": "QA Engineer",
+    "jobType": "Onsite",
+    "overview": "Dashur AI, LLC. is one of the leading companies in our field in the area. We are hiring a talented QA Engineer professional to join our team. If you're excited to be part of a winning team, Dashur AI is a great place to grow your career.",
+    "responsibilities": [
+      "Create tests to identify software problems",
+      "Analyze bugs and errors found during testing",
+      "Document results of tests for the software development team",
+      "Recommend improvements in software to enhance user experiences",
+      "Motivate the development process for efficiency and performance",
+      "Works together with the software developer to enhance and improve programs",
+      "Research and compare similar competitor products",
+      "Maintain updated knowledge of industry trends and advancements"
+    ],
+    "qualification": [
+      "Extensive experience in software development and testing",
+      "High proficiency in computer technology and programming languages",
+      "Strong knowledge of Linux and Microsoft Windows",
+      "Familiarity with Amazon web services",
+      "In-depth understanding of Java, Python, SQL, C++ and XML",
+      "Knowledge of Jira, Basecamp, and Discord are helpful",
+      "Exceptional attention to detail",
+      "Excellent analytical and problem-solving skills",
+      "Good oral and written communication skills",
+      "Great team player and able to work efficiently with minimal supervision"
+    ]
+  },
+  {
+    "id": 5,
+    "jobtitle": "iOS Engineer",
+    "jobType": "Onsite",
+    "overview": "Dashur AI, LLC. is one of the leading companies in our field in the area. We are hiring a talented iOS Engineer professional to join our team. If you're excited to be part of a winning team, Dashur AI is a great place to grow your career.",
+    "responsibilities": [
+      "Design and build applications for iOS platforms",
+      "Ensure performance and quality of the application",
+      "Collaborate with cross-functional team to define and design the app",
+      "Perform checks on correct functionality of the app",
+      "Integrate application with backend tools such as cloud, APIs, and push notifications",
+      "Responsible for helping maintain code quality, organization, and automation",
+      "Responsible for providing prototypes and proofs of concepts",
+      "Use encryption tools to safeguard content"
+    ],
+    "qualification": [
+      "IT Certification, required",
+      "Expert in Objective-C or Swift programming",
+      "UI and UX experience",
+      "Proficiency with 2D and 3D graphics frameworks",
+      "Experience with iOS frameworks",
+      "Adept with benchmarking and modification",
+      "Familiar with Apple's design principles and interface guidelines",
+      "Proficiency with offline storage, threading, and performance tuning",
+      "Knowledgeable of cloud's message API and push notifications"
+    ]
+  }
 ]

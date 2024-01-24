@@ -9,7 +9,7 @@ const JobDescription = ({job}) => {
         <p className='mb-4'>{job?.overview}</p>
         <p className='my-2 font-bold'>Responsibilities for  {job?.jobtitle}</p>
         <ul className='list-disc ml-6'>
-            {job?.responsiblities.map((item) => (<li className='' key={item}>{item}</li>))}
+            {job?.responsibilities.map((item) => (<li className='' key={item}>{item}</li>))}
         </ul>
         <p className='my-4 font-bold'>Qualifications for {job?.jobtitle}</p>
         <ul className='list-disc ml-6'>
