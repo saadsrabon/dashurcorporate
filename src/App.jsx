@@ -12,6 +12,7 @@ import MessageParser from "./chatbot/MessageParser";
 import ActionProvider from "./chatbot/ActionProvider";
 import chatBotGlow from './assets/Ellipse 5.svg'
 import { CookiesFile } from "./components/cookies";
+import { AnimatePresence } from "framer-motion";
  export const ChatbotContext = createContext();
 function App() {
 
@@ -71,7 +72,7 @@ function App() {
       />
       }
   </ChatbotContext.Provider>
-   
+  
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/contact" element={<Contact/>} />
@@ -80,6 +81,7 @@ function App() {
         <Route path="/career" element={<Career/>} />
         
       </Routes>
+   
    
     </MainLayout>
     </BrowserRouter>

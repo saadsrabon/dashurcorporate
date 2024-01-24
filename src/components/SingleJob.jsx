@@ -5,9 +5,11 @@ import CardWrapper from './CardWrapper'
 import JobDescription from './JobDescription'
 import UploadResume from './UploadResume'
 
+
 const SingleJob = ({job ,handleOpen ,isActive}) => {
   const [openResume, setOpenResume] = useState(0);
   return (
+  
     <CardWrapper>
       <div className='relative'>
     <div className="mb-8 ">
@@ -24,6 +26,7 @@ const SingleJob = ({job ,handleOpen ,isActive}) => {
     
     </div>
   </CardWrapper>
+
   )
 }
 

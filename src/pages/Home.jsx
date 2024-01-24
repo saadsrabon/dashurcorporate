@@ -110,9 +110,7 @@ const Home = () => {
      {showCookies&& 
       <CookiesFile  setShowCookies={setShowCookies}/>
      } 
-     <div>
-      <StackedCards/>
-     </div>
+    
     </div>
   );
 };

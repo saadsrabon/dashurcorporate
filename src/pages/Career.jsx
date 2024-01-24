@@ -31,6 +31,7 @@ const handleOpen = (index) => {
 </div>
       {
        tabIndex==0?( jobData.map((job, index) => (
+        
           <SingleJob key={index} job={job} handleOpen={()=>handleOpen(index)} isActive={indexData==index}/>
         ))) : ("")
       }
