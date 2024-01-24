@@ -180,3 +180,54 @@ backdrop-filter: blur(50px);
 }
 }
 
+.techtool{
+  scrollbar-color: red;
+  scrollbar-base-color: red;
+}
+
+
+.pentagon {
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(40, 191, 241 ,20%);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+.pentagons {
+  position:relative;
+ stroke: rgb(40, 191, 241 ,20%);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.pentagons::after{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width:468px ;
+  height: 468px;
+
+  background-color: rgb(40, 191, 241 ,0.20);;
+  border-radius: 16px;
+ 
+  clip-path:polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%) ;
+
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: #f00;
+  border-radius: 50%;
+}
+
+
+/* @media (max-width: 768px) {
+  .dot {
+    width: 3px;
+    height: 3px;
+  }
+} */

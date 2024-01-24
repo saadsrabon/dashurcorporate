@@ -20,7 +20,7 @@ export default function App() {
         slidesPerView={1}
         spaceBetween={20}
         loop={true}
-        pagination={true}
+        style={{overflow: 'visible',}}
         modules={[Pagination, Navigation]}
         className="mySwiper"
         breakpoints={

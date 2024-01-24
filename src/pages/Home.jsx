@@ -7,6 +7,7 @@ import Chips from '../components/chips';
 import { CookiesFile } from '../components/cookies';
 import SearchBar from '../components/searchBar';
 import services from '../utils/services.json';
+import StackedCards from '../components/Stackcard';
 
 const Home = () => {
   const [showCookies, setShowCookies] = useState(false);
@@ -109,6 +110,9 @@ const Home = () => {
      {showCookies&& 
       <CookiesFile  setShowCookies={setShowCookies}/>
      } 
+     <div>
+      <StackedCards/>
+     </div>
     </div>
   );
 };
