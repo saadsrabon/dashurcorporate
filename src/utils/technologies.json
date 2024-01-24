@@ -1,15 +1,27 @@
 [
     {
       "title": "Front End Development",
-      "description": "Front End Development involves creating components and interfaces using various technologies.",
+      "description": "Front-end development leverages JavaScript frameworks like React, Angular, and Vue.js to streamline the process of building dynamic and responsive user interfaces. These frameworks empower developers to efficiently manage state, handle user interactions, and create modular components, enhancing both the efficiency and scalability of web applications.",
       "technology": [
       
         {"name": "JavaScript",
-        "imageLink": "https://i.ibb.co/xMsXXC2/Java-Script.png"},
+        "imageLink": "https://i.ibb.co/xMsXXC2/Java-Script.png",
+        "details":""
+      },
+        
         {"name": "TypeScript",
         "imageLink": "https://i.ibb.co/0GMpnJr/Type-Script.png"},
         {"name": "React",
-        "imageLink": "https://i.ibb.co/6t1wyks/React.png"}
+        "imageLink": "https://i.ibb.co/6t1wyks/React.png"},
+        {"name": "Angular",
+        "imageLink": "https://i.ibb.co/3MmmkS2/Angular.png"},
+        {"name": "Vue",
+        "imageLink": "https://i.ibb.co/xGdkq6H/Vue.png"},
+        {"name": "Jupyter",
+        "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png",
+        "details":"Jupyter Notebook is often used by programmers, data scientists and students to document  and demonstrate coding workflows or simply experiment with code."
+      }
+        
       ]
     },
     {

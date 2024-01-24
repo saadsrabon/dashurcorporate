@@ -14,9 +14,9 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
 
     // Function to toggle the visibility of the dropdown
-    const toggleDropdown = () => {
-      setDropdownVisible(!isDropdownVisible);
-    };
+    // const toggleDropdown = () => {
+    //   setDropdownVisible(!isDropdownVisible);
+    // };
   return (
     <div className="w-[95%] mx-auto py-8">
       <nav className="hidden md:hidden lg:flex justify-between items-center">
@@ -55,17 +55,17 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
               <div className="relative">
               {/* <div className="absolute -top-6 w-0 h-0 border-b-[20px] bg-opacity-20 bg-gray-800 border-b-gray-800 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent"></div> */}
               </div>
-              <div className=" grid grid-cols-2 space-x-8 py-3 px-4 ">
+              <div className=" grid grid-cols-2 space-x-8 py-3 px-4  ">
              
 
                  <div className="flex flex-col">
-                  <NavLink>Defence</NavLink>
-                  <NavLink>Aero Space</NavLink>
-                  <NavLink>Robotics</NavLink>
+                  <NavLink>Department of Defense</NavLink>
+                  <NavLink>Manufacturing</NavLink>
+                  <NavLink>Aviation</NavLink>
                  </div>
                  <div className="flex flex-col">
-                  <NavLink>Agriculture</NavLink>
-                  <NavLink>Media</NavLink>
+                  <NavLink>Hospitality</NavLink>
+                  <NavLink>Healthcare</NavLink>
                  </div>
               </div>
               {/* Add more NavLink items as needed */}

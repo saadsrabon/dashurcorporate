@@ -17,7 +17,7 @@ export default function App() {
     <div className=''>
         
       <Swiper
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={20}
         loop={true}
         pagination={true}
@@ -30,11 +30,11 @@ export default function App() {
                     spaceBetween: 10
                 },
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 20
                 },
                 1024: {
-                    slidesPerView: 3,
+                    slidesPerView: 1,
                     spaceBetween: 30
                 }
             }
