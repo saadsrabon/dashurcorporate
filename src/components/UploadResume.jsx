@@ -1,5 +1,6 @@
 import { useState } from "react";
-import CardWrapper from "./CardWrapper";
+
+
 
 const UploadResume = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -34,6 +35,7 @@ const UploadResume = () => {
     };
   
     return (
+      
       <div className="w-full">
          <div className="rounded-lg border border-solid border-white border-opacity-20  dark:bg-gray-800 dark:opacity-100 bg-white bg-opacity-100 shadow-xl px-6 py-10 my-8">
        <form className="">
@@ -68,6 +70,7 @@ const UploadResume = () => {
       </form>
       </div>
       </div>
+
      
     );
   };
