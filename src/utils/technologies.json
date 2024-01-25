@@ -16,7 +16,9 @@
         {"name": "Angular",
         "imageLink": "https://i.ibb.co/3MmmkS2/Angular.png"},
         {"name": "Vue",
-        "imageLink": "https://i.ibb.co/xGdkq6H/Vue.png"},
+        "imageLink": "https://i.ibb.co/xGdkq6H/Vue.png"
+      
+      },
         {"name": "Jupyter",
         "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png",
         "details":"Jupyter Notebook is often used by programmers, data scientists and students to document  and demonstrate coding workflows or simply experiment with code."

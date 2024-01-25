@@ -1,0 +1,23 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:5173/</loc>
+</url>
+<url>
+<loc>http://localhost:5173/about</loc>
+</url>
+<url>
+<loc>http://localhost:5173/capabilities</loc>
+</url>
+<url>
+<loc>http://localhost:5173/career</loc>
+</url>
+<url>
+<loc>http://localhost:5173/carrer</loc>
+</url>
+<url>
+<loc>http://localhost:5173/contact</loc>
+</url>
+<url>
+<loc>http://localhost:5173/markets</loc>
+</url>
+</urlset>
