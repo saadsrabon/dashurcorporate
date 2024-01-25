@@ -24,8 +24,8 @@ const handleOpen = (index) => {
       </div>
        {/* Tab Version */}
        <div role="tablist" className="tabs tabs-lifted my-12">
-  <a onClick={()=>setTabIndex(0)} role="tab" className={`${tabIndex==0?"tab tab-active font-bold":"tab"}`}>Job Positions</a>
-  <a onClick={()=>setTabIndex(1)} role="tab" className={`${tabIndex==1?"tab tab-active font-bol":"tab"}`}>Learning Lab</a>
+  <a onClick={()=>setTabIndex(0)} role="tab" className={`${tabIndex==0?"tab tab-active font-bold  dark:text-dark-text":"tab text-light-text dark:text-dark-text"}`}>Job Positions</a>
+  <a onClick={()=>setTabIndex(1)} role="tab" className={`${tabIndex==1?"tab tab-active font-bol  dark:text-dark-text":"tab text-light-text dark:text-dark-text"}`}>Learning Lab</a>
   
 
 </div>

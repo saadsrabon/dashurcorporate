@@ -13,12 +13,12 @@ const TechnologiesCard = ({item}) => {
                 <h2 className='uppercase  '>{title}</h2>
                 </div>
                 <div className='flex justify-center items-center'>
-                <p className='text-light-text w-[80%] my-4 text-left text-base leading-6  dark:text-[#D2D2D2]'>
+                <p className='text-light-text w-[80%] my-4 text-center lg:text-left text-base leading-6  dark:text-[#D2D2D2]'>
                {description}
                 </p>
                 </div>
 
-              <div className='grid grid-cols-6  py-8 place-items-center'>
+              <div className='grid grid-cols-2  md:grid-cols-4 lg:grid-cols-6  py-8 place-items-center'>
               {
                 technology?.map((item,index) => (
                   <div onMouseLeave={()=>setTooltipOpen(null)}  onMouseEnter={()=>setTooltipOpen(index)} className="relative techtool " key={index}>
