@@ -2,7 +2,9 @@
 import { NavLink } from "react-router-dom";
 import footerdark from "../assets/footerdark.png"
 import footerlight from "../assets/footerlight.png"
-
+import term from "../assets/website_tc_dashur.pdf"
+import privacy from "../assets/legal_dashur.pdf"
+import cookies from "../assets/cookies_dashur.pdf"
 
 
 const Footer = ({ isDarkMode }) => {
@@ -97,9 +99,9 @@ const Footer = ({ isDarkMode }) => {
       </nav>
       <div className="hidden text-light-text dark:text-dark-text md:hidden lg:flex  justify-between items-center py-2">
         <div className=" space-x-4">
-            <a href="">Privacy </a>
-            <a href="">Terms</a>
-            <a href="">Cookies</a>
+            <a href={privacy}>Privacy </a>
+            <a href={term}>Terms</a>
+            <a href={cookies}>Cookies</a>
             <a href="">Sitemap</a>
         </div>
         <div>
