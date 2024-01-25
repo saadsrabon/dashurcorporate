@@ -1,5 +1,8 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import { ChatBotHeader } from '../components/chatBotHeader';
+import StartBtn from '../chatBotWidgets/startBtn';
+import CustomMesages from '../chatBotWidgets/CustomMesages';
+import Markets from '../chatBotWidgets/Markets';
 
 const config = {
   initialMessages: [createChatBotMessage(`Welcome to Dashur AI Chatbot`)],
@@ -13,6 +16,19 @@ const config = {
     userAvatar:()=>"",
    
   },
+  customMessages: {
+    custom: (props) => <CustomMesages {...props} />,
+  },
+  widgets:[
+    {
+      widgetName:"startBtnn",
+      widgetFunc:(props)=> <StartBtn {...props}/>
+    },
+    {
+      widgetName:"chips",
+      widgetFunc:(props)=> <Markets {...props}/>
+    },
+  ],
   }
  
 

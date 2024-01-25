@@ -1,9 +1,6 @@
 
 import Chips from "../components/chips"
 import aboutBanner from "../assets/about.png"
-import CardWrapper from './../components/CardWrapper';
-import markets from '../assets/markets.png'
-
 import { motion } from "framer-motion";
 import BasicTitle from "../components/basicTitle";
 
