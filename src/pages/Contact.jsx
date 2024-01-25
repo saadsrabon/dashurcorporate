@@ -9,9 +9,9 @@ const Contact = () => {
               <div className="flex ">
               <Chips title="Contact Us"/>
               </div>
-              <div className="flex  flex-col items-center w-3/4 md:w-2/4 lg:w-[40%]">
+              <div className="flex  flex-col items-center w-3/4 md:w-2/4 lg:w-[60%]">
         <h2 className="text-light-text text-center leading-snug md:leading-normal py-4 text-[24px] md:text-5xl uppercase font-sans font-bold  dark:text-dark-text">Connecting Dreams, Crafting Realities</h2>
-        <p className="text-light-text dark:text-dark-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat ipsum odit cupiditate nostrum delectus a, asperiores sequi nesciunt ullam eius, quis molestiae eos labore voluptatem officiis. Tenetur, eos, maiores odit optio, fuga provident delectus nam est laudantium assumenda saepe consequatur.</p>     
+             
     </div>
              
       </div>
@@ -24,13 +24,13 @@ const Contact = () => {
               <img src="" alt="" />
               <div>
               <h2 className="text-light-text dark:text-dark-text font-bold">Email Us</h2>
-              <p className="text-light-text dark:text-dark-text">contact@dashurai.com</p>
+              <a href="mailto:contact@dashurai.com" className="text-light-text dark:text-dark-text">contact@dashurai.com</a>
               </div>
             </div>
             <div>
-              <button className="px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">
+              <a href="mailto:contact@dashurai.com" className=" px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">
                 Email Now
-              </button>
+              </a>
             </div>
           </div>
         </CardWrapper>
@@ -44,9 +44,9 @@ const Contact = () => {
               </div>
             </div>
             <div className="shrink-0">
-              <button className="px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">
+              <a href="tel:(702) 960-4800" className="px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary">
               Get In Touch
-              </button>
+              </a>
             </div>
           </div>
         </CardWrapper>
