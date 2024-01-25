@@ -64,7 +64,7 @@ const Home = () => {
               <BasicTitle title="Celebrating Excellence, Delivering Quality" />
             </div>
             <div className="w-full md:w-[57%] mx-auto">
-              <p className="text-light-text text-base leading-6 text-center dark:text-[#D2D2D2]">
+              <p className="-z-10 text-light-text text-base leading-6 text-center dark:text-[#D2D2D2]">
                 An innovative tech company dedicated to shaping the future through cutting-edge solutions and exceptional service.
               </p>
             </div>

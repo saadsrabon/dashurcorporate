@@ -5,6 +5,16 @@ import logolight from "../assets/logolight.png";
 import footerdark from "../assets/footerdark.png"
 import footerlight from "../assets/footerlight.png"
 import { useState } from "react";
+
+const itemVariants= {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 300, damping: 24 }
+  },
+  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+};
+
 const NavBar = ({ isDarkMode, setIsDarkMode }) => {
       const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -103,16 +113,72 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
         </div>
       </nav>
       {/* Mobile menu */}
-     <nav className="flex md:flex lg:hidden justify-between">
+     <nav className="flex relative md:flex lg:hidden justify-between ">
         {/* Logo */}
-        <div>
-          {isDarkMode ? (
-            <img className="w-48" src={footerdark} alt="" />
-          ) : (
-            <img className="w-48" src={footerlight} alt="" />
-          )}
-        </div>
+        {/* Mobile Menu */}
+        <div className=" absolute z-50 flex flex-col items-center  py-8 bg-light-primary bg-opacity-100  w-full">
+          <NavLink
+            to="/"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/capabilities"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+          >
+            Capabilities
+          </NavLink>
+          <NavLink
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+            
+            onClick={() => setDropdownVisible(!isDropdownVisible)}
+          >
+          <div className="">
+          <span >Markets</span> 
+            </div>  
+            {isDropdownVisible && (
+            <div className="absolute top-24 z-10 bg-opacity-20 bg-gray-800 border border-white border-opacity-20 backdrop-blur-3xl p-2 space-y-2 rounded-lg">
+              <div className="relative">
+              {/* <div className="absolute -top-6 w-0 h-0 border-b-[20px] bg-opacity-20 bg-gray-800 border-b-gray-800 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent"></div> */}
+              </div>
+              <div className=" grid grid-cols-2 space-x-8 py-3 px-4  ">
+             
 
+                 <div className="flex flex-col">
+                  <NavLink>Department of Defense</NavLink>
+                  <NavLink>Manufacturing</NavLink>
+                  <NavLink>Aviation</NavLink>
+                 </div>
+                 <div className="flex flex-col">
+                  <NavLink>Hospitality</NavLink>
+                  <NavLink>Healthcare</NavLink>
+                 </div>
+              </div>
+              {/* Add more NavLink items as needed */}
+            </div>
+          )}
+          </NavLink>
+          <NavLink
+            to="/about"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+          >
+            Contact Us
+          </NavLink>
+          <NavLink
+            to="/career"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+          >
+            Careers
+          </NavLink>
+        </div>
+       {/*  Menu  */}
         {/* toggle Button */}
         <div className="flex space-x-4 items-center">
         <div className="">
