@@ -19,7 +19,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
       const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
-
+ const [isOpen, setIsOpen] = useState(false);
     // State to manage the visibility of the dropdown
     const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -113,11 +113,19 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
         </div>
       </nav>
       {/* Mobile menu */}
-     <nav className="flex relative md:flex lg:hidden justify-between ">
+     <nav className="flex md:flex lg:hidden justify-between">
         {/* Logo */}
-        {/* Mobile Menu */}
-        <div className=" absolute z-50 flex flex-col items-center  py-8 bg-light-primary bg-opacity-100  w-full">
-          <NavLink
+        <div>
+          {isDarkMode ? (
+            <img className="w-48" src={footerdark} alt="" />
+          ) : (
+            <img className="w-48" src={footerlight} alt="" />
+          )}
+        </div>
+{isOpen && <div className=" absolute top-20 left-[50%] translate-x-[-50%] z-50 flex flex-col items-center  py-8 bg-light-primary bg-opacity-100  w-[90%] rounded-lg ">
+          
+          <NavLink 
+          
             to="/"
             className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
           >
@@ -177,8 +185,9 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
           >
             Careers
           </NavLink>
-        </div>
-       {/*  Menu  */}
+        </div>}
+        
+
         {/* toggle Button */}
         <div className="flex space-x-4 items-center">
         <div className="">
@@ -192,7 +201,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
         </div>
 
         {/* Humburger menu */}
-        <div>
+        <div onClick={()=>setIsOpen(!isOpen)} >
  {
   isDarkMode?       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14" fill="none">
   <path d="M1.66667 14C1.33611 14 1.05903 13.8882 0.835417 13.6646C0.611806 13.441 0.5 13.1639 0.5 12.8333C0.5 12.5028 0.611806 12.2257 0.835417 12.0021C1.05903 11.7785 1.33611 11.6667 1.66667 11.6667H20.3333C20.6639 11.6667 20.941 11.7785 21.1646 12.0021C21.3882 12.2257 21.5 12.5028 21.5 12.8333C21.5 13.1639 21.3882 13.441 21.1646 13.6646C20.941 13.8882 20.6639 14 20.3333 14H1.66667ZM1.66667 8.16667C1.33611 8.16667 1.05903 8.05486 0.835417 7.83125C0.611806 7.60764 0.5 7.33056 0.5 7C0.5 6.66944 0.611806 6.39236 0.835417 6.16875C1.05903 5.94514 1.33611 5.83333 1.66667 5.83333H20.3333C20.6639 5.83333 20.941 5.94514 21.1646 6.16875C21.3882 6.39236 21.5 6.66944 21.5 7C21.5 7.33056 21.3882 7.60764 21.1646 7.83125C20.941 8.05486 20.6639 8.16667 20.3333 8.16667H1.66667ZM1.66667 2.33333C1.33611 2.33333 1.05903 2.22153 0.835417 1.99792C0.611806 1.77431 0.5 1.49722 0.5 1.16667C0.5 0.836111 0.611806 0.559028 0.835417 0.335417C1.05903 0.111806 1.33611 0 1.66667 0H20.3333C20.6639 0 20.941 0.111806 21.1646 0.335417C21.3882 0.559028 21.5 0.836111 21.5 1.16667C21.5 1.49722 21.3882 1.77431 21.1646 1.99792C20.941 2.22153 20.6639 2.33333 20.3333 2.33333H1.66667Z" fill="#EBEBEB"/>
