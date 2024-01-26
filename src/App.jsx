@@ -11,16 +11,15 @@ import config from "./chatbot/config";
 import MessageParser from "./chatbot/MessageParser";
 import ActionProvider from "./chatbot/ActionProvider";
 import chatBotGlow from './assets/Ellipse 5.svg'
-import { CookiesFile } from "./components/cookies";
-import { AnimatePresence } from "framer-motion";
+
  export const ChatbotContext = createContext();
 function App() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const[chatbotOpen,setChatbotOpen]=useState(false)
+  const[chatbotOpen,setChatbotOpen]=useState(true)
 
-
+console.log(chatbotOpen)
   useEffect(() => {
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: light)').matches;
    console.log(prefersDarkMode)
@@ -59,7 +58,7 @@ function App() {
  
     >  
     
-      <div onClick={()=>setChatbotOpen(prev=>!prev)} className="fixed top-72 right-5">
+      <div onClick={()=>{ console.log("hello") ,setChatbotOpen(prev=>!prev)}} className="fixed top-72 right-5 botMainAvatar">
          <img src={chatBotGlow} alt="" />
       </div>
  

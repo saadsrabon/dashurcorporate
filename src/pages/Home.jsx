@@ -1,25 +1,25 @@
-import { useEffect, useState } from 'react';
+
 import banner from '../assets/hero.png';
 import CardWrapper from '../components/CardWrapper';
 import BasicSlider from '../components/basicSlider';
 import BasicTitle from '../components/basicTitle';
 import Chips from '../components/chips';
-import { CookiesFile } from '../components/cookies';
+// import { CookiesFile } from '../components/cookies';
 import SearchBar from '../components/searchBar';
 import services from '../utils/services.json';
-import StackedCards from '../components/Stackcard';
+
 
 const Home = () => {
-  const [showCookies, setShowCookies] = useState(false);
+  // const [showCookies, setShowCookies] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
+  // useEffect(() => {
+  //   setTimeout(() => {
       
-      localStorage.setItem('showCookies', true);
-      setShowCookies(true);
+  //     localStorage.setItem('showCookies', true);
+  //     setShowCookies(true);
       
-    }, 5000);
-  }, []);
+  //   }, 5000);
+  // }, []);
 
   
   return (
@@ -107,10 +107,10 @@ const Home = () => {
           <BasicSlider />
         </div>
       </div>
-     {showCookies&& 
+     {/* {showCookies&& 
       <CookiesFile  setShowCookies={setShowCookies}/>
      } 
-    
+     */}
     </div>
   );
 };

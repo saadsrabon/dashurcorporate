@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-;
+
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const initalAction = () => {
