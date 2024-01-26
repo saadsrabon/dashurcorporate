@@ -18,15 +18,15 @@ const TechnologiesCard = ({item}) => {
                 </p>
                 </div>
 
-              <div className='grid grid-cols-2  md:grid-cols-4 lg:grid-cols-6  py-8 place-items-center'>
+              <div className='grid grid-cols-2  md:grid-cols-4 lg:grid-cols-6  py-8 gap-4'>
               {
                 technology?.map((item,index) => (
                   <div onMouseLeave={()=>setTooltipOpen(null)}  onMouseEnter={()=>setTooltipOpen(index)} className="relative techtool " key={index}>
                     <div  className='flex  mb-2 techtool   space-x-2 items-center border border-white border-opacity-20 px-3.5 py-2 rounded-lg' data-tip="hello world fgkhskfghksfhg">
                    <div className="w-8 ">
-                   <img className="w-[100%]" src={item?.imageLink} alt="" />
+                   <img className="w-[100%] grow-0" src={item?.imageLink} alt="" />
                    </div>
-                    <h2  className="text-light-text  dark:text-dark-text">{item?.name}</h2>
+                    <h2  className="text-light-text text-base  dark:text-dark-text">{item?.name}</h2>
                 </div>
                 {
                   tooltipOpen == index &&(<div className={`absolute top-[70px] -left-36 ${tooltipOpen>0?"visible":""}  w-[320px] `}>

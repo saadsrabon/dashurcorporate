@@ -97,7 +97,7 @@ const Home = () => {
           <BasicTitle width="w-full md:w-[70%]" title="Embrace Innovation, Master Tomorrow" />
         </div>
         <div className="w-full md:w-[57%] mx-auto">
-          <p className="text-light-text text-base leading-6 dark:text-[#D2D2D2]">
+          <p className="text-light-text text-center text-base leading-6 dark:text-[#D2D2D2]">
             An innovative tech company dedicated to shaping the future through cutting-edge solutions and exceptional service.
           </p>
         </div>
