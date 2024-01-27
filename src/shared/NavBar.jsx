@@ -21,7 +21,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
   };
  const [isOpen, setIsOpen] = useState(false);
     // State to manage the visibility of the dropdown
-    const [isDropdownVisible, setDropdownVisible] = useState(false);
+   
 
     // Function to toggle the visibility of the dropdown
     // const toggleDropdown = () => {
@@ -53,7 +53,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
             About Us
           </NavLink>
           <NavLink
-            to="/capabilities"
+            
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
             Capabilities
@@ -116,7 +116,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
             About Us
           </NavLink>
           <NavLink
-            to="/capabilities"
+            
             className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
           >
             Capabilities

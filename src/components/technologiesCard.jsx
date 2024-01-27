@@ -10,7 +10,7 @@ const TechnologiesCard = ({item}) => {
     <div className='techCard techtool  py-8 px-4 rounded-lg border border-solid border-white border-opacity-20 dark:bg-gray-800 dark:bg-opacity-20 bg-white bg-opacity-20 shadow-xl my-16 ">
     '>
             <div className='flex justify-center items-center'>
-                <h2 className='uppercase  '>{title}</h2>
+                <h2 className='uppercase  text-light-tex dark:text-dark-text '>{title}</h2>
                 </div>
                 <div className='flex justify-center items-center'>
                 <p className='text-light-text w-[80%] my-4 text-center lg:text-left text-base leading-6  dark:text-[#D2D2D2]'>

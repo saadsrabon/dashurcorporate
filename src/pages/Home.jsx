@@ -75,12 +75,12 @@ const Home = () => {
             {services?.map((item, index) => (
               <CardWrapper key={index}>
                 <div>
-                  <div className={`${item?.bgColor} pb-4`}>
+                  <div className={`${item?.bgColor} pb-4 flex justify-center`}>
                     <img src={item?.image} alt="" />
                   </div>
                 </div>
                 <div>
-                  <h2 className="text-light-text dark:text-dark-text text-lg md:text-2xl font-bold mb-4">{item?.title}</h2>
+                  <h2 className="text-light-text dark:text-dark-text text-lg md:text-2xl font-bold mb-4 text-center uppercase">{item?.title}</h2>
                   <p className="text-light-text dark:text-dark-text">{item?.description}</p>
                 </div>
               </CardWrapper>
