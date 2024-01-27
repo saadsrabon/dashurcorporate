@@ -17,7 +17,7 @@ function App() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const[chatbotOpen,setChatbotOpen]=useState(true)
+  const[chatbotOpen,setChatbotOpen]=useState(false)
 
 console.log(chatbotOpen)
   useEffect(() => {
@@ -58,7 +58,7 @@ console.log(chatbotOpen)
  
     >  
     
-      <div onClick={()=>{ console.log("hello") ,setChatbotOpen(prev=>!prev)}} className="fixed top-72 right-5 botMainAvatar">
+      <div onClick={()=> setChatbotOpen(prev=>!prev)} className="fixed top-72 right-5 botMainAvatar">
          <img src={chatBotGlow} alt="" />
       </div>
  
