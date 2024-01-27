@@ -54,33 +54,10 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
           </NavLink>
           <NavLink
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
-            
-            onClick={() => setDropdownVisible(!isDropdownVisible)}
+            to="/markets"
+          
           >
-          <div className="">
-          <span >Markets</span> 
-            </div>  
-            {isDropdownVisible && (
-            <div className="absolute top-24 z-10 bg-opacity-20 bg-gray-800 border border-white border-opacity-20 backdrop-blur-3xl p-2 space-y-2 rounded-lg">
-              <div className="relative">
-              {/* <div className="absolute -top-6 w-0 h-0 border-b-[20px] bg-opacity-20 bg-gray-800 border-b-gray-800 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent"></div> */}
-              </div>
-              <div className=" grid grid-cols-2 space-x-8 py-3 px-4  ">
-             
-
-                 <div className="flex flex-col">
-                  <NavLink>Department of Defense</NavLink>
-                  <NavLink>Manufacturing</NavLink>
-                  <NavLink>Aviation</NavLink>
-                 </div>
-                 <div className="flex flex-col">
-                  <NavLink>Hospitality</NavLink>
-                  <NavLink>Healthcare</NavLink>
-                 </div>
-              </div>
-              {/* Add more NavLink items as needed */}
-            </div>
-          )}
+          Markets
           </NavLink>
           <NavLink
             to="/about"
@@ -139,33 +116,11 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
           </NavLink>
           <NavLink
             className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
-            
-            onClick={() => setDropdownVisible(!isDropdownVisible)}
+            to="/markets"
+          
           >
-          <div className="">
-          <span >Markets</span> 
-            </div>  
-            {isDropdownVisible && (
-            <div className="absolute top-24 z-10 bg-opacity-20 bg-gray-800 border border-white border-opacity-20 backdrop-blur-3xl p-2 space-y-2 rounded-lg">
-              <div className="relative">
-              {/* <div className="absolute -top-6 w-0 h-0 border-b-[20px] bg-opacity-20 bg-gray-800 border-b-gray-800 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent"></div> */}
-              </div>
-              <div className=" grid grid-cols-2 space-x-8 py-3 px-4  ">
-             
-
-                 <div className="flex flex-col">
-                  <NavLink>Department of Defense</NavLink>
-                  <NavLink>Manufacturing</NavLink>
-                  <NavLink>Aviation</NavLink>
-                 </div>
-                 <div className="flex flex-col">
-                  <NavLink>Hospitality</NavLink>
-                  <NavLink>Healthcare</NavLink>
-                 </div>
-              </div>
-              {/* Add more NavLink items as needed */}
-            </div>
-          )}
+          Markets 
+            
           </NavLink>
           <NavLink
             to="/about"

@@ -11,6 +11,7 @@ import config from "./chatbot/config";
 import MessageParser from "./chatbot/MessageParser";
 import ActionProvider from "./chatbot/ActionProvider";
 import chatBotGlow from './assets/Ellipse 5.svg'
+import MarketsPage from "./pages/MarketsPage";
 
  export const ChatbotContext = createContext();
 function App() {
@@ -78,6 +79,7 @@ console.log(chatbotOpen)
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/career" element={<Career/>} />
+        <Route path="markets" element={<MarketsPage/>} />
         
       </Routes>
    

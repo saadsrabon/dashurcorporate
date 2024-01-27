@@ -24,9 +24,9 @@ export const ChatBotHeader = () => {
 </svg>
         <div className='px-4 py-4  flex  space-x-3 z-[500] '>
             <img className='h-[56px]' src={chatBotIcon} alt="chatbotIcon" />
-            <div>
-                <h2 className='text-xl font-bold uppercase'>Customer Service</h2>
-                <p className='py-1'>We reply immediately</p>
+            <div className='flex justify-center items-center'>
+                <h2 className='text-xl font-bold uppercase text-center'>Mr. Dash </h2>
+               
             </div>
         </div>
     </div>
