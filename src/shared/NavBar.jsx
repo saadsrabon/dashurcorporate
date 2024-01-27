@@ -47,6 +47,12 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
             Home
           </NavLink>
           <NavLink
+            to="/about"
+            className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
+          >
+            About Us
+          </NavLink>
+          <NavLink
             to="/capabilities"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
@@ -60,10 +66,10 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
           Markets
           </NavLink>
           <NavLink
-            to="/about"
+            to="/career"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
-            About Us
+            Careers
           </NavLink>
           <NavLink
             to="/contact"
@@ -71,12 +77,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
           >
             Contact Us
           </NavLink>
-          <NavLink
-            to="/career"
-            className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
-          >
-            Careers
-          </NavLink>
+          
         </div>
         {/* toggle button */}
         <div className="">
@@ -109,6 +110,12 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
             Home
           </NavLink>
           <NavLink
+            to="/about"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+          >
+            About Us
+          </NavLink>
+          <NavLink
             to="/capabilities"
             className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
           >
@@ -123,23 +130,19 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
             
           </NavLink>
           <NavLink
-            to="/about"
+            to="/career"
             className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
           >
-            About Us
+            Careers
           </NavLink>
+          
           <NavLink
             to="/contact"
             className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
           >
             Contact Us
           </NavLink>
-          <NavLink
-            to="/career"
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
-          >
-            Careers
-          </NavLink>
+         
         </div>}
         
 
