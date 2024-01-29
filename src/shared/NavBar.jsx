@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 import logolight from "../assets/logolight.png";
 import footerdark from "../assets/footerdark.png"
 import footerlight from "../assets/footerlight.png"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {motion} from "framer-motion";
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -32,6 +32,26 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
     setIsDarkMode(!isDarkMode);
   };
  const [isOpen, setIsOpen] = useState(false);
+ const [isScrolled, setIsScrolled] = useState(false);
+
+ useEffect(() => {
+   const handleScroll = () => {
+     const scrollPosition = window.scrollY;
+     // You can adjust the scroll threshold as needed
+     const scrollThreshold = 10;
+
+     // Set state to indicate whether the user has scrolled past the threshold
+     setIsScrolled(scrollPosition > scrollThreshold);
+   };
+
+   // Attach the scroll event listener when the component mounts
+   window.addEventListener('scroll', handleScroll);
+
+   // Cleanup the event listener when the component unmounts
+   return () => {
+     window.removeEventListener('scroll', handleScroll);
+   };
+ }, []);
     // State to manage the visibility of the dropdown
    
 
@@ -45,9 +65,9 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
         {/* Logo */}
         <div>
           {isDarkMode ? (
-            <img src={logo} alt="" />
+            <img className={isScrolled?"h-8":"h-auto"} src={logo} alt="" />
           ) : (
-            <img src={logolight} alt="" />
+            <img className={isScrolled?"h-8":"h-auto"} src={logolight} alt="" />
           )}
         </div>
         {/* Menu */}

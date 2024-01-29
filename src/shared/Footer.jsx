@@ -31,6 +31,12 @@ const Footer = ({ isDarkMode }) => {
             Home
           </NavLink>
           <NavLink
+            to="/about"
+            className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
+          >
+            About  Us
+          </NavLink>
+          <NavLink
             to="/capabilities"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
@@ -43,23 +49,19 @@ const Footer = ({ isDarkMode }) => {
             Markets
           </NavLink>
           <NavLink
-            to="/about"
+            to="/carrer"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
-            About  Us
+            Careers
           </NavLink>
+          
           <NavLink
             to="/contact"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
             Contact  Us
           </NavLink>
-          <NavLink
-            to="/carrer"
-            className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
-          >
-            Careers
-          </NavLink>
+          
         </div>
         {/* toggle button */}
         <div className=" flex justify-center items-center space-x-3">
@@ -102,7 +104,7 @@ const Footer = ({ isDarkMode }) => {
       </div>
 
       {/* Mobile Part */}
-      <div className="md:hidden lg:hidden py-2">
+      <div className="md:hidden lg:hidden py-2 px-4">
         {/* logo Part */}
         <div className="flex justify-center">
           {isDarkMode ? (
@@ -119,6 +121,12 @@ const Footer = ({ isDarkMode }) => {
             Home
           </NavLink>
           <NavLink
+            to="/about"
+            className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
+          >
+            About  Us
+          </NavLink>
+          <NavLink
             to="/capabilities"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
@@ -131,23 +139,19 @@ const Footer = ({ isDarkMode }) => {
             Markets
           </NavLink>
           <NavLink
-            to="/about"
+            to="/carrer"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
-            About  Us
+            Careers
           </NavLink>
+          
           <NavLink
             to="/contact"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
             Contact  Us
           </NavLink>
-          <NavLink
-            to="/carrer"
-            className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
-          >
-            Careers
-          </NavLink>
+          
          </div>
 
             

@@ -23,10 +23,10 @@ const Home = () => {
 
   
   return (
-    <div className='relative'>
+    <div className='relative mt-36'>
       {/* Hero Section */}
       <div className="mx-auto py-8 md:py-16 lg:py-24">
-        <h2 className="text-light-text text-xl md:text-4xl lg:text-6xl font-bold uppercase dark:text-dark-text text-center lg:leading-[78px]">
+        <h2 className="text-light-text text-4xl mb-8 lg:mb-0 md:text-4xl lg:text-6xl font-bold uppercase dark:text-dark-text text-center lg:leading-[78px]">
           Empowering Innovation, Connecting <br /> the Future With Dashur ai
         </h2>
       </div>
@@ -35,15 +35,15 @@ const Home = () => {
       <div className=" w-full md:w-[95%] mx-auto -z-[999]">
 
         <div className='relative'>
-        <img src={banner} alt="Your Image" className="  w-full h-auto" />
+        <img src={banner} alt="Your Image" className="  w-full h-auto px-4 lg:px-0" />
         <div className="absolute  top-[-10%] md:top-[-5%] left-1/2 transform -translate-x-1/2">
           <SearchBar />
         </div>
         </div>
        <div className='relative'>
-       <div className="absolute -bottom-10  left-0 right-0 click-btn flex justify-center">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold w-16 h-16 rounded-full shadow-lg flex justify-center items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewBox="0 0 20 26" fill="none">
+       <div className="absolute -bottom-6 lg:-bottom-10  left-0 right-0 click-btn flex justify-center">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold w-8 h-8 lg:w-16 lg:h-16 rounded-full shadow-lg flex justify-center items-center">
+            <svg className='w-4 h-4'  xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewBox="0 0 20 26" fill="none">
               <path d="M10 1V25M10 25L19 16M10 25L1 16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
