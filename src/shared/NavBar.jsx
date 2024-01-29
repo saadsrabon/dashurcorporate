@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 import logolight from "../assets/logolight.png";
 import footerdark from "../assets/footerdark.png"
 import footerlight from "../assets/footerlight.png"
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {motion} from "framer-motion";
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -33,7 +33,8 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
   };
  const [isOpen, setIsOpen] = useState(false);
  const [isScrolled, setIsScrolled] = useState(false);
-
+ const menuRef =useRef(null);
+//  Handle scroll event
  useEffect(() => {
    const handleScroll = () => {
      const scrollPosition = window.scrollY;
@@ -52,13 +53,44 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
      window.removeEventListener('scroll', handleScroll);
    };
  }, []);
-    // State to manage the visibility of the dropdown
-   
 
-    // Function to toggle the visibility of the dropdown
-    // const toggleDropdown = () => {
-    //   setDropdownVisible(!isDropdownVisible);
-    // };
+//  Side effect to close menu outside of the component
+  useEffect(() => {
+    const handleWindowClick = (e) => {
+      if(menuRef.current && !menuRef.current.contains(e.target))
+      setIsOpen(false);
+    };
+  
+    // Attach the event listener when the component mounts
+    window.addEventListener('click', handleWindowClick);
+  
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('click', handleWindowClick);
+    };
+  }
+  , []);
+  
+//  close menu when the user scrolls and after 10 sec of opening
+useEffect(() => {
+  const handleScroll = () => {
+    setIsOpen(false);
+  };
+
+  // Attach the scroll event listener when the component mounts
+  window.addEventListener('scroll', handleScroll);
+
+  // Cleanup the event listener when the component unmounts
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}
+, []);
+
+
+
+
+
   return (
     <div className="w-[95%] mx-auto py-8  fixed left-[50%] -translate-x-[50%] z-[9999999999]  top-0  bg-[#020E14] ">
       <nav className="hidden md:hidden lg:flex justify-between items-center">
@@ -123,7 +155,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
         </div>
       </nav>
       {/* Mobile menu */}
-     <nav className="flex md:flex lg:hidden justify-between">
+     <nav ref={menuRef} className="flex md:flex lg:hidden justify-between">
         {/* Logo */}
         <div>
           {isDarkMode ? (
