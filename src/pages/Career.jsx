@@ -16,7 +16,7 @@ const handleOpen = (index) => {
   setIndexData(index)
 }
   return (
-    <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mx-auto my-12 flex-col items-center px-4">
+    <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mx-auto my-12 mt-48 flex-col items-center px-4">
       <div className="flex flex-col justify-center items-center">
         <Chips title="Careers" />
         <BasicTitle width="w-full md:w-[94%] lg:w-[60%]" title="Make an Outstanding career with dashur AI" />

@@ -19,7 +19,7 @@ const text = {
 };
 const About = () => {
   return (
-    <div className="w-[80%] mx-auto my-12 lg:my-24">
+    <div className="w-[80%] mx-auto my-12 lg:my-24 lg:mt-48">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
            <div>
             

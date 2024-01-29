@@ -40,7 +40,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
     //   setDropdownVisible(!isDropdownVisible);
     // };
   return (
-    <div className="w-[95%] mx-auto py-8">
+    <div className="w-[95%] mx-auto py-8  fixed left-[50%] -translate-x-[50%] z-[9999999999]  top-0  bg-[#020E14] ">
       <nav className="hidden md:hidden lg:flex justify-between items-center">
         {/* Logo */}
         <div>
