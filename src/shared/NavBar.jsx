@@ -92,14 +92,14 @@ useEffect(() => {
 
 
   return (
-    <div className="w-[95%] mx-auto py-8  fixed left-[50%] -translate-x-[50%] z-[9999999999]  top-0  bg-[#020E14] ">
+    <div className="w-[95%] transition-all ease-out mx-auto py-8  fixed left-[50%] -translate-x-[50%] z-[9999999999]  top-0 bg-white   dark:bg-[#020E14] ">
       <nav className="hidden md:hidden lg:flex justify-between items-center">
         {/* Logo */}
         <div>
           {isDarkMode ? (
-            <img className={isScrolled?"h-8":"h-auto"} src={logo} alt="" />
+            <img className={isScrolled?"h-8 transition-all ease-out delay-150":"h-auto  delay-150 transition-all ease-out"} src={logo} alt="" />
           ) : (
-            <img className={isScrolled?"h-8":"h-auto"} src={logolight} alt="" />
+            <img className={isScrolled?"h-8 transition-all ease-out delay-150 ":"h-auto delay-150 transition-all ease-out "} src={logolight} alt="" />
           )}
         </div>
         {/* Menu */}
