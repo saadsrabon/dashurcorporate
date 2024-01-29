@@ -38,6 +38,24 @@ const Contact = () => {
         </CardWrapper>
         <CardWrapper>
           <div className="flex flex-col items-center justify-center">
+          <div className="flex justify-center space-x-4 ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 38 38" fill="none">
+<path d="M33.1241 35.4366C29.2155 39.3452 19.2056 35.6726 10.7665 27.2335C2.32745 18.7944 -1.34522 8.78455 2.56341 4.8759L5.13694 2.30237C6.91359 0.525712 9.84109 0.572675 11.6757 2.40726L15.6618 6.39344C17.4964 8.22803 17.5434 11.1555 15.7667 12.9322L15.214 13.4849C14.2547 14.4442 14.1609 15.9916 15.0522 17.0717C15.9119 18.1136 16.8388 19.1513 17.8438 20.1562C18.8487 21.1612 19.8864 22.0881 20.9283 22.9478C22.0084 23.8391 23.5558 23.7453 24.5151 22.786L25.0678 22.2333C26.8445 20.4566 29.772 20.5036 31.6066 22.3381L35.5927 26.3243C37.4273 28.1589 37.4743 31.0864 35.6976 32.8631L33.1241 35.4366Z" fill="#02A9F7" stroke="#02A9F7" stroke-width="1.5"/>
+</svg><span className="text-2xl text-light-text dark:text-dark-text font-bold">Email</span>
+            </div>
+
+            <div className="my-4">
+              <p className="text-light-text dark:text-dark-text text-center">Make a phone call to let us know your requirements to provide the best service.</p>
+            </div>
+            <div className="text-center mt-8">
+              <a href="tel:(702) 960-4800" className=" block  shrink-0 px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary ">
+                Call Now
+              </a>
+              </div>
+          </div>
+        </CardWrapper>
+        {/* <CardWrapper>
+          <div className="flex flex-col items-center justify-center">
           <div className="flex justify-center space-x-4  ">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 38 38" fill="none">
 <path d="M33.1241 35.4366C29.2155 39.3452 19.2056 35.6726 10.7665 27.2335C2.32745 18.7944 -1.34522 8.78455 2.56341 4.8759L5.13694 2.30237C6.91359 0.525712 9.84109 0.572675 11.6757 2.40726L15.6618 6.39344C17.4964 8.22803 17.5434 11.1555 15.7667 12.9322L15.214 13.4849C14.2547 14.4442 14.1609 15.9916 15.0522 17.0717C15.9119 18.1136 16.8388 19.1513 17.8438 20.1562C18.8487 21.1612 19.8864 22.0881 20.9283 22.9478C22.0084 23.8391 23.5558 23.7453 24.5151 22.786L25.0678 22.2333C26.8445 20.4566 29.772 20.5036 31.6066 22.3381L35.5927 26.3243C37.4273 28.1589 37.4743 31.0864 35.6976 32.8631L33.1241 35.4366Z" fill="#02A9F7" stroke="#02A9F7" stroke-width="1.5"/>
@@ -45,7 +63,7 @@ const Contact = () => {
             </div>
 
             <div className="my-4">
-              <p className="text-light-text dark:text-dark-text text-center">Our representatives are always at your service. Make a phone call to let us know your requirements to provide the best service.</p>
+              <p className="text-light-text dark:text-dark-text text-center"> Make a phone call to let us know your requirements to provide the best service.</p>
             </div>
             <div className="text-center mt-4">
               <a href="tel:(702) 960-4800" className=" shrink-0  px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary mt-4">
@@ -55,7 +73,7 @@ const Contact = () => {
           </div>
            
            
-        </CardWrapper>
+        </CardWrapper> */}
         <CardWrapper>
 
           <div className="flex flex-col items-center justify-center">
