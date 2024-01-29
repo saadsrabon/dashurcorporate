@@ -242,9 +242,15 @@ box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.10);
 }
 
 
-/* @media (max-width: 768px) {
-  .dot {
-    width: 3px;
-    height: 3px;
-  }
-} */
+@media (max-width: 768px) {
+  .react-chatbot-kit-chat-container {
+    top:50%;
+    left:50%;
+    bottom: 0;
+    transform: translate(40%, -40%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(40%, -40%);
+    -ms-transform: translate(40%, -40%);
+    -o-transform: translate(40%, -40%);
+}
+}
