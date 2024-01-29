@@ -54,7 +54,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
         <div className="flex space-x-4">
           <NavLink
             to="/"
-            className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
+            className="text-light-text dark:text-dark-text hover:text-light-gray text-xl "
           >
             Home
           </NavLink>
@@ -116,13 +116,13 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
 variants={container}
 initial="hidden"
 animate="visible"
-    className="absolute top-20 left-5 md:left-9 z-50 flex flex-col items-center  py-8   bg-light-primary bg-opacity-100  w-[90%] rounded-lg  ">
+    className="absolute top-20 left-5 md:left-9 z-50 flex flex-col items-center  py-8 rounded-[200px]   w-[90%]  ">
           
           <NavLink 
           variants={item}
           
             to="/"
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-80 w-full hover:text-light-gray text-xl"
+            className="dark:text-light-text mtb-4 rounded-tl-lg rounded-tr-lg text-dark-text text-center bg-light-primary pt-4 bg-opacity-100 w-full hover:text-light-gray text-xl"
           >
             Home
           </NavLink>
@@ -136,15 +136,14 @@ animate="visible"
           <NavLink
           variants={item}
             
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
+            className="dark:text-light-text text-dark-text text-center   bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
           >
             Capabilities
           </NavLink>
           <NavLink
           variants={item}
-          initial="hidden"
-animate="visible"
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
+          
+            className="dark:text-light-text text-dark-text text-center  bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
             to="/markets"
           
           >
@@ -154,7 +153,7 @@ animate="visible"
           <NavLink
           variants={item}
             to="/career"
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
+            className="dark:text-light-text mtb-4 text-dark-text text-center   bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
           >
             Careers
           </NavLink>
@@ -162,7 +161,7 @@ animate="visible"
           <NavLink
           variants={item}
             to="/contact"
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
+            className="dark:text-light-text mtb-4 rounded-bl-lg rounded-br-lg pb-4 text-dark-text text-center bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
           >
             Contact Us
           </NavLink>
