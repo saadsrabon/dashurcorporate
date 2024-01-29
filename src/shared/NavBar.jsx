@@ -5,15 +5,27 @@ import logolight from "../assets/logolight.png";
 import footerdark from "../assets/footerdark.png"
 import footerlight from "../assets/footerlight.png"
 import { useState } from "react";
-
-const itemVariants= {
-  open: {
+import {motion} from "framer-motion";
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
     opacity: 1,
-    y: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 }
-  },
-  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2
+    }
+  }
 };
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+};
+
 
 const NavBar = ({ isDarkMode, setIsDarkMode }) => {
       const toggleTheme = () => {
@@ -100,29 +112,39 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
             <img className="w-48" src={footerlight} alt="" />
           )}
         </div>
-{isOpen && <div className=" absolute top-20 left-[50%] translate-x-[-50%] z-50 flex flex-col items-center  py-8 bg-light-primary bg-opacity-100  w-[90%] rounded-lg ">
+{isOpen && <motion.div 
+variants={container}
+initial="hidden"
+animate="visible"
+    className="absolute top-20 left-5 md:left-9 z-50 flex flex-col items-center  py-8   bg-light-primary bg-opacity-100  w-[90%] rounded-lg  ">
           
           <NavLink 
+          variants={item}
           
             to="/"
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-80 w-full hover:text-light-gray text-xl"
           >
             Home
           </NavLink>
           <NavLink
+          variants={item}
             to="/about"
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
           >
             About Us
           </NavLink>
           <NavLink
+          variants={item}
             
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
           >
             Capabilities
           </NavLink>
           <NavLink
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+          variants={item}
+          initial="hidden"
+animate="visible"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
             to="/markets"
           
           >
@@ -130,20 +152,22 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
             
           </NavLink>
           <NavLink
+          variants={item}
             to="/career"
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
           >
             Careers
           </NavLink>
           
           <NavLink
+          variants={item}
             to="/contact"
-            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-20 w-full hover:text-light-gray text-xl"
+            className="dark:text-light-text text-dark-text text-center bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
           >
             Contact Us
           </NavLink>
          
-        </div>}
+        </motion.div>}
         
 
         {/* toggle Button */}
