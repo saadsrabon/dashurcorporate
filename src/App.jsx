@@ -12,7 +12,7 @@ import MessageParser from "./chatbot/MessageParser";
 import ActionProvider from "./chatbot/ActionProvider";
 import chatBotGlow from './assets/Ellipse 5.svg'
 import MarketsPage from "./pages/MarketsPage";
-import ChatbotComponent from "./shared/ChatBotComponent";
+
 
  export const ChatbotContext = createContext();
 function App() {
@@ -66,7 +66,12 @@ console.log(chatbotOpen)
  
   <ChatbotContext.Provider value={{setChatbotOpen}}>
       {
-        chatbotOpen && <ChatbotComponent/>
+        chatbotOpen &&  <Chatbot
+        config={config}
+          messageParser={MessageParser}
+          actionProvider={ActionProvider}
+        // Other chatbot kit props and configurations
+      />
       }
   </ChatbotContext.Provider>
   
