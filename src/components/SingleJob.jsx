@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from 'react';
+import {  useState } from 'react';
 import CardWrapper from './CardWrapper'
 import JobDescription from './JobDescription'
 import UploadResume from './UploadResume'
@@ -8,6 +8,8 @@ import UploadResume from './UploadResume'
 
 const SingleJob = ({job ,handleOpen ,isActive}) => {
   const [openResume, setOpenResume] = useState(0);
+ 
+
   return (
   
     <CardWrapper>
@@ -21,7 +23,7 @@ const SingleJob = ({job ,handleOpen ,isActive}) => {
       <button onClick={handleOpen} className="px-2 py-3 text-light-primary text-base font-medium rounded-lg bg-transparent border-light-primary border-2" >View Job Description</button>
     </div>
 {openResume ==job.id && <div className='absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]'>
-      <UploadResume/>
+      <UploadResume setOpenResume={setOpenResume}/>
     </div>}
     
     </div>

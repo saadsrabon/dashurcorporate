@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-const MessageParser = ({ children, actions }) => {
+const MessageParser = ({ children, actions}) => {
   const parse = (message) => {
     const lowerCase = message.toLowerCase();
-    if (lowerCase.includes("hello" || "hi")) {
+    if (lowerCase.includes("hello") || lowerCase.includes("hi") || lowerCase.includes("hey")) {
       actions.initalAction();
+      
     }
   };
 
