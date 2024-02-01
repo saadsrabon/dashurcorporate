@@ -86,7 +86,9 @@
         "details":"Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications."
       },
         {"name": "Next js",
-        "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png"},
+        "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png",
+        "details":"Next.js is an open-source development framework built on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites."
+      },
         {"name": "Express js",
         "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png"}
         
