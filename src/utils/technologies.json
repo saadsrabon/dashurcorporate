@@ -127,7 +127,8 @@
        
           {
               "name": "AWS",
-              "imageLink": "https://i.ibb.co/DYrgmcv/AWS.png"
+              "imageLink": "https://i.ibb.co/DYrgmcv/AWS.png",
+              "details":"Amazon Web Services is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis."
           }
           
         ]
