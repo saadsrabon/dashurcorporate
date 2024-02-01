@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import db from  '../utils/technologies.json'
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation ,Autoplay ,Mousewheel } from 'swiper/modules';
 import TechnologiesCard from './technologiesCard';
 
 
@@ -17,32 +17,36 @@ export default function App() {
     <div className=''>
         
       <Swiper
+       style={{'--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff', 'height':'500px' ,overflow:'hidden'}}
+        direction={'vertical'}
         slidesPerView={1}
-        spaceBetween={20}
-        loop={true}
-        style={{overflowY: 'visible', padding: '20px 20px 20px 0'}}
-        modules={[Pagination, Navigation]}
+        spaceBetween={30}
+        mousewheel={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Mousewheel, Pagination]}
         className="mySwiper"
-        breakpoints={
-            {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 10
-                },
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 20
-                },
-                1024: {
-                    slidesPerView: 1,
-                    spaceBetween: 30
-                }
-            }
-        }
+        // breakpoints={
+        //     {
+        //         320: {
+        //             slidesPerView: 1,
+        //             spaceBetween: 10
+        //         },
+        //         768: {
+        //             slidesPerView: 1,
+        //             spaceBetween: 20
+        //         },
+        //         1024: {
+        //             slidesPerView: 1,
+        //             spaceBetween: 30
+        //         }
+        //     }
+        // }
       >
         {
             db.map((item, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide data  key={index}>
                     <TechnologiesCard item={item} />
                 </SwiperSlide>
             ))
