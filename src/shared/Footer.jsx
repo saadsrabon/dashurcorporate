@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import footerdark from "../assets/footerdark.png"
 import footerlight from "../assets/footerlight.png"
 import term from "../assets/website_tc_dashur.pdf"
@@ -11,15 +11,17 @@ const Footer = ({ isDarkMode }) => {
     // const toggleTheme = () => {
     //     setIsDarkMode(!isDarkMode);
     // };
+
+    const navigate = useNavigate();
   return (
     <div className="w-[95%] mx-auto pt-4  md:divide-y-[0.5px] space-y-4 divide-[#454545]">
       <nav className="hidden md:hidden lg:flex justify-between items-center">
         {/* Logo */}
         <div className="order-3">
           {isDarkMode ? (
-            <img src={footerdark} alt="" />
+            <img onClick={()=>navigate('/')} src={footerdark} alt="" />
           ) : (
-            <img src={footerlight} alt="" />
+            <img onClick={()=>navigate('/')} src={footerlight} alt="" />
           )}
         </div>
         {/* Menu */}
@@ -108,8 +110,8 @@ const Footer = ({ isDarkMode }) => {
         {/* logo Part */}
         <div className="flex justify-center">
           {isDarkMode ? (
-            <img src={footerdark} alt="" />
-          ) : (    <img src={footerlight} alt="" />)}
+            <img onClick={()=>navigate('/')} src={footerdark} alt="" />
+          ) : (    <img onClick={()=>navigate('/')} src={footerlight} alt="" />)}
         </div>
         {/* Menu Part */}
         <div className="flex justify-between  py-2 my-6">
