@@ -121,7 +121,10 @@
         "description": "Cloud Services involve managing and deploying applications in the cloud.",
           "technology":[
             {"name": "Google Cloud",
-          "imageLink": "https://i.ibb.co/Y0HL79Q/Google-Cloud.png"}, 
+          "imageLink": "https://i.ibb.co/Y0HL79Q/Google-Cloud.png",
+          "details":"Google Cloud Platform is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search, Gmail, file storage, and YouTube."},
+      
+       
           {
               "name": "AWS",
               "imageLink": "https://i.ibb.co/DYrgmcv/AWS.png"
