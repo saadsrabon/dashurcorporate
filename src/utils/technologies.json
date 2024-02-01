@@ -90,7 +90,9 @@
         "details":"Next.js is an open-source development framework built on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites."
       },
         {"name": "Express js",
-        "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png"}
+        "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png" ,
+        "details":"Express.js, or simply Express, is a back end web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs."
+      }
         
       ]
 
