@@ -60,11 +60,11 @@ const UploadResume = () => {
       <div className="flex flex-col items-center justify-center py-5 px-4 border-black border-opacity-20 dark:border-white dark:border-opacity-20 rounded-lg border ">
       <p className="text-light-text dark:text-dark-text">Upload or drop your resume in the Word, Google Doc, PDF format</p>
       {selectedFile && <p className="text-light-text dark:text-dark-text">Selected file: {selectedFile.name}</p>}
-      <button onClick={handleUpload} className="mb-2 mt-4  md:mb-0 px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary" >Upload Resume</button>
+      <button disabled onClick={handleUpload} className="mb-2 mt-4  md:mb-0 px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary" >Upload Resume</button>
       </div>
 
         <div  className="flex justify-center">
-        <button  className=" w-[60%] mb-2 mt-8 md:mb-0 px-8 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary" >Submit</button>
+        <button disabled className=" w-[60%] mb-2 mt-8 md:mb-0 px-8 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary" >Submit</button>
         </div>
       </div>
       </form>
