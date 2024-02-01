@@ -109,7 +109,9 @@
           "imageLink": "https://i.ibb.co/yg4Qgq0/Ionic.png",
           "details":"Ionic is a complete open-source SDK for hybrid mobile app development created by Max Lynch, Ben Sperry, and Adam Bradley of Drifty Co. in 2013. The original version was released in 2013 and built on top of AngularJS and Apache Cordova."},
           {"name": "Flutter",
-          "imageLink": "https://i.ibb.co/k4RjWsP/Flutter.png"}
+          "imageLink": "https://i.ibb.co/k4RjWsP/Flutter.png",
+          "details":"Flutter is an open-source UI software development kit created by Google. It is used to develop applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase."}
+      
           
         ]
         
