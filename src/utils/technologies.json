@@ -74,7 +74,9 @@
         "details":"NativeScript is an open-source framework for building cross-platform mobile apps. It's backed by Progress and offers a choice of JavaScript or TypeScript for development."},
      
         {"name": "Django",
-        "imageLink": "https://i.ibb.co/98PZstD/Django.png"},
+        "imageLink": "https://i.ibb.co/98PZstD/Django.png",
+        "details":"Django is a Python-based free and open-source web framework that follows the model-template-views architectural pattern."},
+
         {"name": "Angular js",
         "imageLink": "https://i.ibb.co/3MmmkS2/Angular.png"},
         {"name": "Vue js",
