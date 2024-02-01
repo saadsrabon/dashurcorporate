@@ -78,9 +78,13 @@
         "details":"Django is a Python-based free and open-source web framework that follows the model-template-views architectural pattern."},
 
         {"name": "Angular js",
-        "imageLink": "https://i.ibb.co/3MmmkS2/Angular.png"},
+        "imageLink": "https://i.ibb.co/3MmmkS2/Angular.png",
+        "details":"AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications."
+      },
         {"name": "Vue js",
-        "imageLink": "https://i.ibb.co/xGdkq6H/Vue.png"},
+        "imageLink": "https://i.ibb.co/xGdkq6H/Vue.png",
+        "details":"Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications."
+      },
         {"name": "Next js",
         "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png"},
         {"name": "Express js",
