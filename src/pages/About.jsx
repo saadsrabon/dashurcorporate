@@ -56,7 +56,7 @@ analytics, and human-like acumen.</p>
       <div className="flex flex-col justify-center items-center">
         
         <BasicTitle width="w-full md:w-[94%] lg:w-[60%] " title="Markets" />
-        <p className=" text-light-text dark:text-dark-text text-center md:text-left md:ml-[-45px]">Your feedback and inquiries are important to us, and we're here to <br /> provide the support you need.</p>
+        {/* <p className=" text-light-text dark:text-dark-text text-center md:text-left md:ml-[-45px]">Your feedback and inquiries are important to us, and we're here to <br /> provide the support you need.</p> */}
       </div>
       </div>
       <div className="flex justify-center items-center mt-10">
