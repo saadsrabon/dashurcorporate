@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import logolight from "../assets/logolight.png";
 import footerdark from "../assets/footerdark.png"
@@ -34,6 +34,8 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
  const [isOpen, setIsOpen] = useState(false);
  const [isScrolled, setIsScrolled] = useState(false);
  const menuRef =useRef(null);
+
+ const navigate =useNavigate()
 //  Handle scroll event
  useEffect(() => {
    const handleScroll = () => {
@@ -96,10 +98,11 @@ useEffect(() => {
       <nav className="hidden md:hidden lg:flex justify-between items-center">
         {/* Logo */}
         <div>
+
           {isDarkMode ? (
-            <img className={isScrolled?"h-8 transition-all ease-out delay-150":"h-auto  delay-150 transition-all ease-out"} src={logo} alt="" />
+            <img onClick={()=>navigate('/')} className={isScrolled?"h-8 transition-all ease-out delay-150":"h-auto  delay-150 transition-all ease-out"} src={logo} alt="" />
           ) : (
-            <img className={isScrolled?"h-8 transition-all ease-out delay-150 ":"h-auto delay-150 transition-all ease-out "} src={logolight} alt="" />
+            <img onClick={()=>navigate('/')} className={isScrolled?"h-8 transition-all ease-out delay-150 ":"h-auto delay-150 transition-all ease-out "} src={logolight} alt="" />
           )}
         </div>
         {/* Menu */}
