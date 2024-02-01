@@ -17,7 +17,7 @@ export default function App() {
     <div className=''>
         
       <Swiper
-       style={{'--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff', 'height':'500px' ,overflow:'hidden'}}
+       style={{'--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff', 'height':'550px', margin:"20px 0",  overflow:'hidden'}}
         direction={'vertical'}
         slidesPerView={1}
         spaceBetween={30}

@@ -1,7 +1,7 @@
 [
     {
       "title": "Front End Development",
-      "description": "Front-end development leverages JavaScript frameworks like React, Angular, and Vue.js to streamline the process of building dynamic and responsive user interfaces. These frameworks empower developers to efficiently manage state, handle user interactions, and create modular components, enhancing both the efficiency and scalability of web applications.",
+      "description": "Front-end development leverages JavaScript frameworks like React, Angular, and Vue.js to streamline the process of building dynamic and responsive user interfaces. ",
       "technology": [
       
         {"name": "JavaScript",
