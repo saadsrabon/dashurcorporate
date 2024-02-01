@@ -102,7 +102,9 @@
         "description": "Mobile app development involves designing and creating software applications specifically tailored for smartphones and tablets to meet user needs and enhance their digital experiences..",
         "technology": [
           {"name": "React Native",
-          "imageLink": "https://i.ibb.co/crBysHz/React-Native.png"},
+          "imageLink": "https://i.ibb.co/crBysHz/React-Native.png",
+          "details":"React Native is an open-source mobile application framework created by Facebook. It is used to develop applications for Android, Android TV, iOS, macOS, tvOS, Web, Windows and UWP by enabling developers to use React's framework along with native platform capabilities."},
+      
           {"name": "Ionic",
           "imageLink": "https://i.ibb.co/yg4Qgq0/Ionic.png"},
           {"name": "Flutter",
