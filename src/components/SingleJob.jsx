@@ -22,7 +22,7 @@ const SingleJob = ({job, handleOpen, handleClose, isActive, index }) => {
     <CardWrapper>
       <div className='relative'>
     <div className="mb-8 ">
-      <h2 className="font-sans text-2xl font-bold mb-4 text-light-text dark:text-dark-text ">{job?.jobtitle} ({job?.jobType})</h2>
+      <h2 className="font-sans text-2xl font-bold mb-4 text-light-text dark:text-dark-text ">{job?.jobtitle} </h2>
       {isActive  ?<JobDescription job={job}/>:""}
     </div>
     <div className="flex flex-col md:flex-row justify-center md:space-x-6 mt-4">
