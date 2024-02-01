@@ -3,7 +3,8 @@
 
 const Chips = ({title}) => {
   return (
-    <div className="bg-light-secondary py-1 px-5 rounded-lg">{title}</div>
+    // <div className="bg-light-secondary py-1 px-5 rounded-lg"></div>
+    <></>
   )
 }
 
