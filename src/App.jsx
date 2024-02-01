@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import {HashRouter, , Route, Routes } from "react-router-dom"
 import { MainLayout } from "./Layout/MainLayout"
 import { createContext, useEffect, useState } from "react";
 import Contact from "./pages/Contact";
@@ -53,7 +53,7 @@ console.log(chatbotOpen)
 
 
   return (
-    <BrowserRouter>
+    <HashRouter>
     <MainLayout  className="dark"
     isDarkMode={isDarkMode}
     setIsDarkMode={setIsDarkMode}
@@ -87,7 +87,7 @@ console.log(chatbotOpen)
    
    
     </MainLayout>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
