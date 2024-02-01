@@ -30,9 +30,9 @@ const TechnologiesCard = ({item}) => {
                 </div>
                 {
                   tooltipOpen == index &&(<div className={`absolute top-[70px] -left-36 ${tooltipOpen>0?"visible":""}  w-[320px] `}>
-                  <div className="relative border-[#556D78] border space-x-2 bg-[#556D78]">
+                  <div className="relative px-4 py- border-[#556D78] border space-x-2 bg-[#556D78]">
                   <span className={`w-0 h-0 border-[#556D78] border-r-[20px] border-b-[20px] border-r-transparent absolute rotate-[136deg] left-40 -top-2`}></span>
-                  <p>{item?.details}</p>
+                  < p className="text-light-text dark:text-dark-text">{item?.details}</>
                   </div>
                   </div>)
                 }

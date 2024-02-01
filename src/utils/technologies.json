@@ -136,7 +136,7 @@
       {
         "title": "Deep Learning",
         "description": "Deep learning is a subset of machine learning focused on artificial neural networks with multiple layers. It excels in tasks like image recognition, natural language processing, and speech recognition. Training deep models involves adjusting parameters to minimize prediction errors. Key frameworks for deep learning include TensorFlow, PyTorch, and Keras."
-       
+        
       },
   
       
