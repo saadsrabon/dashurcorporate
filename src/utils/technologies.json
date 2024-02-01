@@ -70,7 +70,9 @@
       "description": "Programming Languages are essential for writing code and developing software.",
       "technology": [
         {"name": "Native Script",
-        "imageLink": "https://i.ibb.co/412zt8n/Native-Script.png"},
+        "imageLink": "https://i.ibb.co/412zt8n/Native-Script.png",
+        "details":"NativeScript is an open-source framework for building cross-platform mobile apps. It's backed by Progress and offers a choice of JavaScript or TypeScript for development."},
+     
         {"name": "Django",
         "imageLink": "https://i.ibb.co/98PZstD/Django.png"},
         {"name": "Angular js",
