@@ -34,7 +34,7 @@ const Footer = ({ isDarkMode }) => {
             to="/about"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
-            About  Us
+            About
           </NavLink>
           <NavLink
             to="/capabilities"
@@ -59,7 +59,7 @@ const Footer = ({ isDarkMode }) => {
             to="/contact"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
-            Contact  Us
+            Contact  
           </NavLink>
           
         </div>
@@ -99,7 +99,7 @@ const Footer = ({ isDarkMode }) => {
             <a href="">Sitemap</a>
         </div>
         <div>
-            <p className="text-light-text dark:text-dark-text">©2024 Dashur AI. All Rights Reserved.</p>
+            <p className="text-light-text dark:text-dark-text">Copyright ©2024 Dashur AI, LLC. All Rights Reserved.</p>
         </div>
       </div>
 
@@ -124,7 +124,7 @@ const Footer = ({ isDarkMode }) => {
             to="/about"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
-            About  Us
+            About  
           </NavLink>
           <NavLink
             to="/capabilities"
@@ -149,7 +149,7 @@ const Footer = ({ isDarkMode }) => {
             to="/contact"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
-            Contact  Us
+            Contact 
           </NavLink>
           
          </div>

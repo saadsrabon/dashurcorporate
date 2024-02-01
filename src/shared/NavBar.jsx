@@ -114,7 +114,7 @@ useEffect(() => {
             to="/about"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
-            About Us
+            About
           </NavLink>
           <NavLink
             
@@ -139,7 +139,7 @@ useEffect(() => {
             to="/contact"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
-            Contact Us
+            Contact 
           </NavLink>
           
         </div>
