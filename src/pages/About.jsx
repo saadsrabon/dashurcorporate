@@ -3,6 +3,7 @@ import Chips from "../components/chips"
 import aboutBanner from "../assets/about.png"
 import { motion } from "framer-motion";
 import BasicTitle from "../components/basicTitle";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const text = {
   hidden: {
@@ -19,6 +20,10 @@ const text = {
 };
 const About = () => {
   return (
+    <HelmetProvider>
+      <Helmet>
+        <title>About Us | Dashur</title>
+      </Helmet>
     <div className="w-[80%] mx-auto my-12 lg:my-24 lg:mt-48">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
            <div>
@@ -112,6 +117,7 @@ className="fill-black dark:fill-white"
       </div>
     </div>
     </div>
+    </HelmetProvider>
   )
 }
 
