@@ -25,12 +25,28 @@ const Home = () => {
   
   return (
     <>
+    {/* All Necessary Steps for Seo */}
     <Helmet>
-      <head>
-        <meta name="description" content="Dashur AI" />
-        <meta name="keywords" content="Dashur AI" />
-
-      </head>
+      <meta charSet="utf-8" />
+      <meta name="description" content="Dashur AI" />
+      <meta name="keywords" content="Dashur AI" />
+      <meta name="author" content="Dashur AI" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <meta name="title" content="Dashur AI" />
+      <meta name="description" content="Dashur AI" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://dashur.ai/" />
+      <meta property="og:title" content="Dashur AI" />
+      <meta property="og:description" content="Dashur AI" />
+      <meta property="og:image" content="https://dashur.ai/" />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://dashur.ai/" />
+      <meta property="twitter:title" content="Dashur AI" />
+      <meta property="twitter:description" content="Dashur AI" />
+      <meta property="twitter:image" content="https://dashur.ai/" />
+      <link rel="canonical" href="https://dashur.ai/" />
+      
       
       <title>Dashur AI</title>
     </Helmet>

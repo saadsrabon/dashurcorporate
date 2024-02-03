@@ -37,29 +37,29 @@
       "technology": [
       
         {"name": "JavaScript",
-        "imageLink": "https://i.ibb.co/xMsXXC2/Java-Script.png",
+        "imageLink": "https://i.ibb.co/DbDbPwv/Java-Script.png",
         "details":"The JavaScript programming language is text-based and can be used on both client and server-side. It controls multimedia within web pages and allows them to become interactive."
       },
         
         {"name": "TypeScript",
-        "imageLink": "https://i.ibb.co/0GMpnJr/Type-Script.png",
+        "imageLink": "https://i.ibb.co/Gs0NKGB/Type-Script.png",
         "details":"TypeScript is a superset of JavaScript that compiles to plain JavaScript. It adds optional static typing and class-based object-oriented programming to the language."
       },
         {"name": "React",
-        "imageLink": "https://i.ibb.co/6t1wyks/React.png",
+        "imageLink": "https://i.ibb.co/Qbjq6dY/React.png",
         "details":"React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies."
       },
         {"name": "Angular",
-        "imageLink": "https://i.ibb.co/3MmmkS2/Angular.png" ,
+        "imageLink": "https://i.ibb.co/qM7BBvH/Angular.png" ,
         "details":"Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations."
       },
         {"name": "Vue",
-        "imageLink": "https://i.ibb.co/xGdkq6H/Vue.png",
+        "imageLink": "https://i.ibb.co/BGPDmrt/Vue.png",
         "details":"Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications."
       
       },
         {"name": "Jupyter",
-        "imageLink": "https://i.ibb.co/JmdSWkR/Next-js.png",
+        "imageLink": "https://i.ibb.co/KVS2WMn/Jupyter.png",
         "details":"Jupyter Notebook is often used by programmers, data scientists and students to document  and demonstrate coding workflows or simply experiment with code."
       }
         
@@ -152,7 +152,7 @@
        
       },
       {
-        "title": "(LLM’s)",
+        "title": "Large Language Models",
         "description": "Large Language Models (LLMs) are advanced AI models with extensive training on textual data.They can understand and generate human-like text, making them useful for various applications.LLMs like GPT-3 are employed in natural language processing, translation, content generation, and more."
        
       }
