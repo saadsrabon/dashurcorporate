@@ -26,6 +26,12 @@ const Home = () => {
   return (
     <>
     <Helmet>
+      <head>
+        <meta name="description" content="Dashur AI" />
+        <meta name="keywords" content="Dashur AI" />
+
+      </head>
+      
       <title>Dashur AI</title>
     </Helmet>
     <div className='relative mt-36'>
