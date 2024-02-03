@@ -12,6 +12,7 @@ import MessageParser from "./chatbot/MessageParser";
 import ActionProvider from "./chatbot/ActionProvider";
 import chatBotGlow from './assets/Ellipse 5.svg'
 import MarketsPage from "./pages/MarketsPage";
+import { HelmetProvider } from "react-helmet-async";
 
 
  export const ChatbotContext = createContext();
@@ -74,7 +75,7 @@ console.log(chatbotOpen)
       />
       }
   </ChatbotContext.Provider>
-  
+     <HelmetProvider>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/contact" element={<Contact/>} />
@@ -84,6 +85,7 @@ console.log(chatbotOpen)
         <Route path="markets" element={<MarketsPage/>} />
         
       </Routes>
+      </HelmetProvider>
    
    
     </MainLayout>

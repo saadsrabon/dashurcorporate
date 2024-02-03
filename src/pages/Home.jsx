@@ -1,4 +1,5 @@
 
+import { Helmet } from 'react-helmet-async';
 import banner from '../assets/hero.png';
 import CardWrapper from '../components/CardWrapper';
 import BasicSlider from '../components/basicSlider';
@@ -23,6 +24,10 @@ const Home = () => {
 
   
   return (
+    <>
+    <Helmet>
+      <title>Dashur AI</title>
+    </Helmet>
     <div className='relative mt-36'>
       {/* Hero Section */}
       <div className="mx-auto py-8 md:py-16 lg:py-24">
@@ -112,6 +117,7 @@ const Home = () => {
      } 
      */}
     </div>
+    </>
   );
 };
 
