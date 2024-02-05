@@ -13,7 +13,7 @@ import { useRef } from "react";
 
 
 export default function App() {
-  let  sliderRef= useRef(null);
+
   let settings = {
     dots: true,
     infinite: true,
@@ -26,10 +26,8 @@ export default function App() {
   };
   return (
     <div className=''>
-         <div><button onClick={()=>sliderRef.slickNext()}>Next</button></div>
-      <Slider ref={slider => {
-         sliderRef = slider;
-        }}
+        
+      <Slider 
        {...settings}
         
       >
