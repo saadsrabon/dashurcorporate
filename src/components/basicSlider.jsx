@@ -20,6 +20,7 @@ export default function App() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     prevArrow: <CustomPrevArrow  />,
     nextArrow: <CustomNextArrow />,
   };
