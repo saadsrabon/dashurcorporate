@@ -1,5 +1,38 @@
 [
-   
+  {
+    "title": "Front End Development",
+    "description": "Front-end development leverages JavaScript frameworks like React, Angular, and Vue.js to streamline the process of building dynamic and responsive user interfaces.Front End is all about interact with that data.",
+    "technology": [
+    
+      {"name": "JavaScript",
+      "imageLink": "https://i.ibb.co/DbDbPwv/Java-Script.png",
+      "details":"The JavaScript programming language is text-based and can be used on both client and server-side. It controls multimedia within web pages and allows them to become interactive."
+    },
+      
+      {"name": "TypeScript",
+      "imageLink": "https://i.ibb.co/Gs0NKGB/Type-Script.png",
+      "details":"TypeScript is a superset of JavaScript that compiles to plain JavaScript. It adds optional static typing and class-based object-oriented programming to the language."
+    },
+      {"name": "React",
+      "imageLink": "https://i.ibb.co/Qbjq6dY/React.png",
+      "details":"React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies."
+    },
+      {"name": "Angular",
+      "imageLink": "https://i.ibb.co/qM7BBvH/Angular.png" ,
+      "details":"Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations."
+    },
+      {"name": "Vue",
+      "imageLink": "https://i.ibb.co/BGPDmrt/Vue.png",
+      "details":"Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications."
+    
+    },
+      {"name": "Jupyter",
+      "imageLink": "https://i.ibb.co/KVS2WMn/Jupyter.png",
+      "details":"Jupyter Notebook is often used by programmers, data scientists and students to document  and demonstrate coding workflows or simply experiment with code."
+    }
+      
+    ]
+  },
     {
       "title": "Back End Development",
       "description": "Back-end development involves building and maintaining the technology that powers those components which, together, enable the user-facing side of the website to even exist in the first place. ",
@@ -31,40 +64,7 @@
             
         ]
     },
-    {
-      "title": "Front End Development",
-      "description": "Front-end development leverages JavaScript frameworks like React, Angular, and Vue.js to streamline the process of building dynamic and responsive user interfaces.Front End is all about interact with that data.",
-      "technology": [
-      
-        {"name": "JavaScript",
-        "imageLink": "https://i.ibb.co/DbDbPwv/Java-Script.png",
-        "details":"The JavaScript programming language is text-based and can be used on both client and server-side. It controls multimedia within web pages and allows them to become interactive."
-      },
-        
-        {"name": "TypeScript",
-        "imageLink": "https://i.ibb.co/Gs0NKGB/Type-Script.png",
-        "details":"TypeScript is a superset of JavaScript that compiles to plain JavaScript. It adds optional static typing and class-based object-oriented programming to the language."
-      },
-        {"name": "React",
-        "imageLink": "https://i.ibb.co/Qbjq6dY/React.png",
-        "details":"React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies."
-      },
-        {"name": "Angular",
-        "imageLink": "https://i.ibb.co/qM7BBvH/Angular.png" ,
-        "details":"Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations."
-      },
-        {"name": "Vue",
-        "imageLink": "https://i.ibb.co/BGPDmrt/Vue.png",
-        "details":"Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications."
-      
-      },
-        {"name": "Jupyter",
-        "imageLink": "https://i.ibb.co/KVS2WMn/Jupyter.png",
-        "details":"Jupyter Notebook is often used by programmers, data scientists and students to document  and demonstrate coding workflows or simply experiment with code."
-      }
-        
-      ]
-    },
+   
 
     {
       "title": "Frameworks",

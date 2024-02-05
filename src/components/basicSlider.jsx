@@ -9,22 +9,26 @@ import db from  '../utils/technologies.json'
 import TechnologiesCard from './technologiesCard';
 import { CustomPrevArrow } from "./CustomPrevArrow";
 import { CustomNextArrow } from "./CustomNextArrow";
+import { useRef } from "react";
 
 
 export default function App() {
+  let  sliderRef= useRef(null);
   let settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <CustomPrevArrow />,
+    prevArrow: <CustomPrevArrow  />,
     nextArrow: <CustomNextArrow />,
   };
   return (
     <div className=''>
-        
-      <Slider
+         <div><button onClick={()=>sliderRef.slickNext()}>Next</button></div>
+      <Slider ref={slider => {
+         sliderRef = slider;
+        }}
        {...settings}
         
       >
@@ -36,6 +40,8 @@ export default function App() {
             ))
         }
       </Slider>  
+
+     
     </div>
   );
 }
