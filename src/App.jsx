@@ -80,10 +80,10 @@ console.log(chatbotOpen)
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/contact" element={<Contact/>} />
-        <Route path="/about" element={<About/>} />
+        <Route path="/about" element={<About isDarkMode={isDarkMode}/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/career" element={<Career/>} />
-        <Route path="/markets" element={<MarketsPage/>} />
+        <Route path="/markets" element={<MarketsPage isDarkMode={isDarkMode}/>} />
         <Route path="/jobs" element={<JobApplications/>} />
         
       </Routes>
