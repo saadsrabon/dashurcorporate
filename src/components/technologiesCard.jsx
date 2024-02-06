@@ -26,7 +26,7 @@ const TechnologiesCard = ({item}) => {
                    <div className="w-8 ">
                    <img className="w-[100%] grow-0" src={item?.imageLink} alt="" />
                    </div>
-                    <h2  className="text-light-text text-base  dark:text-dark-text">{item?.name}</h2>
+                    <h2  className="  dark:text-dark-text">{item?.name}</h2>
                 </div>
                 {
                   tooltipOpen == index &&(<div className={`absolute top-[70px] z-50 - ${tooltipOpen>0?"visible":""}  w-[320px] `}>

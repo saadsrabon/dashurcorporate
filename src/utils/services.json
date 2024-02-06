@@ -28,18 +28,18 @@
         "title":"Digital Marketing",
         "description":"Elevate your brand's online visibility and reach new heights with our comprehensive digital marketing services.",
         "image":"https://i.ibb.co/qN4CBCR/image-19.png",
-        "bgColor":"bg-green-400"
+        "bgColor":"#3F77CC"
     },
     {
         "title":"SEO",
         "description":"Boost your online presence and climb search engine rankings with our SEO expertise. Our tailored strategies focus on traffic.",
         "image":"https://i.ibb.co/nsDS3Mc/image-20.png",
-        "bgColor":""
+        "bgColor":"#3F77CC"
     },
     {
         "title":"AI INTEGRATION",
         "description":"Seamlessly integrate the power of artificial intelligence into your business operations with our AI integration services.",
         "image":"https://i.ibb.co/qkdJvSg/image-21.png",
-        "bgColor":"bg-green-400"
+        "bgColor":"#3F77CC"
     }
 ]

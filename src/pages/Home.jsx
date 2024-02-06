@@ -103,7 +103,7 @@ const Home = () => {
               <CardWrapper key={index}>
                 <div>
                   <div className={`${item?.bgColor} pb-4 flex justify-center`}>
-                    <img src={item?.image} alt="" />
+                    <img className='item-img' src={item?.image} alt="" />
                   </div>
                 </div>
                 <div>

@@ -3,9 +3,12 @@ import React from 'react';
 
 const MessageParser = ({ children, actions}) => {
   const parse = (message) => {
+    
     const lowerCase = message.toLowerCase();
-    if (lowerCase.includes("hello") || lowerCase.includes("hi") || lowerCase.includes("hey")) {
+    if (lowerCase.includes("hello") || lowerCase.includes("hi") || lowerCase.includes("hey") || message.length>2) {
       actions.initalAction();
+    
+  
       
     }
   };

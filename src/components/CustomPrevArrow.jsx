@@ -6,7 +6,7 @@ export const CustomPrevArrow = (props) => {
   
   return (
     <div
-      className={className + " hover:bg-light-primary -ml-10 bg-[#fff] dark:bg-[#2f2f2f] dark:hover:bg-light-primary " }
+      className={className + " hover:bg-light-primary shadow-lg drop-shadow-lg -ml-10 bg-[#fff] dark:bg-[#2f2f2f] dark:hover:bg-light-primary " }
       style={{ ...style,  width: "40px", height: "40px" ,display:"flex",justifyContent:"center",alignItems:"center" ,borderRadius:"50%",zIndex:"10"}}
       onClick={onClick}
     />
