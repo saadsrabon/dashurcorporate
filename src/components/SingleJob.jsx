@@ -31,7 +31,7 @@ const SingleJob = ({job, handleOpen, handleClose, isActive, index }) => {
     </div>
     {openResume && isActive && (
       <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
-        <UploadResume />
+        <UploadResume handleClose={handleClose} />
       </div>
     )}
     

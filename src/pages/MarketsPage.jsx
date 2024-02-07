@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
 import BasicTitle from "../components/basicTitle"
 import { motion } from "framer-motion"

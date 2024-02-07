@@ -14,6 +14,9 @@ const Career = () => {
   const handleOpen = (index) => {
     setOpenJobIndex(index);
   };
+  const handleClose = () => {
+    setOpenJobIndex(null);
+  };
 
   return (
     
@@ -35,7 +38,7 @@ const Career = () => {
       </div>
       {tabIndex === 0 &&
         jobData.map((job, index) => (
-          <SingleJob key={index} job={job} handleOpen={() => handleOpen(index)} index={index}  isActive={index === openJobIndex} />
+          <SingleJob key={index} job={job} handleOpen={() => handleOpen(index)} index={index}  isActive={index === openJobIndex} handleClose={handleClose} />
         ))}
     </div>
   );
