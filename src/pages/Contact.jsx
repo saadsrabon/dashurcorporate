@@ -13,7 +13,7 @@ const Contact = () => {
       const element = document.getElementById("contact-form");
     
       element.scrollIntoView({ behavior: "smooth" });
-    }, 40);
+    }, 400);
    
     
     clearTimeout();

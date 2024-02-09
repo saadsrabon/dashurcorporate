@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 
 
 const InquiryForm = () => {
@@ -6,14 +7,32 @@ const InquiryForm = () => {
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs
+          .sendForm('service_us6o5pd', 'template_iijmxtq', form.current, {
+            publicKey:'2ox7-3gdQnHMcDfGD',
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+            },
+          );
+      };
 
     // Add your form submission logic here
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      console.log(name, phone, email ,message);
-    };
+    // const handleSubmit = (event) => {
+    //   event.preventDefault();
+    //   console.log(name, phone, email ,message);
+    // };
   return (
-    <div id="contact-form " className="w-[40%]">
+    <div id="contact-form" className="w-[40%]">
     
      <div className="relative rounded-lg border border-solid border-white border-opacity-20  dark:bg-gray-800 dark:opacity-100 bg-white bg-opacity-100 shadow-xl px-6 py-10 my-8">
      <div className=" absolute right-4 top-3"><svg width="26" height="26" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,22 +44,22 @@ const InquiryForm = () => {
 </g>
 </svg>
 </div>
-   <form className="" onSubmit={handleSubmit}>
+   <form ref={form} className="" onSubmit={sendEmail }>
     <div className="mb-6" >
       <label className="block text-light-text dark:text-dark-text" htmlFor="name">Name</label>
-      <input onChange={(e)=>setName(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="name" />
+      <input onChange={(e)=>setName(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_name" />
     </div>
     <div className="mb-6">
       <label className="block text-light-text dark:text-dark-text" htmlFor="phone">Phone</label>
-      <input onChange={(e)=>setPhone(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="phone" />
+      <input onChange={(e)=>setPhone(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_phone" />
     </div>
     <div className="mb-6">
       <label className="block text-light-text dark:text-dark-text" htmlFor="email">Email</label>
-      <input onChange={(e)=>setEmail(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="email" name="email" />
+      <input onChange={(e)=>setEmail(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="email" name="user_email" />
     </div>
     <div className="mb-6">
       <label className="block text-light-text dark:text-dark-text" htmlFor="message">Write Your Message</label>
-      <textarea onChange={(e)=>setMessage(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]"  name="message" />
+      <textarea onChange={(e)=>setMessage(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]"  name="user_message" />
     </div>
     
     <div  className="flex justify-center">

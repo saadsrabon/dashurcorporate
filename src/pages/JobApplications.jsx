@@ -1,7 +1,19 @@
+import { useEffect, useState } from "react"
 import CardWrapper from "../components/CardWrapper"
+import axios from "axios"
 
 
 export const JobApplications = () => {
+
+    const [applications, setApplications] = useState([])
+    console.log(applications)
+
+    useEffect(() => {
+       axios.get("http://localhost:5000/get-files")
+        .then((res)=>{console.log(res.data); setApplications(res.data)
+        }
+        )
+    }, [])
   return (
     <>
         <div className="mt-48 mb-24 "></div>
@@ -40,7 +52,7 @@ export const JobApplications = () => {
             
         </div>
        </CardWrapper>
-    <CardWrapper>
+    {/* <CardWrapper>
         <div className="flex justify-around ">
             <div>
                <p className="text-light-text dark:text-dark-text ">Name</p>
@@ -114,7 +126,7 @@ export const JobApplications = () => {
             </div>
             
         </div>
-       </CardWrapper>
+       </CardWrapper> */}
     </div>
        </>
   )
