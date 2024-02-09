@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.1.0",
     "@reduxjs/toolkit": "^2.0.1",
     "add": "^2.0.6",
     "axios": "^1.6.7",

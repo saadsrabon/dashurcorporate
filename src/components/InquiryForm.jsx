@@ -5,11 +5,12 @@ const InquiryForm = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
     // Add your form submission logic here
     const handleSubmit = (event) => {
       event.preventDefault();
-      console.log(name, phone, email);
+      console.log(name, phone, email ,message);
     };
   return (
     <div id="contact-form " className="w-[40%]">
@@ -38,8 +39,8 @@ const InquiryForm = () => {
       <input onChange={(e)=>setEmail(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="email" name="email" />
     </div>
     <div className="mb-6">
-      <label className="block text-light-text dark:text-dark-text" htmlFor="email">Write Your Message</label>
-      <textarea onChange={(e)=>setEmail(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="email" name="email" />
+      <label className="block text-light-text dark:text-dark-text" htmlFor="message">Write Your Message</label>
+      <textarea onChange={(e)=>setMessage(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]"  name="message" />
     </div>
     
     <div  className="flex justify-center">
