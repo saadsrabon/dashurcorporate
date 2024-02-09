@@ -1,8 +1,23 @@
+import { useState } from "react";
 import CardWrapper from "../components/CardWrapper"
+import InquiryForm from "../components/InquiryForm"
 import Chips from "../components/chips"
 
 
 const Contact = () => {
+  const [showForm, setShowForm] = useState(false);
+  // handle scroll to section
+  const handleScroll = () => {
+    setShowForm(true);
+    setTimeout(() => {
+      const element = document.getElementById("contact-form");
+    
+      element.scrollIntoView({ behavior: "smooth" });
+    }, 40);
+   
+    
+    clearTimeout();
+  };
   return (
     <div className="flex flex-col items-center w-[95%] mx-auto my-24 mt-48">
           <div className="flex flex-col  space-y-4 justify-center items-center">
@@ -69,7 +84,7 @@ Inquiries
               <p className="text-light-text dark:text-dark-text text-center">Provide your information to connect with you. We respect your privacy. We will not share your personal information</p>
             </div>
             <div className="text-center mt-4">
-              <a className="shrink-0 px-3 py-2 text-[#0C0C0C] block text-base font-medium rounded-lg bg-light-primary mt-4">
+              <a onClick={handleScroll}  className="shrink-0 px-3 py-2 text-[#0C0C0C] block text-base font-medium rounded-lg bg-light-primary mt-4">
               Inquiry Now
               </a>
               </div>
@@ -80,8 +95,9 @@ Inquiries
        
       </div>
 
-      {/* contact Us Form */}
+      {/* contact Us Form */}  
 
+   {showForm && <InquiryForm />}
 
     </div>
   )
