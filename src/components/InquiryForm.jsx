@@ -22,9 +22,11 @@ const InquiryForm = ({setShowForm}) => {
           .then(
             () => {
               console.log('SUCCESS!');
+              setShowForm(false);
             },
             (error) => {
               console.log('FAILED...', error.text);
+              setShowForm(false);
             },
           );
       };
