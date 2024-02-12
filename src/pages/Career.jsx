@@ -6,6 +6,7 @@ import Chips from "../components/chips";
 import jobData from '../utils/job.json';
 
 import SingleJob from "../components/SingleJob";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Career = () => {
   const [openJobIndex, setOpenJobIndex] = useState(null);
@@ -19,7 +20,11 @@ const Career = () => {
   };
 
   return (
-    
+    <HelmetProvider>
+
+    <Helmet>
+      <title>Careers | Dashur AI</title>
+    </Helmet>
     <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mx-auto my-12 mt-48 flex-col items-center px-4">
       <div className="flex flex-col justify-center items-center">
         <Chips title="Careers" />
@@ -41,6 +46,7 @@ const Career = () => {
           <SingleJob key={index} job={job} handleOpen={() => handleOpen(index)} index={index}  isActive={index === openJobIndex} handleClose={handleClose} />
         ))}
     </div>
+    </HelmetProvider>
   );
 };
 

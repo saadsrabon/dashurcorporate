@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import BasicTitle from "../components/basicTitle"
 import { motion } from "framer-motion"
 const text = {
@@ -17,6 +18,10 @@ const text = {
   };
 const MarketsPage = ({isDarkMode}) => {
   return (
+    <HelmetProvider>
+    <Helmet>
+      <title>Markets | Dashur AI</title>
+    </Helmet>
     <div>
     <div className=""> 
     <div className="flex flex-col justify-center items-center lg:mt-48">
@@ -133,6 +138,7 @@ className="fill-black dark:fill-white"
 
     </div>
   </div>
+  </HelmetProvider>
   )
 }
 

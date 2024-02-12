@@ -10,9 +10,11 @@ export const JobApplications = () => {
 
     useEffect(() => {
        axios.get("http://localhost:5000/get-files")
-        .then((res)=>{console.log(res.data); setApplications(res.data)
+        .then((res)=>{setApplications(res.data)
         }
         )
+
+        
     }, [])
   return (
     <>
@@ -27,31 +29,34 @@ export const JobApplications = () => {
         <span className=" text-bold text-base text-light-text dark:text-dark-text ">This Week</span>
        </div>
     <div className=" w-[90%] mx-auto">
-    <CardWrapper>
-        <div className="flex justify-around ">
-            <div>
-               <p className="text-light-text dark:text-dark-text ">Name</p>
-                <h2 className="text-light-text dark:text-dark-text font-bold ">John Smith</h2> 
+        {
+            applications?.data?.length>0 ? applications?.data?.map((application) => <CardWrapper key={application?._id}>
+            <div className="flex justify-around ">
+                <div>
+                   <p className="text-light-text dark:text-dark-text ">Name</p>
+                    <h2 className="text-light-text dark:text-dark-text font-bold ">{application?.name}</h2> 
+                </div>
+                <div>
+                   <p className="text-light-text dark:text-dark-text ">Email</p>
+                    <h2 className="text-light-text dark:text-dark-text font-bold ">{application?.email}</h2> 
+                </div>
+                <div>
+                   <p className="text-light-text dark:text-dark-text ">Phone Number</p>
+                    <h2 className="text-light-text dark:text-dark-text font-bold ">{application?.phone}</h2> 
+                </div>
+                <div>
+                   <p className="text-light-text dark:text-dark-text ">Resume</p>
+                    <a href={`http://localhost:5000/files/${application?.pdf}`} className="text-light-text dark:text-dark-text font-bold ">Show Resume</a> 
+                </div>
+                <div>
+                   <p className="text-light-text dark:text-dark-text ">Date</p>
+                    <h2 className="text-light-text dark:text-dark-text font-bold ">02/10/2024</h2> 
+                </div>
+                
             </div>
-            <div>
-               <p className="text-light-text dark:text-dark-text ">Email</p>
-                <h2 className="text-light-text dark:text-dark-text font-bold ">john@gmail.com</h2> 
-            </div>
-            <div>
-               <p className="text-light-text dark:text-dark-text ">Phone Number</p>
-                <h2 className="text-light-text dark:text-dark-text font-bold ">138737947982734323</h2> 
-            </div>
-            <div>
-               <p className="text-light-text dark:text-dark-text ">Resume</p>
-                <h2 className="text-light-text dark:text-dark-text font-bold ">John Smith</h2> 
-            </div>
-            <div>
-               <p className="text-light-text dark:text-dark-text ">Date</p>
-                <h2 className="text-light-text dark:text-dark-text font-bold ">01/02/2024</h2> 
-            </div>
-            
-        </div>
-       </CardWrapper>
+           </CardWrapper>  ): <h1 className="text-center mt-24 text-5xl mb-64 text-red-400">No Applications !</h1>
+        }
+    
     {/* <CardWrapper>
         <div className="flex justify-around ">
             <div>

@@ -1,8 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
 
-const InquiryForm = () => {
+const InquiryForm = ({setShowForm}) => {
+
+
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
@@ -35,7 +38,7 @@ const InquiryForm = () => {
     <div id="contact-form" className="w-[40%]">
     
      <div className="relative rounded-lg border border-solid border-white border-opacity-20  dark:bg-gray-800 dark:opacity-100 bg-white bg-opacity-100 shadow-xl px-6 py-10 my-8">
-     <div className=" absolute right-4 top-3"><svg width="26" height="26" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+     <div className=" absolute right-4 top-3"><svg  onClick={()=>setShowForm(false)} width="26" height="26" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="mask0_187_626"  maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
 <rect width="36" height="36" fill="#D9D9D9"/>
 </mask>
