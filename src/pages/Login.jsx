@@ -1,9 +1,27 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { AuthContext } from "../context/Contextfile"
+import {  useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const {Signin} = useContext(AuthContext)
+  console.log(Signin)
+  console.log(email)
+  console.log(password)
+const navigate =useNavigate()
+  // login Functions
+ const handleLogin = async(e)=>{
+    e.preventDefault()
+    try{
+      await Signin(email,password)
+      navigate('/jobapplications')
+    }catch(err){
+      console.log(err)
+    }
+ }
   return (
    <div className=" mt-48 h-screen">
 <div> 
@@ -14,7 +32,7 @@ const Login = () => {
     
     <div className="relative rounded-lg border border-solid border-white border-opacity-20  dark:bg-gray-800 dark:opacity-100 bg-white bg-opacity-100 shadow-xl px-6 py-10 my-8">
   
-  <form  className="">
+  <form  className="" onSubmit={handleLogin}>
   
    <div className="mb-6">
      <label className="block text-light-text dark:text-dark-text" htmlFor="email">Email</label>

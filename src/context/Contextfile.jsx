@@ -1,92 +1,74 @@
-/* eslint-disable react/prop-types */
-import  { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
-import app from '../Firebase/Firebase.config';
+import  { createContext, useEffect, useState } from 'react'
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signOut,  } from "firebase/auth";
+import app from '../Firebase/Firebase.config'
+
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://firebase.google.com/docs/web/learn-more#config-object
 
 
+
+// Initialize Firebase Authentication and get a reference to the service
 export const AuthContext = createContext()
+const auth = getAuth(app)
+
 
 const Contextfile = ({children}) => {
-  const googleProvider = new GoogleAuthProvider()
-  const [data,setData]= useState([])
-  console.log(setData)
-  const [loader,setLoader]=useState(true)
-  const [user,setUser]= useState(null)
-  const auth = getAuth(app);
+    const [user,setUser] =useState(null)
+    const [loading,setLoading] =useState(true)
 
-// Methods of Authentications
-// Create User with email password
-const  createUserMethod =(email,password)=>{
-  setLoader(true)
-  return  createUserWithEmailAndPassword(auth, email, password)
-}
-
-// Login User
-const signInmethod =(email,password)=>{
-  setLoader(true)
-  return signInWithEmailAndPassword(auth, email, password)
-
-}
-  // Google sign In function
-  const googleSign =()=>{
-    setLoader(true)
-     return signInWithPopup(auth, googleProvider)
-  
-  }
- 
-  // SignOut method 
- const signOutMethod = ()=>{
-  setLoader(true)
-  return signOut(auth).then(() => {
-      // Sign-out successful.
-     
-    })
- }
-  // update Profile 
-  const updateUserProfile = (name ,photourl)=>{
-    setLoader(true)
-      updateProfile(auth.currentUser, {
-          displayName: name, 
-          photoURL:photourl,
-        })
-  }
-
-  // on auth state Change
-  useEffect(()=>{
-      const unsubscribe = onAuthStateChanged(auth,(currentUser)=>{
-          setUser(currentUser)
-          setLoader(false)
-      })
-      return ()=>{
-          unsubscribe()
-      }
-  },[auth])
-
-
-
-//Google Sign in
-
-// github Sign in
-
-// Logout User 
-
-  // Object That will pass all the value to auth provider
-    const authinfo ={
-      createUserMethod ,
-      data,
-      updateUserProfile, 
-      signOutMethod ,
-      signInmethod, 
-      googleSign,
-      user,
-      loader,
-      setLoader,
-      auth
+    // Sign up Method pass
+    const CreateUser =(email,password)=>{
+       setLoading(true)
+     return  createUserWithEmailAndPassword(auth,email,password);
+   
     }
+  
+    // Sign in method
+    const Signin=(email,password)=>{
+       setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    const signOutUser = () => {
+      return signOut(auth);
+    }
+//  forget password method
+const forgetPasswordMethod =(email)=>{
+   setLoading(true)
+    return sendPasswordResetEmail(auth,email)
+}
+      
+
+    // Get user login or not
+    useEffect(()=>{
+        const unsubcribe = onAuthStateChanged(auth, (currentUser)=>{
+            if (currentUser) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
+            
+                const uid = currentUser.uid;
+                setUser(currentUser)
+                console.log(uid)
+                setLoading(false)
+
+                // ...
+              } else {
+              setUser(null)
+              }
+        })
+        return ()=>{
+            unsubcribe()
+        }
+    },[])
+
+    // Creating Object to store All the authentication data for provider
+    const authInfo ={CreateUser,user ,Signin ,signOutUser ,loading,setLoading ,forgetPasswordMethod}
     return (
-      <AuthContext.Provider value={authinfo}>
-        {children}
-      </AuthContext.Provider>
+    
+         <AuthContext.Provider value={authInfo}>
+          {children}
+         </AuthContext.Provider>
+       
     );
 };
 
