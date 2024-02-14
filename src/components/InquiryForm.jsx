@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
+import { Bounce, toast } from "react-toastify";
 
 
 const InquiryForm = ({setShowForm}) => {
@@ -11,6 +12,7 @@ const InquiryForm = ({setShowForm}) => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const form = useRef();
+   
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -20,12 +22,35 @@ const InquiryForm = ({setShowForm}) => {
             publicKey:'2ox7-3gdQnHMcDfGD',
           })
           .then(
-            () => {
-              console.log('SUCCESS!');
+            (res) => {
+              console.log('SUCCESS!' ,res);
+              toast.success(' Inquiry submitted!', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                });
               setShowForm(false);
+
             },
             (error) => {
               console.log('FAILED...', error.text);
+              toast.warn('🦄 Something went wrong!', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                });
               setShowForm(false);
             },
           );

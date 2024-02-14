@@ -10,7 +10,7 @@ const TechnologiesCard = ({item}) => {
     <div className='techCard techtool -z-10 overflow-hidden  py-8 px-4 rounded-lg border border-solid border-white border-opacity-20 dark:bg-gray-800 dark:bg-opacity-20 bg-white bg-opacity-20 shadow-xl my-16 ">
     '>
             <div className='flex justify-center items-center'>
-                <h2 className='uppercase text-light-text dark:text-dark-text '>{title}</h2>
+                <h2 className='uppercase text-light-text dark:text-dark-text font-bold '>{title}</h2>
                 </div>
                 <div className='flex justify-center items-center'>
                 <p className='text-light-text w-[80%] my-4 text-center lg:text-left text-base leading-6  dark:text-[#D2D2D2]'>
@@ -18,11 +18,11 @@ const TechnologiesCard = ({item}) => {
                 </p>
                 </div>
 
-              <div className='grid grid-cols-2  md:grid-cols-4 lg:grid-cols-4 px-8 py-10 gap-4'>
+              <div className='grid grid-cols-2  md:grid-cols-4 lg:grid-cols-4 px-8 py-10 gap-4 '>
               {
                 technology?.map((item,index) => (
                   <div onMouseLeave={()=>setTooltipOpen(null)} onMouseEnter={()=>setTooltipOpen(index)} className="relative techtool" key={index}>
-                    <div  className='flex  mb-2 techtool   space-x-2 items-center border border-white border-opacity-20 px-3.5 py-2 rounded-lg  bg-[#535353] hover:border-light-primary' data-tip="hello world fgkhskfghksfhg">
+                    <div  className='flex mb-2 techtool mx-  space-x-2 items-center border border-white border-opacity-20 px-3.5 py-2 rounded-lg  bg-[#535353] hover:border-light-primary' data-tip="hello world fgkhskfghksfhg">
                    <div className="w-8 ">
                    <img className="w-[100%] grow-0" src={item?.imageLink} alt="" />
                    </div>

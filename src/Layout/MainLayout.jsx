@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { ToastContainer } from "react-toastify"
 import Footer from "../shared/Footer"
 import NavBar from "../shared/NavBar"
 
@@ -10,7 +11,9 @@ console.log(isDarkMode)
  <>
 <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
 {children}
+
 <Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+<ToastContainer/>
  </>
   )
 }

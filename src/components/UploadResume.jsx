@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import axios from "axios";
 import { useRef, useState } from "react";
+import { Bounce, toast } from "react-toastify";
 
 
 
@@ -47,16 +49,42 @@ const UploadResume = ({handleClose}) => {
         console.log(`Uploading file: ${selectedFile.name}`);
         // Add your file upload logic (e.g., using FormData and API)
         const result = await axios.post(
-          "http://localhost:5000/upload-files",
+          "https://dashur-backend.vercel.app/upload-files",
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
           }
-        );
+        ).catch((error) => {
+          console.log(error);
+        });
         console.log(result);
+        toast.success(' File Uploaded!', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+          })
+        handleClose()
         
       } else {
         console.log('No file selected');
+        toast.warn('No file selected', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+          });
+      
       }
     };
       
@@ -64,8 +92,17 @@ const UploadResume = ({handleClose}) => {
     return (
       
       <div className="w-full">
-        <div className="absolute">*</div>
-         <div className="rounded-lg border border-solid border-white border-opacity-20  dark:bg-gray-800 dark:opacity-100 bg-white bg-opacity-100 shadow-xl px-6 py-10 my-8">
+   <div className="rounded-lg border border-solid border-white border-opacity-20  dark:bg-gray-800 dark:opacity-100 bg-white bg-opacity-100 shadow-xl px-6 py-10 my-8">
+   <div className=" absolute right-4 top-12"><svg onClick={handleClose}   width="26" height="26" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_187_626"  maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
+<rect width="36" height="36" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_187_626)">
+<path d="M9.60183 28.502L7.50183 26.402L15.9018 18.002L7.50183 9.60195L9.60183 7.50195L18.0018 15.902L26.4018 7.50195L28.5018 9.60195L20.1018 18.002L28.5018 26.402L26.4018 28.502L18.0018 20.102L9.60183 28.502Z" fill="#EBEBEB"/>
+</g>
+</svg>
+</div>
+      
        <form className="" onSubmit={handleUpload}>
         <div className="mb-6" >
           <label className="block text-light-text dark:text-dark-text" htmlFor="name">Name</label>

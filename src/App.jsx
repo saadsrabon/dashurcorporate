@@ -1,4 +1,4 @@
-import {HashRouter , Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Router, Routes } from "react-router-dom"
 import { MainLayout } from "./Layout/MainLayout"
 import { createContext, useEffect, useState } from "react";
 import Contact from "./pages/Contact";
@@ -15,18 +15,20 @@ import MarketsPage from "./pages/MarketsPage";
 import { HelmetProvider } from "react-helmet-async";
 import { JobApplications } from "./pages/JobApplications";
 
+import Login from './pages/Login';
 
- export const ChatbotContext = createContext();
+
+export const ChatbotContext = createContext();
 function App() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const[chatbotOpen,setChatbotOpen]=useState(false)
+  const [chatbotOpen, setChatbotOpen] = useState(false)
 
-console.log(chatbotOpen)
+  console.log(chatbotOpen)
   useEffect(() => {
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: light)').matches;
-   console.log(prefersDarkMode)
+    console.log(prefersDarkMode)
   }, []);
 
 
@@ -37,7 +39,7 @@ console.log(chatbotOpen)
     const isNightTime = currentTime >= 20 || currentTime < 6;
 
     setIsDarkMode(isNightTime);
-   
+
   }, []);
 
   useEffect(() => {
@@ -45,8 +47,8 @@ console.log(chatbotOpen)
       console.log(isDarkMode)
       document.documentElement.classList.add('dark');
       // document.body.style.backgroundColor = "#121212"; 
-       document.body.style.backgroundColor = "#020E14";
-     
+      document.body.style.backgroundColor = "#020E14";
+
     } else {
       document.documentElement.classList.remove('dark');
       document.body.style.backgroundColor = "#FFFF";
@@ -55,43 +57,52 @@ console.log(chatbotOpen)
 
 
   return (
+    <>
     <HashRouter>
-    <MainLayout  className="dark"
-    isDarkMode={isDarkMode}
-    setIsDarkMode={setIsDarkMode}
- 
-    >  
-    
-      <div onClick={()=> setChatbotOpen(prev=>!prev)} className="fixed top-72 right-5 botMainAvatar">
-         <img src={chatBotGlow} alt="" />
-      </div>
- 
-  <ChatbotContext.Provider value={{setChatbotOpen}}>
-      {
-        chatbotOpen &&  <Chatbot
-        config={config}
-          messageParser={MessageParser}
-          actionProvider={ActionProvider}
-        // Other chatbot kit props and configurations
-      />
-      }
-  </ChatbotContext.Provider>
-     <HelmetProvider>
+      <MainLayout className="dark"
+        isDarkMode={isDarkMode}
+        setIsDarkMode={setIsDarkMode}
+
+      >
+
+        <div onClick={() => setChatbotOpen(prev => !prev)} className="fixed top-72 right-5 botMainAvatar">
+          <img src={chatBotGlow} alt="" />
+        </div>
+
+        <ChatbotContext.Provider value={{ setChatbotOpen }}>
+          {
+            chatbotOpen && <Chatbot
+              config={config}
+              messageParser={MessageParser}
+              actionProvider={ActionProvider}
+            // Other chatbot kit props and configurations
+            />
+          }
+        </ChatbotContext.Provider>
+        <HelmetProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/career" element={<Career />} />
+            <Route path="/markets" element={<MarketsPage isDarkMode={isDarkMode} />} />
+            <Route path="/jobs" element={<JobApplications />} />
+
+          </Routes>
+        </HelmetProvider>
+
+
+      </MainLayout>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/about" element={<About isDarkMode={isDarkMode}/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/career" element={<Career/>} />
-        <Route path="/markets" element={<MarketsPage isDarkMode={isDarkMode}/>} />
-        <Route path="/jobs" element={<JobApplications/>} />
-        
+      <Route path="/login" element={<Login />} />
       </Routes>
-      </HelmetProvider>
-   
-   
-    </MainLayout>
+  
+      
     </HashRouter>
+    
+    
+  </>
   )
 }
 

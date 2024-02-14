@@ -251,7 +251,8 @@ box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.10);
 
     content: url("https://i.ibb.co/0r9WCCv/Icon.png");
     color: #fff;
-     transform:rotate(180deg); 
+    transform:rotate(180deg); 
+    
     
 }
 
@@ -259,6 +260,7 @@ box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.10);
     content:  url("https://i.ibb.co/0r9WCCv/Icon.png");
   
     color: #fff;
+
    
  
    

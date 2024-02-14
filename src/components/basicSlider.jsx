@@ -9,7 +9,7 @@ import db from  '../utils/technologies.json'
 import TechnologiesCard from './technologiesCard';
 import { CustomPrevArrow } from "./CustomPrevArrow";
 import { CustomNextArrow } from "./CustomNextArrow";
-import { useRef } from "react";
+
 
 
 export default function App() {

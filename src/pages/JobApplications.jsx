@@ -9,7 +9,7 @@ export const JobApplications = () => {
     console.log(applications)
 
     useEffect(() => {
-       axios.get("http://localhost:5000/get-files")
+       axios.get("https://dashur-backend.vercel.app/get-files")
         .then((res)=>{setApplications(res.data)
         }
         )
@@ -46,7 +46,7 @@ export const JobApplications = () => {
                 </div>
                 <div>
                    <p className="text-light-text dark:text-dark-text ">Resume</p>
-                    <a href={`http://localhost:5000/files/${application?.pdf}`} className="text-light-text dark:text-dark-text font-bold ">Show Resume</a> 
+                    <a href={`https://dashur-backend.vercel.app/files/${application?.pdf}`} className="text-light-text dark:text-dark-text font-bold ">Show Resume</a> 
                 </div>
                 <div>
                    <p className="text-light-text dark:text-dark-text ">Date</p>
