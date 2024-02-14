@@ -22,8 +22,8 @@ const Login = () => {
    </div>
   
    <div className="mb-6">
-     <label className="block text-light-text dark:text-dark-text" htmlFor="email">Password</label>
-     <input required value={password} onChange={(e)=>setPassword(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="password" name="user_password" />
+     <label className="block text-light-text dark:text-dark-text" htmlFor="password">Password</label>
+     <input required value={password} onChange={(e)=>setPassword(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545] text-black dark:text-dark-primary" type="password" name="user_password" />
    </div>
    
    
