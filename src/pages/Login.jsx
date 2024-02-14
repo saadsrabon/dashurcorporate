@@ -5,7 +5,7 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   return (
-   <div className=" mt-24">
+   <div className=" mt-48 h-screen">
 <div> 
   <h2 className="text-center text-2xl uppercase font-semibold md:text-3xl ">Admin Login</h2>
 </div>

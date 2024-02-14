@@ -14,6 +14,7 @@
     "@reduxjs/toolkit": "^2.0.1",
     "add": "^2.0.6",
     "axios": "^1.6.7",
+    "firebase": "^10.8.0",
     "framer-motion": "^11.0.3",
     "menubar": "^9.4.0",
     "react": "^18.2.0",

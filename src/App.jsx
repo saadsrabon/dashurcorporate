@@ -1,4 +1,4 @@
-import { HashRouter, Route, Router, Routes } from "react-router-dom"
+import { HashRouter, Route,  Routes } from "react-router-dom"
 import { MainLayout } from "./Layout/MainLayout"
 import { createContext, useEffect, useState } from "react";
 import Contact from "./pages/Contact";
@@ -16,6 +16,8 @@ import { HelmetProvider } from "react-helmet-async";
 import { JobApplications } from "./pages/JobApplications";
 
 import Login from './pages/Login';
+import PrivateRoute from "./PrivateRoutes/PrivateRoutes";
+import Contextfile from "./context/Contextfile";
 
 
 export const ChatbotContext = createContext();
@@ -80,6 +82,7 @@ function App() {
           }
         </ChatbotContext.Provider>
         <HelmetProvider>
+          <Contextfile>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
@@ -87,16 +90,17 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/career" element={<Career />} />
             <Route path="/markets" element={<MarketsPage isDarkMode={isDarkMode} />} />
-            <Route path="/jobs" element={<JobApplications />} />
-
+            <Route path="/jobs" element={<PrivateRoute><JobApplications /></PrivateRoute>} />
+            <Route path="/login" element={<Login />} />
           </Routes>
+          </Contextfile>
         </HelmetProvider>
 
 
       </MainLayout>
-      <Routes>
-      <Route path="/login" element={<Login />} />
-      </Routes>
+  
+    
+      
   
       
     </HashRouter>
