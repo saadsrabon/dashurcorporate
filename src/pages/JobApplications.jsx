@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react"
 import CardWrapper from "../components/CardWrapper"
 import axios from "axios"
+import { formatTimestamp } from "../utilities/utility"
 
 
 export const JobApplications = () => {
 
+  
+   
+
     const [applications, setApplications] = useState([])
+    const [filteredData, setFilteredData] = useState([])
+    const [timeRange, setTimeRange] = useState('all');
     console.log(applications)
 
     useEffect(() => {
@@ -16,6 +22,32 @@ export const JobApplications = () => {
 
         
     }, [])
+console.log(filteredData)
+    
+      useEffect(() => {
+        function filterItemsByTimeRange(timeRange) {
+            const now = new Date();
+            let thresholdDate;
+          
+            switch (timeRange) {
+              case 'all':
+                return applications?.data;
+              case 'week':
+                thresholdDate = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+      return applications?.data?.filter(item => new Date(item.publishedAt) >= thresholdDate);
+              case 'month':
+                thresholdDate = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+                return applications?.data?.filter(item => new Date(item.publishedAt) >= thresholdDate);
+              default:
+                return [];
+            }
+          }
+        const filteredApplications = filterItemsByTimeRange(timeRange);
+             setFilteredData(filteredApplications);
+      }, [timeRange, applications]);
+
+    
+      
   return (
     <>
         <div className="mt-48 mb-24 "></div>
@@ -23,14 +55,14 @@ export const JobApplications = () => {
         <div>
             <h2 className="text-light-text dark:text-dark-text font-bold text-5xl  text-center ">Job Applications</h2>
         </div>
-       <div className="flex justify-center my-8 space-x-4 ">
-        <span className=" text-bold text-base text-light-primary ">All</span>
-        <span className=" text-bold text-base  text-light-text dark:text-dark-text">This Month</span>
-        <span className=" text-bold text-base text-light-text dark:text-dark-text ">This Week</span>
+       <div className="flex justify-center my-8 space-x-4  ">
+        <span onClick={()=>setTimeRange('all')} className=" text-bold text-base text-light-primary ">All</span>
+        <span onClick={()=>setTimeRange('month')} className=" text-bold text-base  text-light-text dark:text-dark-text">This Month</span>
+        <span onClick={()=>setTimeRange('week')} className=" text-bold text-base text-light-text dark:text-dark-text ">This Week</span>
        </div>
-    <div className=" w-[90%] mx-auto">
+    <div className=" w-[90%] mx-auto mb-64">
         {
-            applications?.data?.length>0 ? applications?.data?.map((application) => <CardWrapper key={application?._id}>
+            filteredData?.length>0 ? filteredData?.map((application) => <CardWrapper key={application?._id}>
             <div className="flex justify-around ">
                 <div>
                    <p className="text-light-text dark:text-dark-text ">Name</p>
@@ -50,7 +82,7 @@ export const JobApplications = () => {
                 </div>
                 <div>
                    <p className="text-light-text dark:text-dark-text ">Date</p>
-                    <h2 className="text-light-text dark:text-dark-text font-bold ">02/10/2024</h2> 
+                    <h2 className="text-light-text dark:text-dark-text font-bold text-center">{formatTimestamp(application?.publishedAt)}</h2> 
                 </div>
                 
             </div>

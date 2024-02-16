@@ -77,15 +77,15 @@ const InquiryForm = ({setShowForm}) => {
    <form ref={form} className="" onSubmit={sendEmail }>
     <div className="mb-6" >
       <label className="block text-light-text dark:text-dark-text" htmlFor="name">Name</label>
-      <input onChange={(e)=>setName(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_name" />
+      <input required onChange={(e)=>setName(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_name" />
     </div>
     <div className="mb-6">
       <label className="block text-light-text dark:text-dark-text" htmlFor="phone">Phone</label>
-      <input onChange={(e)=>setPhone(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_phone" />
+      <input required onChange={(e)=>setPhone(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_phone" />
     </div>
     <div className="mb-6">
       <label className="block text-light-text dark:text-dark-text" htmlFor="email">Email</label>
-      <input onChange={(e)=>setEmail(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="email" name="user_email" />
+      <input required onChange={(e)=>setEmail(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="email" name="user_email" />
     </div>
     <div className="mb-6">
       <label className="block text-light-text dark:text-dark-text" htmlFor="message">Write Your Message</label>
