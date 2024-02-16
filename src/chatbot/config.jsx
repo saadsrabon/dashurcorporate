@@ -3,6 +3,8 @@ import { ChatBotHeader } from '../components/chatBotHeader';
 import StartBtn from '../chatBotWidgets/startBtn';
 import CustomMesages from '../chatBotWidgets/CustomMesages';
 import Markets from '../chatBotWidgets/Markets';
+import ServiceWidget from '../chatBotWidgets/ServiceWidget';
+import ContactsWidget from '../chatBotWidgets/ContactsWidget';
 
 const config = {
   initialMessages: [createChatBotMessage(`Welcome to Dashur AI Chatbot`)],
@@ -28,6 +30,14 @@ const config = {
       widgetName:"chips",
       widgetFunc:(props)=> <Markets {...props}/>
     },
+    {
+      widgetName:"services",
+      widgetFunc:(props)=> <ServiceWidget {...props}/>
+    },
+    {
+      widgetName:"contact",
+      widgetFunc:(props)=> <ContactsWidget {...props}/>
+    }
   ],
   }
  

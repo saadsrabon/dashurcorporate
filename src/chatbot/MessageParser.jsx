@@ -22,6 +22,8 @@ const MessageParser = ({ children, actions}) => {
             initalAction: actions.initalAction,
             handleAbout: actions.handleAbout,
             handleMarkets: actions.handleMarkets,
+            handleServices: actions.handleServices,
+            handleContacts: actions.handleContacts,
           },
         });
       })}

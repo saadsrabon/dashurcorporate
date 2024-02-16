@@ -17,7 +17,7 @@ const navigate =useNavigate()
     e.preventDefault()
     try{
       await Signin(email,password)
-      navigate('/jobapplications')
+      navigate('/jobs')
     }catch(err){
       console.log(err)
     }

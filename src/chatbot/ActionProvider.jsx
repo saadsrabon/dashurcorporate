@@ -27,6 +27,24 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     updateStateChatbot(messages);
 
   }
+  const handleServices = () => {
+    
+    const messages = createChatBotMessage("We are proud to work in these services",{
+      widget: "services",
+      delay: 500,
+    } );
+    updateStateChatbot(messages);
+
+  }
+  const handleContacts = () => {
+    
+    const messages = createChatBotMessage("We are proud to work in these services",{
+      widget: "contact",
+      delay: 500,
+    } );
+    updateStateChatbot(messages);
+
+  }
   const  updateStateChatbot = (message) => {
     setState((prevState) => ({
       ...prevState,
@@ -45,6 +63,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             initalAction,
             handleAbout,
             handleMarkets,
+            handleServices,
+            handleContacts,
            
           },
         });

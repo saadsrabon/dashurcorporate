@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom"
 
 
 const ServiceWidget = () => {
+    const navigate =useNavigate()
   return (
     <div>
-        <h2>Our Services</h2>
+        
     <ul className="ml-6 list-disc">
         <li>GRAPHIC DESIGN</li>
         <li>WEB DEVELOPMENT</li>
@@ -14,6 +16,7 @@ const ServiceWidget = () => {
         <li>SEO</li>
        
     </ul>
+    <p>If you have any other inquiry <span onClick={()=>navigate('/contact')} className="font-semibold text-light-primary">Click here</span></p>
 </div>
   )
 }
