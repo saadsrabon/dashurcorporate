@@ -269,3 +269,65 @@ box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.10);
 .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet{
   border:1px solid
 }
+/* .left-clip{
+  position: relative;
+  border:2px solid #28BFF1;
+  border-right:none;
+  border-top:none;
+  
+  
+}
+.left-clip::before{
+  position: absolute;
+  z-index: -1;
+  content: "";
+  right: -1.5%;
+  top: -2px;
+  bottom: 0;
+  height: 103%;
+  width: 100%;
+
+  background-color: inherit;
+  background-color: #000;
+
+  transform:skewX(10deg);
+  border-right:2px solid #28BFF1 ;
+  border-top:2px solid #28BFF1 ;
+  border-bottom:2px solid #28BFF1;
+  -webkit-transform:skewX(10deg);
+  -moz-transform:skewX(10deg);
+  -ms-transform:skewX(10deg);
+  -o-transform:skewX(10deg);
+}
+.right-clip{
+  overflow: hidden;
+  position: relative;
+  border:2px solid #28BFF1;
+  border-left:none;
+  border-bottom:none;
+
+}
+.right-clip::after{
+  position: absolute;
+  z-index: -1;
+  content: "";
+  right: 1.7%;
+  top: -2px;
+  height: 103%;
+  width: 96.5%;
+  background-color: inherit;
+  transform:skewX(10deg);
+  border-left:2px solid #28BFF1;
+  border-bottom:2px solid #28BFF1;
+ 
+
+  -webkit-transform:skewX(10deg);
+  -moz-transform:skewX(10deg);
+  -ms-transform:skewX(10deg);
+  -o-transform:skewX(10deg);
+} */
+
+
+ .healthcare{
+
+ }

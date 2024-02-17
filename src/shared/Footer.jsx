@@ -39,7 +39,7 @@ const Footer = ({ isDarkMode }) => {
             About
           </NavLink>
           <NavLink
-            
+            to="/capabilities"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
             Capabilities

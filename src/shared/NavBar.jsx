@@ -120,7 +120,7 @@ useEffect(() => {
             About
           </NavLink>
           <NavLink
-            
+            to="/capabilties"
             className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
           >
             Capabilities
@@ -190,7 +190,7 @@ animate="visible"
           </NavLink>
           <NavLink
           variants={item}
-            
+             to="/capabilities"
             className="dark:text-light-text text-dark-text text-center   bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
           >
             Capabilities

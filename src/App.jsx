@@ -18,6 +18,7 @@ import { JobApplications } from "./pages/JobApplications";
 import Login from './pages/Login';
 import PrivateRoute from "./PrivateRoutes/PrivateRoutes";
 import Contextfile from "./context/Contextfile";
+import { Capablities } from "./pages/Capablities";
 
 
 export const ChatbotContext = createContext();
@@ -92,6 +93,7 @@ function App() {
             <Route path="/markets" element={<MarketsPage isDarkMode={isDarkMode} />} />
             <Route path="/jobs" element={<PrivateRoute><JobApplications /></PrivateRoute>} />
             <Route path="/login" element={<Login />} />
+            <Route path="/capabilties" element={<Capablities/>} />
           </Routes>
           </Contextfile>
         </HelmetProvider>
