@@ -36,7 +36,7 @@ const MarketsPage = ({isDarkMode}) => {
     </div>
      <div className="flex flex-col items-center mx-auto w-[60%]">
   <h2 className="text-light-text text-center  dark:text-dark-text font-semibold text-xl mt-8">Hospitality</h2>
-  <p className="text-light-text text-left  dark:text-dark-text max-w-[650px] my-2">Our AI and robotics solutions on Hospitality are streamlining operations and enhancing guest experiences. From automated check-in systems to robot concierges for hotels and resorts deliver services. Also, providing automated adjusting equipment for Entertainment</p>
+  <p className="hidden md:visible text-light-text text-left  dark:text-dark-text max-w-[650px] my-2">Our AI and robotics solutions on Hospitality are streamlining operations and enhancing guest experiences. From automated check-in systems to robot concierges for hotels and resorts deliver services. Also, providing automated adjusting equipment for Entertainment</p>
 </div>
     <div className=" relative flex justify-center items-center  mb-72 w-[57%] mx-auto">
    

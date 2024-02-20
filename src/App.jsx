@@ -68,8 +68,10 @@ function App() {
 
       >
 
-        <div onClick={() => setChatbotOpen(prev => !prev)} className="fixed top-72 right-5 botMainAvatar">
+        <div onClick={() => setChatbotOpen(prev => !prev)} className="fixed realtive  top-72 right-5 botMainAvatar">
           <img src={chatBotGlow} alt="" />
+          <span className="h-4 w-4 bg-green-500 absolute rounded-full bottom-7 right-6 border-[3px] border-white"></span>
+                    <span className="h-4 w-4 bg-green-500 absolute rounded-full bottom-7 right-6 animate-ping"></span>
         </div>
 
         <ChatbotContext.Provider value={{ setChatbotOpen }}>
