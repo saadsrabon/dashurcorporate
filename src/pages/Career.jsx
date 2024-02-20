@@ -9,7 +9,7 @@ import SingleJob from "../components/SingleJob";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Career = () => {
-  const [openJobIndex, setOpenJobIndex] = useState(null);
+  const [openJobIndex, setOpenJobIndex] = useState(0);
   const [tabIndex, setTabIndex] = useState(0);
 
   const handleOpen = (index) => {
@@ -37,7 +37,7 @@ const Career = () => {
       {/* Tab Version */}
       <div role="tablist" className="tabs my-12 bg-l">
         <a onClick={() => setTabIndex(0)} role="tab" className={`${tabIndex === 0 ? "tab uppercase tab-active font-bold text-3xl dark:text-dark-text" : "tab text-light-text dark:text-dark-text "}`}>
-          Job Positions
+        Career Opportunities
         </a>
        
       </div>

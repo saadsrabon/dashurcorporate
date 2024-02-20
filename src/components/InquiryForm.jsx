@@ -13,6 +13,7 @@ const InquiryForm = ({setShowForm}) => {
     const [email, setEmail] = useState({value:"", error:false});
     const [message, setMessage] = useState('');
     const [width , setWidth] = useState({width:'w-[40%]' , height:'300px'});
+    const [isVerified, setIsVerified] = useState(false);
     const form = useRef();
    
 
@@ -137,11 +138,12 @@ xmlSpace="preserve">
       <textarea onChange={(e)=>setMessage(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]"  name="user_message" />
     </div>
     <ReCAPTCHA
-    sitekey="6Lcs2HUpAAAAAC-Gh5XjGwfgJ7CclzR-m_wEm5oX"
+    sitekey="6Lfb-HkpAAAAAOzuAk0ea5yHP_onzDZ-P8ubByPI"
+    onChange={() => setIsVerified(true)}
     
   />
     <div  className="flex justify-center">
-        <button type="submit"  className=" w-[60%] mb-2 mt-8 md:mb-0 px-8 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary" >Submit</button>
+        <button disabled={!isVerified} type="submit"  className=" w-[60%] mb-2 mt-8 md:mb-0 px-8 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary" >Submit</button>
         </div>
  
   </form>
