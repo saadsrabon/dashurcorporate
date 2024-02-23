@@ -27,8 +27,8 @@ const SingleJob = ({job, handleOpen, handleClose, isActive, index }) => {
       {isActive  ?<JobDescription job={job}/>:""}
         
     </div>
-    <div className="flex flex-col md:flex-row justify-center md:space-x-6 mt-4">
-      <button onClick={handleResumeClick} className={`${isActive?"block":"hidden"}mb-2 md:mb-0 px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary`}>Submit CV/Resume</button>
+    <div className="flex flex-col md:flex-row justify-center md:space-x-6 space-y-4  mt-4">
+      <button onClick={handleResumeClick} className={`${isActive?"block":"hidden"}mb-2 md:mb-0 px-3 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary `}>Submit CV/Resume</button>
       <button onClick={handleOpen} className="px-2 py-3 text-light-primary text-base font-medium rounded-lg bg-transparent border-light-primary border-2" >View Job Description</button>
       
     </div>

@@ -47,7 +47,7 @@ const InquiryForm = ({setShowForm}) => {
           })
           .then(
             (res) => {
-              console.log('SUCCESS!' ,res);
+        
               toast.success(' Inquiry submitted!', {
                 position: "bottom-right",
                 autoClose: 5000,
@@ -63,7 +63,7 @@ const InquiryForm = ({setShowForm}) => {
 
             },
             (error) => {
-              console.log('FAILED...', error.text);
+            
               toast.warn('🦄 Something went wrong!', {
                 position: "bottom-right",
                 autoClose: 5000,

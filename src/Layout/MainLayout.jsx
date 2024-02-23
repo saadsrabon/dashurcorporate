@@ -5,7 +5,7 @@ import Footer from "../shared/Footer"
 import NavBar from "../shared/NavBar"
 
 export const MainLayout = ({children ,isDarkMode, setIsDarkMode}) => {
-console.log(isDarkMode)
+
 
   return (
  <>

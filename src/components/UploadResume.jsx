@@ -41,12 +41,12 @@ const UploadResume = ({handleClose}) => {
       formData.append("phone", phone);
       formData.append("email", email);
       formData.append("file", selectedFile);
-      console.log(name, selectedFile);
- console.log(formData)
+     
+
       
       // You can implement file upload logic here
       if (selectedFile) {
-        console.log(`Uploading file: ${selectedFile.name}`);
+
         // Add your file upload logic (e.g., using FormData and API)
         const result = await axios.post(
           "https://dashur-backend.vercel.app/upload-files",
@@ -55,9 +55,9 @@ const UploadResume = ({handleClose}) => {
             headers: { "Content-Type": "multipart/form-data" },
           }
         ).catch((error) => {
-          console.log(error);
+      
         });
-        console.log(result);
+     
         toast.success(' File Uploaded!', {
           position: "bottom-right",
           autoClose: 5000,
@@ -72,7 +72,7 @@ const UploadResume = ({handleClose}) => {
         handleClose()
         
       } else {
-        console.log('No file selected');
+     
         toast.warn('No file selected', {
           position: "bottom-right",
           autoClose: 5000,

@@ -3,10 +3,10 @@
 export const Capablities = () => {
   return (
     <section className="h-screen mt-48 mb-48 w-[80%] mx-auto">
-        <h2 className='uppercase text-light-text dark:text-dark-text text-5xl font-bold text-center'>Capabilities</h2>
+        <h2 className=' text-5xl  text-light-text text-center py-4 text-[24px] md:text-5xl uppercase font-sans font-bold  dark:text-dark-text'>Capabilities</h2>
      
-     <div className="flex  justify-evenly my-20 ">
-        <div className='pl-24  w-[45%] bg-[url("https://i.ibb.co/3mHYVCL/Rectangle-161-removebg-preview.png")] bg-no-repeat bg-contain'>
+     <div className="flex md:grid-cols-2  my-20 ">
+        <div className='pl-24 w-full  lg:w-[45%] bg-[url("https://i.ibb.co/3mHYVCL/Rectangle-161-removebg-preview.png")] bg-no-repeat bg-contain'>
             <h2 className="uppercase mt-8 text-3xl text-light-text dark:text-dark-text">CaPABILITies</h2>
              
              <div className=" mb-8">
@@ -20,7 +20,7 @@ export const Capablities = () => {
           <p className="text-xl font-semibold my-2  text-light-text dark:text-dark-text">And More</p>
              </div>
         </div>
-        <div className='pl-24 bg-[url("https://i.ibb.co/L9fXWvk/Rectangle-162-removebg-preview.png")] bg-no-repeat bg-contain w-[45%]'>
+        <div className='pl-24  lg:w-[45%] bg-[url("https://i.ibb.co/L9fXWvk/Rectangle-162-removebg-preview.png")] bg-no-repeat bg-contain w-full'>
         <h2 className="uppercase mt-8  text-3xl text-light-text dark:text-dark-text">Q1-Q2 2024 CLIENT PROJECTS</h2>
        <div className="my-4 ">
        <p className="text-xl font-semibold my-2  text-light-text dark:text-dark-text">National Football League (NFL) NY, NY</p>

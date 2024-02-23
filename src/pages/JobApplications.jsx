@@ -12,7 +12,7 @@ export const JobApplications = () => {
     const [applications, setApplications] = useState([])
     const [filteredData, setFilteredData] = useState([])
     const [timeRange, setTimeRange] = useState('all');
-    console.log(applications)
+   
 
     useEffect(() => {
        axios.get("https://dashur-backend.vercel.app/get-files")
@@ -22,8 +22,7 @@ export const JobApplications = () => {
 
         
     }, [])
-console.log(filteredData)
-    
+
       useEffect(() => {
         function filterItemsByTimeRange(timeRange) {
             const now = new Date();

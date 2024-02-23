@@ -7,7 +7,7 @@ export const ChatBotHeader = () => {
     const {setChatbotOpen}=chatBotdecide
 
     const handleClick=()=>{
-        console.log('clicked')
+       
         setChatbotOpen(prev=>!prev)
     }
 
@@ -31,7 +31,7 @@ export const ChatBotHeader = () => {
            
           
             <div className='flex justify-center items-center'>
-                <h2 className='text-xl font-bold uppercase text-center'>Mr. Dash </h2>
+                <h2 className='text-xl font-bold uppercase text-center'>Dash </h2>
                
             </div>
         </div>

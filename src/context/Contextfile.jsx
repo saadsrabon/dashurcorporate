@@ -48,7 +48,7 @@ const forgetPasswordMethod =(email)=>{
             
                 const uid = currentUser.uid;
                 setUser(currentUser)
-                console.log(uid)
+              
                 setLoading(false)
 
                 // ...

@@ -49,8 +49,8 @@ we aim to provide cutting-edge solutions with real-time situational awareness, p
 analytics, and human-like acumen.</p>   
 
 <div className="mt-24" >
-        <h2 className="text-light-text dark:text-dark-text text-4xl font-bold mt-8 uppercase ">Our Mission</h2>
-          <p className="text-light-text text-base mt-4 dark:text-dark-text">Deliver exceptional service and premium applications and , products that empower our clients to  elevate and expand their brands.</p>
+        <h2 className="text-light-text text-left py-4 text-[24px] md:text-5xl uppercase font-sans font-bold  dark:text-dark-text">Our Mission</h2>
+          <p className=" wow fadeIn text-light-text text-base  dark:text-dark-text" data-wow-delay=".5s">Deliver exceptional service and premium applications and , products that empower our clients to  elevate and expand their brands.</p>
         </div>
       </div>
 
@@ -59,7 +59,7 @@ analytics, and human-like acumen.</p>
     {/* Mission and vison Part */}
 
     <div>
-      <div className="mt-48"> 
+      <div className=" mt-12 lg:mt-48"> 
       <div className="flex flex-col justify-center items-center">
         <img src={mainMarkets} alt="" />
         {/* <BasicTitle width="w-full md:w-[94%] lg:w-[60%] " title="Markets" /> */}

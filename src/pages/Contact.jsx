@@ -39,7 +39,7 @@ const Contact = () => {
         <title>Contact Us | Dashur AI</title>
       </Helmet>
 
-      <div className="flex flex-col items-center w-[95%] mx-auto my-24 mt-48">
+      <div className="flex flex-col items-center w-[95%] mx-auto my-24 lg:mt-48">
         <div className="flex flex-col  space-y-4 justify-center items-center">
           <div className="flex ">
             <Chips title="Contact Us" />
@@ -52,7 +52,7 @@ const Contact = () => {
         </div>
 
         {/* item section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12" >
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 md:gap-6 lg:my-12" >
           <CardWrapper>
             <div className="flex flex-col items-center justify-center">
               <div className="flex justify-center space-x-4 ">

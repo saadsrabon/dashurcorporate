@@ -2,7 +2,7 @@
 
 
 const JobDescription = ({job}) => {
-    console.log(job)
+  
   return (
     <div>
         <p className='my-2 font-semibold text-light-text dark:text-dark-text'>Job Overview</p>

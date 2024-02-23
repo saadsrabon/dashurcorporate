@@ -3,13 +3,11 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import BasicTitle from "../components/basicTitle"
 
-import { createRef } from "react";
-import { PathTooltip } from "react-path-tooltip";
+
 import { DashurDark } from "../components/DashurDark";
 
 const MarketsPage = ({isDarkMode}) => {
-  const svgRef = createRef()
-  const pathRef = createRef()
+ 
   return (
     <HelmetProvider>
     <Helmet>

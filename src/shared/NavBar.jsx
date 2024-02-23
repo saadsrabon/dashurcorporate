@@ -190,7 +190,7 @@ animate="visible"
           </NavLink>
           <NavLink
           variants={item}
-             to="/capabilities"
+             to="/capabilties"
             className="dark:text-light-text text-dark-text text-center   bg-light-primary bg-opacity-100 w-full hover:text-light-gray text-xl"
           >
             Capabilities

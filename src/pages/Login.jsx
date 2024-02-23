@@ -8,9 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState('')
 
   const {Signin} = useContext(AuthContext)
-  console.log(Signin)
-  console.log(email)
-  console.log(password)
+
 const navigate =useNavigate()
   // login Functions
  const handleLogin = async(e)=>{
@@ -19,7 +17,7 @@ const navigate =useNavigate()
       await Signin(email,password)
       navigate('/jobs')
     }catch(err){
-      console.log(err)
+    
     }
  }
   return (

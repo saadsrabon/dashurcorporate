@@ -21,6 +21,10 @@ const Home = () => {
       
   //   }, 5000);
   // }, []);
+ const handleNextSection=()=>{
+  document.getElementById('service').
+  scrollIntoView({ behavior: 'smooth' });
+  }
 
   
   return (
@@ -50,11 +54,11 @@ const Home = () => {
       
       <title>Dashur AI</title>
     </Helmet>
-    <div className='relative mt-36'>
+    <div className='relative mt-32 lg:mt-24'>
       {/* Hero Section */}
-      <div className="mx-auto py-8 md:py-16 lg:py-24">
-        <h2 className="text-light-text text-4xl mb-8 lg:mb-0 md:text-4xl lg:text-6xl font-bold uppercase dark:text-dark-text text-center lg:leading-[78px]">
-          Empowering Innovation, Connecting <br /> the Future With Dashur ai
+      <div className="mx-auto py-4 md:py-16 lg:py-24">
+        <h2 className="text-light-text text-3xl md:px-48 mb-8 lg:mb-0 md:text-4xl lg:text-6xl font-bold uppercase dark:text-dark-text text-center lg:leading-[78px]">
+          Empowering Innovation, Connecting  the Future With Dashur ai
         </h2>
       </div>
 
@@ -69,8 +73,8 @@ const Home = () => {
         </div>
        <div className='relative'>
        <div className="absolute -bottom-6 lg:-bottom-10  left-0 right-0 click-btn flex justify-center">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold w-8 h-8 lg:w-16 lg:h-16 rounded-full shadow-lg flex justify-center items-center">
-            <svg className='w-4 h-4'  xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewBox="0 0 20 26" fill="none">
+          <button onClick={handleNextSection} className="animate-bounce bg-blue-500 hover:bg-blue-700 text-white font-bold w-6 h-6  lg:w-16 lg:h-16 rounded-full shadow-lg flex justify-center items-center">
+            <svg className='w-3 h-3'  xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewBox="0 0 20 26" fill="none">
               <path d="M10 1V25M10 25L19 16M10 25L1 16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
@@ -91,7 +95,7 @@ const Home = () => {
               <BasicTitle title="Celebrating Excellence, Delivering Quality" />
             </div>
             <div className="w-full md:w-[57%] mx-auto">
-              <p className="-z-10 text-light-text text-base leading-6 text-center dark:text-[#D2D2D2]">
+              <p className="-z-10 text-light-text text-base leading-6 text-center px-4 md:px-0 dark:text-[#D2D2D2]">
                 An innovative tech company dedicated to shaping the future through cutting-edge solutions and exceptional service.
               </p>
             </div>
