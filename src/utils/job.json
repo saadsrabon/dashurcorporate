@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "availability": "open",
     "jobtitle": "Software Developer",
     "jobType": "Onsite",
     "overview": "Dashur AI, LLC. is one of the leading companies in our field in the area. We are hiring a talented Software Developer professional to join our team. If you're excited to be part of a winning team, Dashur AI is a great place to grow your career.",
@@ -29,6 +30,7 @@
   {
     "id": 2,
     "jobtitle": "Backend Engineer",
+    "availability": "closed",
     "jobType": "Onsite",
     "overview": "Dashur AI, Inc., we are the leading company in our industry in the Las Vegas area. We are hiring an experienced Backend Engineer to help us continue growth. If you're dedicated and ambitious, Dashur AI, Inc. is an excellent place to grow your career!",
     "responsibilities": [
@@ -56,6 +58,7 @@
   },
   {
     "id": 3,
+    "availability": "open",
     "jobtitle": "Mobile Developer",
     "jobType": "Onsite",
     "overview": "Dashur AI, LLC is an emerging tech firm in the Las Vegas metropolitan area. We are looking to hire an experienced Mobile Developer to help us keep growing. If you're hard-working and dedicated, Dashur AI is an excellent place to grow your career.",
@@ -84,6 +87,7 @@
   },
   {
     "id": 4,
+    "availability": "open",
     "jobtitle": "QA Engineer",
     "jobType": "Onsite",
     "overview": "Dashur AI, LLC. is one of the leading companies in our field in the area. We are hiring a talented QA Engineer professional to join our team. If you're excited to be part of a winning team, Dashur AI is a great place to grow your career.",
@@ -114,6 +118,7 @@
     "id": 5,
     "jobtitle": "iOS Engineer",
     "jobType": "Onsite",
+    "availability": "open",
     "overview": "Dashur AI, LLC. is one of the leading companies in our field in the area. We are hiring a talented iOS Engineer professional to join our team. If you're excited to be part of a winning team, Dashur AI is a great place to grow your career.",
     "responsibilities": [
       "Design and build applications for iOS platforms",

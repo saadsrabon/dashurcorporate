@@ -24,8 +24,8 @@ const MarketsPage = ({isDarkMode}) => {
     </div>
     </div>
      <div className="flex flex-col items-center mx-auto w-[60%]">
-  <h2 className="text-light-text text-center  dark:text-dark-text font-medium md:font-semibold text-[8px] md:text-xl mt-8 mr-6 -mb-2 lg:mb-0">Hospitality</h2>
-  <p className="hidden md:block text-light-text text-left  dark:text-dark-text max-w-[650px] my-2">Our AI and robotics solutions on Hospitality are streamlining operations and enhancing guest experiences. From automated check-in systems to robot concierges for hotels and resorts deliver services. Also, providing automated adjusting equipment for Entertainment</p>
+  <h2 className="text-light-text text-center  dark:text-dark-text font-medium md:font-semibold text-[8px] md:text-xl mt-8 mr-6 -mb-2 lg:mb-0">Hospitality/Entertainment</h2>
+  <p className="hidden md:block text-light-text text-left  dark:text-dark-text max-w-[650px] my-2">Our AI and robotics solutions on <span className="font-bold">Hospitality </span>are streamlining operations and enhancing guest experiences. From automated check-in systems to robot concierges for hotels and resorts deliver services. Also, providing automated adjusting equipment for <span className="font-bold">Entertainment.</span></p>
 </div>
     <div className=" relative flex justify-center items-center  mb-72 w-[57%] mx-auto">
    
@@ -90,19 +90,19 @@ const MarketsPage = ({isDarkMode}) => {
   </div>
   <div className="absolute w-[250px] right-[0%] md:right-[%] xl:-right-[8%] bottom-[14%]">
     <p className=" hidden md:block text-light-text dark:text-dark-text  ">
-    Dashur AI is transforming the manufacturing industry, enhancing efficiency and precision through automated assembly lines, predictive maintenance algorithms, and robotic arms to cope with the evolving market demands.
+    Dashur AI is transforming the <span className="font-bold">Manufacturing</span> industry, enhancing efficiency and precision through automated assembly lines, predictive maintenance algorithms, and robotic arms to cope with the evolving market demands.
     </p>
   </div>
 
   <div className="absolute w-[368px] -left-[14%] -bottom-[24%]">
     <p className=" hidden md:block text-light-text dark:text-dark-text  ">
-    In defense, we are reshaping military capabilities, enabling autonomous drones, unmanned vehicles, and intelligent surveillance systems to enhance situational awareness, strategic planning, and mission execution, while also minimizing risks to human personnel on the battlefield.
+    In <span className="font-bold">Defense</span>, we are reshaping military capabilities, enabling autonomous drones, unmanned vehicles, and intelligent surveillance systems to enhance situational awareness, strategic planning, and mission execution, while also minimizing risks to human personnel on the battlefield.
     </p>
   </div>
 
   <div className="absolute w-[368px] md:-right-[14%] lg:-right-[%] -bottom-[24%]">
     <p className=" hidden md:block text-light-text dark:text-dark-text  ">
-    We help designing and producing advanced aircraft and spacecraft, enabling precise engineering, autonomous navigation, and predictive maintenance, ultimately ensuring safer and more efficient air and space travel. Also, managing aero plane show to attract people in Aerospace
+    We help designing and producing advanced aircraft and spacecraft, enabling precise engineering, autonomous navigation, and predictive maintenance, ultimately ensuring safer and more efficient air and space travel. Also, managing aero plane show to attract people in <span className="font-bold">Aerospace.</span>
     </p>
   </div>
 {/* Light Mode */}

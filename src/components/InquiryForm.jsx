@@ -1,24 +1,45 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import { Bounce, toast } from "react-toastify";
-import { isValid } from "mailchecker";
+import { useForm} from "react-hook-form"
 import ReCAPTCHA from "react-google-recaptcha";
+import Formalert from "./formalert";
 const InquiryForm = ({setShowForm}) => {
 
 
-    const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
-    const [email, setEmail] = useState({value:"", error:false});
-    const [message, setMessage] = useState('');
+    // All States
     const [width , setWidth] = useState({width:'w-[40%]' , height:'300px'});
     const [isVerified, setIsVerified] = useState(false);
+    // To select the form
     const form = useRef();
+    const {
+      register,
+      handleSubmit,
+      setError,
+      formState: { errors },
+    } = useForm({
+      defaultValues:{
+        user_name:'',
+        user_last_name:'',
+        user_phone:'',
+        user_email:'',
+        user_message:'',
+      }
+    });
    
-
+  //  Function to send email
     const sendEmail = (e) => {
-        e.preventDefault();
+     
+        if(!isVerified){
+          setError('root', {
+            type: "manual",
+            message: "Please verify the captcha"
+          });
+          return;
+        }
         
         emailjs
           .sendForm('service_us6o5pd', 'template_iijmxtq', form.current, {
@@ -54,27 +75,15 @@ const InquiryForm = ({setShowForm}) => {
                 theme: "light",
                 transition: Bounce,
                 });
-              setShowForm(false);
+            
             },
           );
       };
 
-      console.log(email.error)
+      // 
 
-   useEffect(() => {
-    if (isValid(email.value)) {
-      setEmail(prev => ({ ...prev, error: false }));
-    } else {
-      setEmail(prev => ({ ...prev, error: true }));
-    }
-  }, [email.value]);
+   
 
-
-    // Add your form submission logic here
-    // const handleSubmit = (event) => {
-    //   event.preventDefault();
-    //   console.log(name, phone, email ,message);
-    // };
   return (
     <div id="contact-form" className={`${width.width}`}>
     
@@ -112,38 +121,79 @@ xmlSpace="preserve">
         }
         
       })} className="btn btn-sm btn-circle btn-ghost absolute right-10 top-2"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fillRule="evenodd" clipRule="evenodd" d="M22 5C22 3.34315 20.6569 2 19 2H5C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5ZM20 5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5Z" fill="#ffff"></path> </g></svg></button>
-   <form ref={form} className="" onSubmit={sendEmail }>
+   <form ref={form} className="" onSubmit={handleSubmit(sendEmail)}>
     <div className="grid">
     <div className="mb-6" >
       <label className="block text-light-text dark:text-dark-text" htmlFor="name">First Name</label>
-      <input required onChange={(e)=>setName(e.target.value)} className="appearance-none  bg-transparent w-full block py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_name" />
+      <input className="appearance-none  bg-transparent w-full block py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_name" 
+     {...register("user_name", {
+      required: 'Please input your first name',
+      maxLength: {
+        value: 8,
+        message: "Your firstname can be max 8 characters" // Corrected the message
+      },
+      minLength: {
+        value: 3,
+        message: "Your first name must be at least 3 characters"
+      }
+    })}
+      />
+      
+{errors?.user_name && <Formalert message={errors?.user_name?.message} />}
     </div>
     <div className="mb-6" >
       <label className="block text-light-text dark:text-dark-text" htmlFor="name">Last Name</label>
-      <input required onChange={(e)=>setName(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_name" />
+      <input {...register("user_last_name", {
+  required: 'Please input your last name',
+  maxLength: {
+    value: 8,
+    message: "Your lastname can be max 8 characters"
+  },
+  minLength: {
+    value: 3,
+    message: "Your last name must be at least 3 characters"
+  },
+})}  className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_last_name" 
+     
+      />
+      {errors?.user_last_name&& <Formalert message={errors?.user_last_name?.message} />}
     </div>
     </div>
     
     <div className="mb-6">
       <label className="block text-light-text dark:text-dark-text" htmlFor="phone">Phone</label>
-      <input required onChange={(e)=>setPhone(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_phone" />
+      <input {...register("user_phone" , {required:"Please enter your phone number"})}  className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="text" name="user_phone" />
+      {errors?.user_phone && <Formalert message={errors?.user_phone?.message} />}
     </div>
     <div className="mb-6">
       <label className="block text-light-text dark:text-dark-text" htmlFor="email">Email</label>
-      <input required onChange={(e)=>setEmail(prev =>( {...prev,value:e.target.value}))} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="email" name="user_email" />
-      {email.error && <p className="text-red-500">Please enter a valid email</p>}
+      <input {...register("user_email" , {required:"Please enter your email"})}  className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]" type="email" name="user_email" />
+      {errors?.user_email && <Formalert message={errors?.user_email?.message} />}
     </div>
     <div className="mb-6">
       <label className="block text-light-text dark:text-dark-text" htmlFor="message">Write Your Message</label>
-      <textarea onChange={(e)=>setMessage(e.target.value)} className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]"  name="user_message" />
+      <textarea {...register("user_message", {
+  required: 'Please input your last name',
+  maxLength: {
+    value: 150,
+    message: " Message can be max 150 characters"
+  },
+  minLength: {
+    value: 10,
+    message: "Message must be at least 10 characters"
+  },
+})}  className="appearance-none bg-transparent w-full py-2 outline-none border-b-[0.5px] border-[#454545]"  name="user_message" />
+      {errors?.user_message && <Formalert message={errors?.user_message?.message} />}
     </div>
     <ReCAPTCHA
     sitekey="6Lfb-HkpAAAAAOzuAk0ea5yHP_onzDZ-P8ubByPI"
     onChange={() => setIsVerified(true)}
     
   />
+  <div>{errors.root && <p className="text-red-500 text-xs italic my-2">{errors.root.message}</p>}</div>
     <div  className="flex justify-center">
-        <button disabled={!isVerified} type="submit"  className=" w-[60%] mb-2 mt-8 md:mb-0 px-8 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary" >Submit</button>
+       
+        <button type="submit"  className=" w-[60%] mb-2 mt-8 md:mb-0 px-8 py-2 text-[#0C0C0C] text-base font-medium rounded-lg bg-light-primary" >Submit</button>
         </div>
  
   </form>

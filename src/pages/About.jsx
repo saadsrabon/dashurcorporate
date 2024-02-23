@@ -6,7 +6,7 @@ import aboutBanner from "../assets/about.png"
 import { motion } from "framer-motion";
 import BasicTitle from "../components/basicTitle";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-
+import mainMarkets from "../assets/MainMarekts.png"
 const text = {
   hidden: {
     opacity: 0,
@@ -61,7 +61,7 @@ analytics, and human-like acumen.</p>
     <div>
       <div className="mt-48"> 
       <div className="flex flex-col justify-center items-center">
-        
+        <img src={mainMarkets} alt="" />
         {/* <BasicTitle width="w-full md:w-[94%] lg:w-[60%] " title="Markets" /> */}
         {/* <p className=" text-light-text dark:text-dark-text text-center md:text-left md:ml-[-45px]">Your feedback and inquiries are important to us, and we're here to <br /> provide the support you need.</p> */}
       </div>
