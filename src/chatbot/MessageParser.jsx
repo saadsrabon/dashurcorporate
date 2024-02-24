@@ -6,11 +6,13 @@ const MessageParser = ({ children, actions}) => {
     
     const lowerCase = message.toLowerCase();
     if (lowerCase.includes("hello") || lowerCase.includes("hi") || lowerCase.includes("hey") || message.length>2) {
-      actions.initalAction();
-    
-  
-      
+      actions.initalAction();  
     }
+    if (message=="") {
+     const newMessage= actions.createChatBotMessage("Please enter a valid message")
+      actions.updateStateChatbot(newMessage);
+    }
+    // Response from Chatgpt
   };
 
   return (

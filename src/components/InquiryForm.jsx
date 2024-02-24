@@ -129,7 +129,7 @@ xmlSpace="preserve">
      {...register("user_name", {
       required: 'Please input your first name',
       maxLength: {
-        value: 8,
+        value: 10,
         message: "Your firstname can be max 8 characters" // Corrected the message
       },
       minLength: {
@@ -146,7 +146,7 @@ xmlSpace="preserve">
       <input {...register("user_last_name", {
   required: 'Please input your last name',
   maxLength: {
-    value: 8,
+    value: 10,
     message: "Your lastname can be max 8 characters"
   },
   minLength: {

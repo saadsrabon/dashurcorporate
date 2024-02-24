@@ -140,7 +140,7 @@ useEffect(() => {
           </NavLink>
           <NavLink
             to="/contact"
-            className="text-light-text dark:text-dark-text hover:text-light-gray text-xl"
+            className="text-light-text dark:text-dark-text text-xl"
           >
             Contact 
           </NavLink>
