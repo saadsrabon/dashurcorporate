@@ -1,148 +1,82 @@
 
 import { Helmet } from 'react-helmet-async';
-import banner from '../assets/hero.png';
-import CardWrapper from '../components/CardWrapper';
 import BasicSlider from '../components/basicSlider';
-import BasicTitle from '../components/basicTitle';
-import Chips from '../components/chips';
-// import { CookiesFile } from '../components/cookies';
-import SearchBar from '../components/searchBar';
 import services from '../utils/services.json';
-
+import SEO from '../components/SEO';
+import ModernHero from '../components/ModernHero';
+import ModernServiceCard from '../components/ModernServiceCard';
+import ModernSectionHeader from '../components/ModernSectionHeader';
+import ModernSearchBar from '../components/ModernSearchBar';
 
 const Home = () => {
-  // const [showCookies, setShowCookies] = useState(false);
+  const handleNextSection = () => {
+    document.getElementById('service').scrollIntoView({ behavior: 'smooth' });
+  };
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-      
-  //     localStorage.setItem('showCookies', true);
-  //     setShowCookies(true);
-      
-  //   }, 5000);
-  // }, []);
- const handleNextSection=()=>{
-  document.getElementById('service').
-  scrollIntoView({ behavior: 'smooth' });
-  }
+  const handleSearch = (query) => {
+    console.log('Searching for:', query);
+    // Implement search functionality
+  };
 
-  
   return (
     <>
-    {/* All Necessary Steps for Seo */}
-    <Helmet>
-      <meta charSet="utf-8" />
-      <meta name="description" content="Dashur AI" />
-      <meta name="keywords" content="Dashur AI" />
-      <meta name="author" content="Dashur AI" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#000000" />
-      <meta name="title" content="Dashur AI" />
-      <meta name="description" content="Dashur AI" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://dashur.ai/" />
-      <meta property="og:title" content="Dashur AI" />
-      <meta property="og:description" content="Dashur AI" />
-      <meta property="og:image" content="https://dashur.ai/" />
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://dashur.ai/" />
-      <meta property="twitter:title" content="Dashur AI" />
-      <meta property="twitter:description" content="Dashur AI" />
-      <meta property="twitter:image" content="https://dashur.ai/" />
-      <link rel="canonical" href="https://dashur.ai/" />
+      <SEO 
+        title="Dashur AI - Empowering Innovation, Connecting the Future"
+        description="Dashur AI is an innovative tech company dedicated to shaping the future through cutting-edge AI solutions, digital transformation, and exceptional service delivery. Discover our comprehensive range of services."
+        keywords="AI, artificial intelligence, machine learning, digital transformation, tech solutions, innovation, automation, data analytics, cloud computing, software development, web development, mobile apps"
+        image="https://dashurai.com/og-image.jpg"
+        url="https://dashurai.com"
+        type="website"
+      />
       
-      
-      <title>Dashur AI</title>
-    </Helmet>
-    <div className='relative mt-32 lg:mt-24'>
-      {/* Hero Section */}
-      <div className="mx-auto py-4 md:py-16 lg:py-24">
-        <h2 className="text-light-text text-3xl md:px-48 mb-8 lg:mb-0 md:text-4xl lg:text-6xl font-bold uppercase dark:text-dark-text text-center lg:leading-[78px]">
-          Empowering Innovation, Connecting  the Future With Dashur ai
-        </h2>
-      </div>
+      {/* Modern Hero Section */}
+      <ModernHero
+        title="Empowering Innovation, Connecting the Future"
+        subtitle="Transforming businesses through cutting-edge AI solutions and digital excellence"
+        onScrollClick={handleNextSection}
+      />
 
-      {/* Banner Section */}
-      <div className=" w-full md:w-[95%] mx-auto -z-[999]">
 
-        <div className='relative'>
-        <img src={banner} alt="Your Image" className="  w-full h-auto px-4 lg:px-0" />
-        <div className="absolute  top-[-10%] md:top-[-5%] left-1/2 transform -translate-x-1/2">
-          <SearchBar />
-        </div>
-        </div>
-       <div className='relative'>
-       <div className="absolute -bottom-6 lg:-bottom-10  left-0 right-0 click-btn flex justify-center">
-          <button onClick={handleNextSection} className="animate-bounce bg-blue-500 hover:bg-blue-700 text-white font-bold w-6 h-6  lg:w-16 lg:h-16 rounded-full shadow-lg flex justify-center items-center">
-            <svg className='w-3 h-3'  xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewBox="0 0 20 26" fill="none">
-              <path d="M10 1V25M10 25L19 16M10 25L1 16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-        </div>
-       </div>
-        
 
-        {/* SearchBar */}
-       
-      </div>
+      {/* Services Section */}
+      <section id="service" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <ModernSectionHeader
+            badge="Our Services"
+            title="Celebrating Excellence, Delivering Quality"
+            subtitle="An innovative tech company dedicated to shaping the future through cutting-edge solutions and exceptional service."
+            className="mb-16"
+          />
 
-      {/* Service Section */}
-      <div id="service" className="mt-8 md:mt-16 lg:mt-24">
-        <div className="flex justify-center items-center flex-col">
-          <div>
-            <div className="flex flex-col items-center">
-              <Chips title="Our Services" />
-              <BasicTitle title="Celebrating Excellence, Delivering Quality" />
-            </div>
-            <div className="w-full md:w-[57%] mx-auto">
-              <p className="-z-10 text-light-text text-base leading-6 text-center px-4 md:px-0 dark:text-[#D2D2D2]">
-                An innovative tech company dedicated to shaping the future through cutting-edge solutions and exceptional service.
-              </p>
-            </div>
-          </div>
-
-          {/* Slider Part */}
-          <div className="grid grid-cols-1 px-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full md:w-[90%] gap-4 content-center place-content-center mt-8 md:mt-12">
-            {services?.map((item, index) => (
-              <CardWrapper key={index}>
-                <div>
-                  <div className={`${item?.bgColor} pb-4 flex justify-center`}>
-                    <img className='item-img' src={item?.image} alt="" />
-                  </div>
-                </div>
-                <div>
-                  <h2 className="text-light-text dark:text-dark-text text-lg md:text-2xl font-bold mb-4 text-center uppercase">{item?.title}</h2>
-                  <p className="text-light-text dark:text-dark-text">{item?.description}</p>
-                </div>
-              </CardWrapper>
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {services?.map((service, index) => (
+              <ModernServiceCard
+                key={index}
+                service={service}
+                index={index}
+              />
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Technologies Section */}
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8 mt-8 md:mt-16 lg:mt-24">
-        {/* Title-Part */}
-        <div className="flex flex-col items-center">
-          <Chips title="Technologies" />
-          <BasicTitle width="w-full md:w-[70%]" title="Embrace Innovation, Master Tomorrow" />
-        </div>
-        <div className="w-full md:w-[57%] mx-auto">
-          <p className="text-light-text text-center text-base leading-6 dark:text-[#D2D2D2]">
-            An innovative tech company dedicated to shaping the future through cutting-edge solutions and exceptional service.
-          </p>
-        </div>
+      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <ModernSectionHeader
+            badge="Technologies"
+            title="Embrace Innovation, Master Tomorrow"
+            subtitle="An innovative tech company dedicated to shaping the future through cutting-edge solutions and exceptional service."
+            className="mb-16"
+          />
 
-        {/* Slider Section */}
-        <div className="w-full md:w-[90%] mx-auto">
-          <BasicSlider />
+          {/* Slider Section */}
+          <div className="max-w-6xl mx-auto">
+            <BasicSlider />
+          </div>
         </div>
-      </div>
-     {/* {showCookies&& 
-      <CookiesFile  setShowCookies={setShowCookies}/>
-     } 
-     */}
-    </div>
+      </section>
     </>
   );
 };

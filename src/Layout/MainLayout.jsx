@@ -1,19 +1,16 @@
 /* eslint-disable react/prop-types */
 
 import { ToastContainer } from "react-toastify"
-import Footer from "../shared/Footer"
-import NavBar from "../shared/NavBar"
+import ModernFooter from "../components/ModernFooter"
+import ModernNavbar from "../components/ModernNavbar"
 
 export const MainLayout = ({children ,isDarkMode, setIsDarkMode}) => {
-
-
   return (
- <>
-<NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-{children}
-
-<Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-<ToastContainer/>
- </>
+    <>
+      <ModernNavbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+      {children}
+      <ModernFooter isDarkMode={isDarkMode} />
+      <ToastContainer/>
+    </>
   )
 }

@@ -1,4 +1,6 @@
 /* eslint-disable no-undef */
+import daisyui from 'daisyui';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class', // Enable dark mode based on class
@@ -44,12 +46,13 @@ export default {
     },
   },
 
-  plugins: [require("daisyui")],
+  plugins: [daisyui],
   daisyui: {
     themes: [
       {
         mytheme: {
         
+
 
         
 "base-100": "#024666",
