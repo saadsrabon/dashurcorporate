@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const ModernCareerHero = () => {
   return (
-    <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900">
+    <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 pt-36 pb-24">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -89,22 +89,10 @@ const ModernCareerHero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="group flex flex-col items-center text-cyan-400 hover:text-white transition-colors duration-300">
-          <span className="text-sm mb-2">Explore opportunities</span>
-          <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-bounce group-hover:bg-white"></div>
-          </div>
-        </div>
-      </motion.div>
+     
     </div>
   );
 };
 
 export default ModernCareerHero;
+
